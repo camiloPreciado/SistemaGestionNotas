@@ -19,7 +19,7 @@ namespace Estudiantes.API.Controllers
         }
 
         /// <summary>
-        /// Obtiene una lista paginada de los estudiantes.
+        /// Obtiene una lista paginada de los estudiantes iosdhjiasdhash.
         /// </summary>
         [HttpGet]
         public async Task<IActionResult> GetAll([FromQuery] int page = 1, [FromQuery] int pageSize = 10)
