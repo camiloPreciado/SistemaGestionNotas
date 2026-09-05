@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Estudiantes.API</name>
+    </assembly>
+    <members>
+        <member name="T:Estudiantes.API.Controllers.EstudiantesController">
+            <summary>
+            Controlador encargado de la gestión de estudiantes.
+            </summary>
+        </member>
+        <member name="M:Estudiantes.API.Controllers.EstudiantesController.GetAll(System.Int32,System.Int32)">
+            <summary>
+            Obtiene una lista paginada de los estudiantes.
+            </summary>
+        </member>
+        <member name="M:Estudiantes.API.Controllers.EstudiantesController.GetById(System.Int32)">
+            <summary>
+            Obtiene un estudiante por el id
+            </summary>
+        </member>
+        <member name="M:Estudiantes.API.Controllers.EstudiantesController.Create(Estudiantes.Application.DTOs.CreateEstudianteDto)">
+            <summary>
+            Crea un nuevo estudiante.
+            </summary>
+            <param name="dto">Información del estudiante a crear.</param>
+            <returns>El estudiante creado.</returns>
+        </member>
+        <member name="M:Estudiantes.API.Controllers.EstudiantesController.Update(System.Int32,Estudiantes.Application.DTOs.UpdateEstudianteDto)">
+            <summary>
+            Actualiza las propiedades de un estudiante
+            </summary>
+        </member>
+        <member name="M:Estudiantes.API.Controllers.EstudiantesController.Delete(System.Int32)">
+            <summary>
+            Elimina un estudiante por el id
+            </summary>
+        </member>
+    </members>
+</doc>
