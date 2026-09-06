@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "M8ovxN3MNIk=",
+  "dgSpecHash": "fjfsrPRWORw=",
   "success": true,
   "projectFilePath": "C:\\Users\\Goyatsu\\Desktop\\SistemaGestionNotas\\SistemaGestionNotas\\Usuarios.Tests\\Usuarios.Tests.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Goyatsu\\.nuget\\packages\\bcrypt.net-next\\4.2.0\\bcrypt.net-next.4.2.0.nupkg.sha512",
     "C:\\Users\\Goyatsu\\.nuget\\packages\\coverlet.collector\\6.0.0\\coverlet.collector.6.0.0.nupkg.sha512",
     "C:\\Users\\Goyatsu\\.nuget\\packages\\microsoft.codecoverage\\17.8.0\\microsoft.codecoverage.17.8.0.nupkg.sha512",
     "C:\\Users\\Goyatsu\\.nuget\\packages\\microsoft.net.test.sdk\\17.8.0\\microsoft.net.test.sdk.17.8.0.nupkg.sha512",

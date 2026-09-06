@@ -1,0 +1,15 @@
+[
+  {
+    "Name": "Nuevo perfil",
+    "Projects": [
+      {
+        "Path": "SistemaGestionNotas.Estudiantes.API\\Estudiantes.API.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "Usuarios.API\\Usuarios.API.csproj",
+        "Action": "Start"
+      }
+    ]
+  }
+]

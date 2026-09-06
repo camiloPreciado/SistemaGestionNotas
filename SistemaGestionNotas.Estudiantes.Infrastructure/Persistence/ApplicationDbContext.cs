@@ -27,6 +27,9 @@ namespace Estudiantes.Infrastructure.Persistence
 
                 entity.HasKey(e => e.Id);
 
+                entity.HasIndex(e => e.UsuarioId)
+                    .IsUnique();
+
                 entity.Property(e => e.Nombre)
                     .IsRequired()
                     .HasMaxLength(100);

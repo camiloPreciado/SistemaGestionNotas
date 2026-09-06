@@ -1,0 +1,12 @@
+C:\Users\Goyatsu\Desktop\SistemaGestionNotas\SistemaGestionNotas\Usuarios.Domain\bin\Debug\net8.0\Usuarios.Domain.deps.json
+C:\Users\Goyatsu\Desktop\SistemaGestionNotas\SistemaGestionNotas\Usuarios.Domain\bin\Debug\net8.0\Usuarios.Domain.dll
+C:\Users\Goyatsu\Desktop\SistemaGestionNotas\SistemaGestionNotas\Usuarios.Domain\bin\Debug\net8.0\Usuarios.Domain.pdb
+C:\Users\Goyatsu\Desktop\SistemaGestionNotas\SistemaGestionNotas\Usuarios.Domain\obj\Debug\net8.0\Usuarios.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Goyatsu\Desktop\SistemaGestionNotas\SistemaGestionNotas\Usuarios.Domain\obj\Debug\net8.0\Usuarios.Domain.AssemblyInfoInputs.cache
+C:\Users\Goyatsu\Desktop\SistemaGestionNotas\SistemaGestionNotas\Usuarios.Domain\obj\Debug\net8.0\Usuarios.Domain.AssemblyInfo.cs
+C:\Users\Goyatsu\Desktop\SistemaGestionNotas\SistemaGestionNotas\Usuarios.Domain\obj\Debug\net8.0\Usuarios.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Goyatsu\Desktop\SistemaGestionNotas\SistemaGestionNotas\Usuarios.Domain\obj\Debug\net8.0\Usuarios.Domain.sourcelink.json
+C:\Users\Goyatsu\Desktop\SistemaGestionNotas\SistemaGestionNotas\Usuarios.Domain\obj\Debug\net8.0\Usuarios.Domain.dll
+C:\Users\Goyatsu\Desktop\SistemaGestionNotas\SistemaGestionNotas\Usuarios.Domain\obj\Debug\net8.0\refint\Usuarios.Domain.dll
+C:\Users\Goyatsu\Desktop\SistemaGestionNotas\SistemaGestionNotas\Usuarios.Domain\obj\Debug\net8.0\Usuarios.Domain.pdb
+C:\Users\Goyatsu\Desktop\SistemaGestionNotas\SistemaGestionNotas\Usuarios.Domain\obj\Debug\net8.0\ref\Usuarios.Domain.dll

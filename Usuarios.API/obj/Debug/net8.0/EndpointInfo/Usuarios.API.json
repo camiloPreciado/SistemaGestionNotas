@@ -1,0 +1,133 @@
+{
+  "openapi": "3.0.4",
+  "info": {
+    "title": "Usuarios.API",
+    "version": "1.0"
+  },
+  "paths": {
+    "/api/Usuario/usuarios": {
+      "post": {
+        "tags": [
+          "Usuario"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateUsuarioDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateUsuarioDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateUsuarioDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Usuario/registro-estudiante": {
+      "post": {
+        "tags": [
+          "Usuario"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RegistroEstudianteDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RegistroEstudianteDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/RegistroEstudianteDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "CreateUsuarioDto": {
+        "required": [
+          "contrasena",
+          "correo",
+          "rol"
+        ],
+        "type": "object",
+        "properties": {
+          "correo": {
+            "maxLength": 150,
+            "minLength": 0,
+            "type": "string",
+            "format": "email"
+          },
+          "contrasena": {
+            "maxLength": 100,
+            "minLength": 6,
+            "type": "string"
+          },
+          "rol": {
+            "minLength": 1,
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      },
+      "RegistroEstudianteDto": {
+        "required": [
+          "contrasena",
+          "correo",
+          "nombre"
+        ],
+        "type": "object",
+        "properties": {
+          "correo": {
+            "maxLength": 150,
+            "minLength": 0,
+            "type": "string",
+            "format": "email"
+          },
+          "contrasena": {
+            "maxLength": 100,
+            "minLength": 6,
+            "type": "string"
+          },
+          "nombre": {
+            "maxLength": 100,
+            "minLength": 2,
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "tags": [
+    {
+      "name": "Usuario"
+    }
+  ]
+}

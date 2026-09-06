@@ -161,10 +161,15 @@
     "schemas": {
       "CreateEstudianteDto": {
         "required": [
-          "nombre"
+          "nombre",
+          "usuarioId"
         ],
         "type": "object",
         "properties": {
+          "usuarioId": {
+            "type": "integer",
+            "format": "int32"
+          },
           "nombre": {
             "maxLength": 100,
             "minLength": 2,
@@ -175,10 +180,15 @@
       },
       "UpdateEstudianteDto": {
         "required": [
-          "nombre"
+          "nombre",
+          "usuarioId"
         ],
         "type": "object",
         "properties": {
+          "usuarioId": {
+            "type": "integer",
+            "format": "int32"
+          },
           "nombre": {
             "maxLength": 100,
             "minLength": 2,

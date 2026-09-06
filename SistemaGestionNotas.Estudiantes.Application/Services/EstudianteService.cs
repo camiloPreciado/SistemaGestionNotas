@@ -31,6 +31,7 @@ namespace Estudiantes.Application.Services
                 Items = result.Items.Select(e => new EstudianteDto
                 {
                     Id = e.Id,
+                    UsuarioId = e.UsuarioId,
                     Nombre = e.Nombre
                 }),
                 Page = result.Page,
@@ -48,6 +49,7 @@ namespace Estudiantes.Application.Services
             return new EstudianteDto
             {
                 Id = estudiante.Id,
+                UsuarioId = estudiante.UsuarioId,
                 Nombre = estudiante.Nombre
             };
         }
@@ -56,6 +58,7 @@ namespace Estudiantes.Application.Services
         {
             var estudiante = new Estudiante
             {
+                UsuarioId = dto.UsuarioId,
                 Nombre = dto.Nombre
             };
 
@@ -64,6 +67,7 @@ namespace Estudiantes.Application.Services
             return new EstudianteDto
             {
                 Id = created.Id,
+                UsuarioId = created.UsuarioId,
                 Nombre = created.Nombre
             };
         }
