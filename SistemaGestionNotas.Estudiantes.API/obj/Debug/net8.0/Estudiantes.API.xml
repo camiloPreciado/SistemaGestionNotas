@@ -11,7 +11,7 @@
         </member>
         <member name="M:Estudiantes.API.Controllers.EstudiantesController.GetAll(System.Int32,System.Int32)">
             <summary>
-            Obtiene una lista paginada de los estudiantes iosdhjiasdhash.
+            Obtiene una lista paginada de los estudiantes.
             </summary>
         </member>
         <member name="M:Estudiantes.API.Controllers.EstudiantesController.GetById(System.Int32)">

@@ -1,6 +1,22 @@
 [
   {
     "ContainingType": "Usuarios.API.Controllers.UsuarioController",
+    "Method": "Login",
+    "RelativePath": "api/Usuario/login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "Usuarios.Application.DTOs.LoginDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Usuarios.API.Controllers.UsuarioController",
     "Method": "RegistrarEstudiante",
     "RelativePath": "api/Usuario/registro-estudiante",
     "HttpMethod": "POST",

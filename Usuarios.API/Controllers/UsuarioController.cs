@@ -1,6 +1,8 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Usuarios.Application.DTOs;
 using Usuarios.Application.Interfaces;
+using Usuarios.Application.Services;
 
 namespace Usuarios.API.Controllers
 {
@@ -10,10 +12,12 @@ namespace Usuarios.API.Controllers
     public class UsuarioController : ControllerBase
     {
         private readonly IUsuarioService _usuarioService;
+        private readonly UsuarioService _usuarioServiceLogin;
 
-        public UsuarioController(IUsuarioService usuarioService)
+        public UsuarioController(IUsuarioService usuarioService, UsuarioService usuarioServiceLogin)
         {
             _usuarioService = usuarioService;
+            _usuarioServiceLogin = usuarioServiceLogin;
         }
 
         [HttpPost("usuarios")]
@@ -41,5 +45,29 @@ namespace Usuarios.API.Controllers
                 mensaje = "Estudiante registrado correctamente."
             });
         }
+
+        [HttpPost("login")]
+        public async Task<IActionResult> Login([FromBody] LoginDto dto)
+        {
+            var resultado = await _usuarioServiceLogin.LoginAsync(dto);
+
+            if (resultado is null)
+                return Unauthorized(new
+                {
+                    mensaje = "Correo o contraseña incorrectos."
+                });
+
+            return Ok(resultado);
+        }
+
+        //[Authorize]
+        //[HttpGet("protegido")]
+        //public IActionResult Protegido()
+        //{
+        //    return Ok(new
+        //    {
+        //        mensaje = "Tienes acceso al endpoint protegido."
+        //    });
+        //}
     }
 }

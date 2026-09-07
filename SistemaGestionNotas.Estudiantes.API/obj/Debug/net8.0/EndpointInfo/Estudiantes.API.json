@@ -10,7 +10,7 @@
         "tags": [
           "Estudiantes"
         ],
-        "summary": "Obtiene una lista paginada de los estudiantes iosdhjiasdhash.",
+        "summary": "Obtiene una lista paginada de los estudiantes.",
         "parameters": [
           {
             "name": "page",
@@ -197,8 +197,21 @@
         },
         "additionalProperties": false
       }
+    },
+    "securitySchemes": {
+      "Bearer": {
+        "type": "http",
+        "description": "Ingrese el token JWT. Ejemplo: Bearer {token}",
+        "scheme": "Bearer",
+        "bearerFormat": "JWT"
+      }
     }
   },
+  "security": [
+    {
+      "Bearer": [ ]
+    }
+  ],
   "tags": [
     {
       "name": "Estudiantes"

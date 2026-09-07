@@ -167,3 +167,4 @@ C:\Users\Goyatsu\Desktop\SistemaGestionNotas\SistemaGestionNotas\SistemaGestionN
 C:\Users\Goyatsu\Desktop\SistemaGestionNotas\SistemaGestionNotas\SistemaGestionNotas.Estudiantes.API\obj\Debug\net8.0\Estudiantes.API.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\Goyatsu\Desktop\SistemaGestionNotas\SistemaGestionNotas\SistemaGestionNotas.Estudiantes.API\bin\Debug\net8.0\Estudiantes.API.xml
 C:\Users\Goyatsu\Desktop\SistemaGestionNotas\SistemaGestionNotas\SistemaGestionNotas.Estudiantes.API\obj\Debug\net8.0\Estudiantes.API.xml
+C:\Users\Goyatsu\Desktop\SistemaGestionNotas\SistemaGestionNotas\SistemaGestionNotas.Estudiantes.API\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll

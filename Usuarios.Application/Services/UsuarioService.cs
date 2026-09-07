@@ -76,11 +76,11 @@ namespace Usuarios.Application.Services
             if (usuario is null)
                 return null;
 
-            var contraseniaValida = BCrypt.Net.BCrypt.Verify(
-                dto.Contrasenia,
+            var contrasenaValida = BCrypt.Net.BCrypt.Verify(
+                dto.Contrasena,
                 usuario.ContrasenaHash);
 
-            if (!contraseniaValida)
+            if (!contrasenaValida)
                 return null;
 
             return new LoginResponseDto

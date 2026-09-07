@@ -1,6 +1,8 @@
 ﻿using Estudiantes.Application.DTOs;
 using Estudiantes.Application.Interfaces;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Estudiantes.Domain.Constants;
 
 namespace Estudiantes.API.Controllers
 {
@@ -19,8 +21,9 @@ namespace Estudiantes.API.Controllers
         }
 
         /// <summary>
-        /// Obtiene una lista paginada de los estudiantes iosdhjiasdhash.
+        /// Obtiene una lista paginada de los estudiantes.
         /// </summary>
+        [Authorize(Roles = Roles.Admin + "," + Roles.Profesor)]
         [HttpGet]
         public async Task<IActionResult> GetAll([FromQuery] int page = 1, [FromQuery] int pageSize = 10)
         {
@@ -32,6 +35,7 @@ namespace Estudiantes.API.Controllers
         /// <summary>
         /// Obtiene un estudiante por el id
         /// </summary>
+        [Authorize(Roles = Roles.Admin + "," + Roles.Profesor)]
         [HttpGet("{id:int}")]
         public async Task<IActionResult> GetById(int id)
         {
@@ -48,9 +52,9 @@ namespace Estudiantes.API.Controllers
         /// </summary>
         /// <param name="dto">Información del estudiante a crear.</param>
         /// <returns>El estudiante creado.</returns>
+        [Authorize(Roles = Roles.Admin)]
         [HttpPost]
-        public async Task<IActionResult> Create(
-            [FromBody] CreateEstudianteDto dto)
+        public async Task<IActionResult> Create([FromBody] CreateEstudianteDto dto)
         {
             var estudiante = await _service.CreateAsync(dto);
 
@@ -63,10 +67,9 @@ namespace Estudiantes.API.Controllers
         /// <summary>
         /// Actualiza las propiedades de un estudiante
         /// </summary>
+        [Authorize(Roles = Roles.Admin)]
         [HttpPut("{id:int}")]
-        public async Task<IActionResult> Update(
-            int id,
-            [FromBody] UpdateEstudianteDto dto)
+        public async Task<IActionResult> Update(int id, [FromBody] UpdateEstudianteDto dto)
         {
             var updated = await _service.UpdateAsync(id, dto);
 
@@ -78,6 +81,7 @@ namespace Estudiantes.API.Controllers
         /// <summary>
         /// Elimina un estudiante por el id
         /// </summary>
+        [Authorize(Roles = Roles.Admin)]
         [HttpDelete("{id:int}")]
         public async Task<IActionResult> Delete(int id)
         {
