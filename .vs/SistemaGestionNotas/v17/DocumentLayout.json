@@ -3,24 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\Goyatsu\\Desktop\\SistemaGestionNotas\\SistemaGestionNotas\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{4EF13CF6-529A-471B-9E4F-9C0664CECF1A}|SistemaGestionNotas.Estudiantes.API\\Estudiantes.API.csproj|c:\\users\\goyatsu\\desktop\\sistemagestionnotas\\sistemagestionnotas\\sistemagestionnotas.estudiantes.api\\controllers\\estudiantescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4EF13CF6-529A-471B-9E4F-9C0664CECF1A}|SistemaGestionNotas.Estudiantes.API\\Estudiantes.API.csproj|solutionrelative:sistemagestionnotas.estudiantes.api\\controllers\\estudiantescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{97D8A5BA-B396-499F-BA07-9C6F35208C50}|Usuarios.Infrastructure\\Usuarios.Infrastructure.csproj|c:\\users\\goyatsu\\desktop\\sistemagestionnotas\\sistemagestionnotas\\usuarios.infrastructure\\servicesclient\\estudianteclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{97D8A5BA-B396-499F-BA07-9C6F35208C50}|Usuarios.Infrastructure\\Usuarios.Infrastructure.csproj|solutionrelative:usuarios.infrastructure\\servicesclient\\estudianteclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4EF13CF6-529A-471B-9E4F-9C0664CECF1A}|SistemaGestionNotas.Estudiantes.API\\Estudiantes.API.csproj|c:\\users\\goyatsu\\desktop\\sistemagestionnotas\\sistemagestionnotas\\sistemagestionnotas.estudiantes.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4EF13CF6-529A-471B-9E4F-9C0664CECF1A}|SistemaGestionNotas.Estudiantes.API\\Estudiantes.API.csproj|solutionrelative:sistemagestionnotas.estudiantes.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{193759E1-AD91-40C7-AADB-416D95FF1A15}|Usuarios.API\\Usuarios.API.csproj|c:\\users\\goyatsu\\desktop\\sistemagestionnotas\\sistemagestionnotas\\usuarios.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{193759E1-AD91-40C7-AADB-416D95FF1A15}|Usuarios.API\\Usuarios.API.csproj|solutionrelative:usuarios.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4EF13CF6-529A-471B-9E4F-9C0664CECF1A}|SistemaGestionNotas.Estudiantes.API\\Estudiantes.API.csproj|c:\\users\\goyatsu\\desktop\\sistemagestionnotas\\sistemagestionnotas\\sistemagestionnotas.estudiantes.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{4EF13CF6-529A-471B-9E4F-9C0664CECF1A}|SistemaGestionNotas.Estudiantes.API\\Estudiantes.API.csproj|solutionrelative:sistemagestionnotas.estudiantes.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{193759E1-AD91-40C7-AADB-416D95FF1A15}|Usuarios.API\\Usuarios.API.csproj|c:\\users\\goyatsu\\desktop\\sistemagestionnotas\\sistemagestionnotas\\usuarios.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{193759E1-AD91-40C7-AADB-416D95FF1A15}|Usuarios.API\\Usuarios.API.csproj|solutionrelative:usuarios.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{97D8A5BA-B396-499F-BA07-9C6F35208C50}|Usuarios.Infrastructure\\Usuarios.Infrastructure.csproj|c:\\users\\goyatsu\\desktop\\sistemagestionnotas\\sistemagestionnotas\\usuarios.infrastructure\\servicesclient\\profesorclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{97D8A5BA-B396-499F-BA07-9C6F35208C50}|Usuarios.Infrastructure\\Usuarios.Infrastructure.csproj|solutionrelative:usuarios.infrastructure\\servicesclient\\profesorclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -43,66 +31,27 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "EstudiantesController.cs",
-              "DocumentMoniker": "C:\\Users\\Goyatsu\\Desktop\\SistemaGestionNotas\\SistemaGestionNotas\\SistemaGestionNotas.Estudiantes.API\\Controllers\\EstudiantesController.cs",
-              "RelativeDocumentMoniker": "SistemaGestionNotas.Estudiantes.API\\Controllers\\EstudiantesController.cs",
-              "ToolTip": "C:\\Users\\Goyatsu\\Desktop\\SistemaGestionNotas\\SistemaGestionNotas\\SistemaGestionNotas.Estudiantes.API\\Controllers\\EstudiantesController.cs",
-              "RelativeToolTip": "SistemaGestionNotas.Estudiantes.API\\Controllers\\EstudiantesController.cs",
-              "ViewState": "AgIAABkAAAAAAAAAAAAgwCIAAAAVAAAAAAAAAA==",
+              "Title": "EstudianteClient.cs",
+              "DocumentMoniker": "C:\\Users\\Goyatsu\\Desktop\\SistemaGestionNotas\\SistemaGestionNotas\\Usuarios.Infrastructure\\ServicesClient\\EstudianteClient.cs",
+              "RelativeDocumentMoniker": "Usuarios.Infrastructure\\ServicesClient\\EstudianteClient.cs",
+              "ToolTip": "C:\\Users\\Goyatsu\\Desktop\\SistemaGestionNotas\\SistemaGestionNotas\\Usuarios.Infrastructure\\ServicesClient\\EstudianteClient.cs",
+              "RelativeToolTip": "Usuarios.Infrastructure\\ServicesClient\\EstudianteClient.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAA1wB4AAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-07T00:07:44.037Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\Goyatsu\\Desktop\\SistemaGestionNotas\\SistemaGestionNotas\\Usuarios.API\\appsettings.json",
-              "RelativeDocumentMoniker": "Usuarios.API\\appsettings.json",
-              "ToolTip": "C:\\Users\\Goyatsu\\Desktop\\SistemaGestionNotas\\SistemaGestionNotas\\Usuarios.API\\appsettings.json",
-              "RelativeToolTip": "Usuarios.API\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAACAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-09-07T00:02:40.185Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\Goyatsu\\Desktop\\SistemaGestionNotas\\SistemaGestionNotas\\SistemaGestionNotas.Estudiantes.API\\appsettings.json",
-              "RelativeDocumentMoniker": "SistemaGestionNotas.Estudiantes.API\\appsettings.json",
-              "ToolTip": "C:\\Users\\Goyatsu\\Desktop\\SistemaGestionNotas\\SistemaGestionNotas\\SistemaGestionNotas.Estudiantes.API\\appsettings.json",
-              "RelativeToolTip": "SistemaGestionNotas.Estudiantes.API\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-09-07T00:02:32.388Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Goyatsu\\Desktop\\SistemaGestionNotas\\SistemaGestionNotas\\Usuarios.API\\Program.cs",
-              "RelativeDocumentMoniker": "Usuarios.API\\Program.cs",
-              "ToolTip": "C:\\Users\\Goyatsu\\Desktop\\SistemaGestionNotas\\SistemaGestionNotas\\Usuarios.API\\Program.cs",
-              "RelativeToolTip": "Usuarios.API\\Program.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAB4AAAAnAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-06T23:59:29.823Z",
+              "WhenOpened": "2026-09-07T02:24:52.866Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Goyatsu\\Desktop\\SistemaGestionNotas\\SistemaGestionNotas\\SistemaGestionNotas.Estudiantes.API\\Program.cs",
-              "RelativeDocumentMoniker": "SistemaGestionNotas.Estudiantes.API\\Program.cs",
-              "ToolTip": "C:\\Users\\Goyatsu\\Desktop\\SistemaGestionNotas\\SistemaGestionNotas\\SistemaGestionNotas.Estudiantes.API\\Program.cs",
-              "RelativeToolTip": "SistemaGestionNotas.Estudiantes.API\\Program.cs",
-              "ViewState": "AgIAAE4AAAAAAAAAAAAAAGcAAAAAAAAAAAAAAA==",
+              "Title": "ProfesorClient.cs",
+              "DocumentMoniker": "C:\\Users\\Goyatsu\\Desktop\\SistemaGestionNotas\\SistemaGestionNotas\\Usuarios.Infrastructure\\ServicesClient\\ProfesorClient.cs",
+              "RelativeDocumentMoniker": "Usuarios.Infrastructure\\ServicesClient\\ProfesorClient.cs",
+              "ToolTip": "C:\\Users\\Goyatsu\\Desktop\\SistemaGestionNotas\\SistemaGestionNotas\\Usuarios.Infrastructure\\ServicesClient\\ProfesorClient.cs",
+              "RelativeToolTip": "Usuarios.Infrastructure\\ServicesClient\\ProfesorClient.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAAAB4AAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-06T23:59:02.159Z",
+              "WhenOpened": "2026-09-07T02:14:05.076Z",
               "EditorCaption": ""
             }
           ]

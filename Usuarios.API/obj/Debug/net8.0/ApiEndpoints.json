@@ -33,6 +33,22 @@
   },
   {
     "ContainingType": "Usuarios.API.Controllers.UsuarioController",
+    "Method": "RegistrarProfesor",
+    "RelativePath": "api/Usuario/registro-profesor",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "Usuarios.Application.DTOs.RegistroProfesorDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Usuarios.API.Controllers.UsuarioController",
     "Method": "CrearUsuario",
     "RelativePath": "api/Usuario/usuarios",
     "HttpMethod": "POST",

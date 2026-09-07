@@ -17,15 +17,18 @@ namespace Usuarios.Application.Services
         private readonly IUsuarioRepository _usuarioRepository;
         private readonly ITokenService _tokenService;
         private readonly IEstudianteClient _estudianteClient;
+        private readonly IProfesorClient _profesorClient;
 
         public UsuarioService(
             IUsuarioRepository usuarioRepository,
             ITokenService tokenService,
-            IEstudianteClient estudianteClient)
+            IEstudianteClient estudianteClient,
+            IProfesorClient profesorClient)
         {
             _usuarioRepository = usuarioRepository;
             _tokenService = tokenService;
             _estudianteClient = estudianteClient;
+            _profesorClient = profesorClient;
         }
 
         public async Task<bool> ExisteCorreoAsync(string correo)
@@ -95,7 +98,7 @@ namespace Usuarios.Application.Services
         {
             if (await ExisteCorreoAsync(dto.Correo))
             {
-                throw new ArgumentException(
+                throw new ValidationException(
                     "Ya existe un usuario con ese correo.");
             }
 
@@ -118,6 +121,38 @@ namespace Usuarios.Application.Services
             {
                 throw new InvalidOperationException(
                     "No fue posible crear el estudiante.");
+            }
+
+            return usuarioCreado.Id;
+        }
+
+        public async Task<int> RegistrarProfesorAsync(RegistroProfesorDto dto)
+        {
+            if (await ExisteCorreoAsync(dto.Correo))
+            {
+                throw new ValidationException(
+                    "Ya existe un usuario con ese correo.");
+            }
+
+            var usuario = new Usuario
+            {
+                Correo = dto.Correo,
+                ContrasenaHash = BCrypt.Net.BCrypt.HashPassword(
+                    dto.Contrasena),
+                Rol = Roles.Profesor
+            };
+
+            var usuarioCreado = await _usuarioRepository
+                .CreateAsync(usuario);
+
+            var profesorCreado = await _profesorClient.CrearAsync(
+                usuarioCreado.Id,
+                dto.Nombre);
+
+            if (!profesorCreado)
+            {
+                throw new InvalidOperationException(
+                    "No fue posible crear el profesor.");
             }
 
             return usuarioCreado.Id;

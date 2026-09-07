@@ -1,6 +1,4 @@
-C:\Users\Goyatsu\Desktop\SistemaGestionNotas\SistemaGestionNotas\SistemaGestionNotas.Estudiantes.Domain\bin\Debug\net8.0\Estudiantes.Domain.exe
 C:\Users\Goyatsu\Desktop\SistemaGestionNotas\SistemaGestionNotas\SistemaGestionNotas.Estudiantes.Domain\bin\Debug\net8.0\Estudiantes.Domain.deps.json
-C:\Users\Goyatsu\Desktop\SistemaGestionNotas\SistemaGestionNotas\SistemaGestionNotas.Estudiantes.Domain\bin\Debug\net8.0\Estudiantes.Domain.runtimeconfig.json
 C:\Users\Goyatsu\Desktop\SistemaGestionNotas\SistemaGestionNotas\SistemaGestionNotas.Estudiantes.Domain\bin\Debug\net8.0\Estudiantes.Domain.dll
 C:\Users\Goyatsu\Desktop\SistemaGestionNotas\SistemaGestionNotas\SistemaGestionNotas.Estudiantes.Domain\bin\Debug\net8.0\Estudiantes.Domain.pdb
 C:\Users\Goyatsu\Desktop\SistemaGestionNotas\SistemaGestionNotas\SistemaGestionNotas.Estudiantes.Domain\obj\Debug\net8.0\Estudiantes.Domain.GeneratedMSBuildEditorConfig.editorconfig
@@ -11,5 +9,4 @@ C:\Users\Goyatsu\Desktop\SistemaGestionNotas\SistemaGestionNotas\SistemaGestionN
 C:\Users\Goyatsu\Desktop\SistemaGestionNotas\SistemaGestionNotas\SistemaGestionNotas.Estudiantes.Domain\obj\Debug\net8.0\Estudiantes.Domain.dll
 C:\Users\Goyatsu\Desktop\SistemaGestionNotas\SistemaGestionNotas\SistemaGestionNotas.Estudiantes.Domain\obj\Debug\net8.0\refint\Estudiantes.Domain.dll
 C:\Users\Goyatsu\Desktop\SistemaGestionNotas\SistemaGestionNotas\SistemaGestionNotas.Estudiantes.Domain\obj\Debug\net8.0\Estudiantes.Domain.pdb
-C:\Users\Goyatsu\Desktop\SistemaGestionNotas\SistemaGestionNotas\SistemaGestionNotas.Estudiantes.Domain\obj\Debug\net8.0\Estudiantes.Domain.genruntimeconfig.cache
 C:\Users\Goyatsu\Desktop\SistemaGestionNotas\SistemaGestionNotas\SistemaGestionNotas.Estudiantes.Domain\obj\Debug\net8.0\ref\Estudiantes.Domain.dll

@@ -180,15 +180,10 @@
       },
       "UpdateEstudianteDto": {
         "required": [
-          "nombre",
-          "usuarioId"
+          "nombre"
         ],
         "type": "object",
         "properties": {
-          "usuarioId": {
-            "type": "integer",
-            "format": "int32"
-          },
           "nombre": {
             "maxLength": 100,
             "minLength": 2,

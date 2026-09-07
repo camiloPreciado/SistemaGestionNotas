@@ -91,13 +91,9 @@ builder.Services.AddDbContext<ApplicationDbContext>(
             }));
 
 
-builder.Services.AddScoped<
-    IEstudianteRepository,
-    EstudianteRepository>();
+builder.Services.AddScoped<IEstudianteRepository, EstudianteRepository>();
 
-builder.Services.AddScoped<
-    IEstudianteService,
-    EstudianteService>();
+builder.Services.AddScoped<IEstudianteService, EstudianteService>();
 
 
 var app = builder.Build();

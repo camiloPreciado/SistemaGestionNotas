@@ -12,5 +12,6 @@ namespace Usuarios.Application.Interfaces
         Task<bool> ExisteCorreoAsync(string correo);
         Task<int> CrearAsync(CreateUsuarioDto dto);
         Task<int> RegistrarEstudianteAsync(RegistroEstudianteDto dto);
+        Task<int> RegistrarProfesorAsync(RegistroProfesorDto dto);
     }
 }

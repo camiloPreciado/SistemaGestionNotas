@@ -1,11 +1,5 @@
 C:\Users\Goyatsu\Desktop\SistemaGestionNotas\SistemaGestionNotas\SistemaGestionNotas.Estudiantes.Tests\bin\Debug\net8.0\CoverletSourceRootsMapping_Estudiantes.Tests
 C:\Users\Goyatsu\Desktop\SistemaGestionNotas\SistemaGestionNotas\SistemaGestionNotas.Estudiantes.Tests\bin\Debug\net8.0\testhost.dll
-C:\Users\Goyatsu\Desktop\SistemaGestionNotas\SistemaGestionNotas\SistemaGestionNotas.Estudiantes.Tests\bin\Debug\net8.0\Estudiantes.Application.deps.json
-C:\Users\Goyatsu\Desktop\SistemaGestionNotas\SistemaGestionNotas\SistemaGestionNotas.Estudiantes.Tests\bin\Debug\net8.0\Estudiantes.Application.runtimeconfig.json
-C:\Users\Goyatsu\Desktop\SistemaGestionNotas\SistemaGestionNotas\SistemaGestionNotas.Estudiantes.Tests\bin\Debug\net8.0\Estudiantes.Domain.deps.json
-C:\Users\Goyatsu\Desktop\SistemaGestionNotas\SistemaGestionNotas\SistemaGestionNotas.Estudiantes.Tests\bin\Debug\net8.0\Estudiantes.Domain.runtimeconfig.json
-C:\Users\Goyatsu\Desktop\SistemaGestionNotas\SistemaGestionNotas\SistemaGestionNotas.Estudiantes.Tests\bin\Debug\net8.0\Estudiantes.Domain.exe
-C:\Users\Goyatsu\Desktop\SistemaGestionNotas\SistemaGestionNotas\SistemaGestionNotas.Estudiantes.Tests\bin\Debug\net8.0\Estudiantes.Application.exe
 C:\Users\Goyatsu\Desktop\SistemaGestionNotas\SistemaGestionNotas\SistemaGestionNotas.Estudiantes.Tests\bin\Debug\net8.0\testhost.exe
 C:\Users\Goyatsu\Desktop\SistemaGestionNotas\SistemaGestionNotas\SistemaGestionNotas.Estudiantes.Tests\bin\Debug\net8.0\xunit.runner.visualstudio.dotnetcore.testadapter.dll
 C:\Users\Goyatsu\Desktop\SistemaGestionNotas\SistemaGestionNotas\SistemaGestionNotas.Estudiantes.Tests\bin\Debug\net8.0\xunit.runner.reporters.netcoreapp10.dll

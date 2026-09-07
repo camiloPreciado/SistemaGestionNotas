@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using Usuarios.Application.DTOs;
 using Usuarios.Application.Interfaces;
 using Usuarios.Application.Services;
+using Usuarios.Domain.Constants;
 
 namespace Usuarios.API.Controllers
 {
@@ -20,6 +21,7 @@ namespace Usuarios.API.Controllers
             _usuarioServiceLogin = usuarioServiceLogin;
         }
 
+        [Authorize(Roles = Roles.Admin)]
         [HttpPost("usuarios")]
         public async Task<IActionResult> CrearUsuario(
             [FromBody] CreateUsuarioDto dto)
@@ -33,6 +35,8 @@ namespace Usuarios.API.Controllers
             });
         }
 
+
+        [Authorize(Roles = Roles.Admin)]
         [HttpPost("registro-estudiante")]
         public async Task<IActionResult> RegistrarEstudiante([FromBody] RegistroEstudianteDto dto)
         {
@@ -43,6 +47,21 @@ namespace Usuarios.API.Controllers
             {
                 id = usuarioId,
                 mensaje = "Estudiante registrado correctamente."
+            });
+        }
+
+
+        [Authorize(Roles = Roles.Admin)]
+        [HttpPost("registro-profesor")]
+        public async Task<IActionResult> RegistrarProfesor([FromBody] RegistroProfesorDto dto)
+        {
+            var usuarioId = await _usuarioService
+                .RegistrarProfesorAsync(dto);
+
+            return Ok(new
+            {
+                id = usuarioId,
+                mensaje = "Profesor registrado correctamente."
             });
         }
 

@@ -13,7 +13,7 @@ using Usuarios.Infrastructure.ServicesClient;
 
 var builder = WebApplication.CreateBuilder(args);
 
-
+builder.Services.AddHttpContextAccessor();
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(options =>
@@ -94,6 +94,15 @@ builder.Services.AddHttpClient<IEstudianteClient, EstudianteClient>(
             builder.Configuration["Services:Estudiantes"]
             ?? throw new InvalidOperationException(
                 "La URL de Estudiantes no está configurada."));
+    });
+
+builder.Services.AddHttpClient<IProfesorClient, ProfesorClient>(
+    client =>
+    {
+        client.BaseAddress = new Uri(
+            builder.Configuration["Services:Profesores"]
+            ?? throw new InvalidOperationException(
+                "La URL de Profesores no está configurada."));
     });
 
 builder.Services.AddAuthorization();

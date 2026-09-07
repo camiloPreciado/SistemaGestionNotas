@@ -1,9 +1,4 @@
-C:\Users\Goyatsu\Desktop\SistemaGestionNotas\SistemaGestionNotas\SistemaGestionNotas.Estudiantes.Application\bin\Debug\net8.0\Estudiantes.Domain.deps.json
-C:\Users\Goyatsu\Desktop\SistemaGestionNotas\SistemaGestionNotas\SistemaGestionNotas.Estudiantes.Application\bin\Debug\net8.0\Estudiantes.Domain.runtimeconfig.json
-C:\Users\Goyatsu\Desktop\SistemaGestionNotas\SistemaGestionNotas\SistemaGestionNotas.Estudiantes.Application\bin\Debug\net8.0\Estudiantes.Domain.exe
-C:\Users\Goyatsu\Desktop\SistemaGestionNotas\SistemaGestionNotas\SistemaGestionNotas.Estudiantes.Application\bin\Debug\net8.0\Estudiantes.Application.exe
 C:\Users\Goyatsu\Desktop\SistemaGestionNotas\SistemaGestionNotas\SistemaGestionNotas.Estudiantes.Application\bin\Debug\net8.0\Estudiantes.Application.deps.json
-C:\Users\Goyatsu\Desktop\SistemaGestionNotas\SistemaGestionNotas\SistemaGestionNotas.Estudiantes.Application\bin\Debug\net8.0\Estudiantes.Application.runtimeconfig.json
 C:\Users\Goyatsu\Desktop\SistemaGestionNotas\SistemaGestionNotas\SistemaGestionNotas.Estudiantes.Application\bin\Debug\net8.0\Estudiantes.Application.dll
 C:\Users\Goyatsu\Desktop\SistemaGestionNotas\SistemaGestionNotas\SistemaGestionNotas.Estudiantes.Application\bin\Debug\net8.0\Estudiantes.Application.pdb
 C:\Users\Goyatsu\Desktop\SistemaGestionNotas\SistemaGestionNotas\SistemaGestionNotas.Estudiantes.Application\bin\Debug\net8.0\Estudiantes.Domain.dll
@@ -18,5 +13,4 @@ C:\Users\Goyatsu\Desktop\SistemaGestionNotas\SistemaGestionNotas\SistemaGestionN
 C:\Users\Goyatsu\Desktop\SistemaGestionNotas\SistemaGestionNotas\SistemaGestionNotas.Estudiantes.Application\obj\Debug\net8.0\Estudiantes.Application.dll
 C:\Users\Goyatsu\Desktop\SistemaGestionNotas\SistemaGestionNotas\SistemaGestionNotas.Estudiantes.Application\obj\Debug\net8.0\refint\Estudiantes.Application.dll
 C:\Users\Goyatsu\Desktop\SistemaGestionNotas\SistemaGestionNotas\SistemaGestionNotas.Estudiantes.Application\obj\Debug\net8.0\Estudiantes.Application.pdb
-C:\Users\Goyatsu\Desktop\SistemaGestionNotas\SistemaGestionNotas\SistemaGestionNotas.Estudiantes.Application\obj\Debug\net8.0\Estudiantes.Application.genruntimeconfig.cache
 C:\Users\Goyatsu\Desktop\SistemaGestionNotas\SistemaGestionNotas\SistemaGestionNotas.Estudiantes.Application\obj\Debug\net8.0\ref\Estudiantes.Application.dll
