@@ -55,3 +55,577 @@ OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
 2026-09-07 21:29:09.418 -05:00 [INF] Executed action Estudiantes.API.Controllers.EstudiantesController.GetAll (Estudiantes.API) in 19.9234ms
 2026-09-07 21:29:09.419 -05:00 [INF] Executed endpoint 'Estudiantes.API.Controllers.EstudiantesController.GetAll (Estudiantes.API)'
 2026-09-07 21:29:09.420 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7061/api/Estudiantes?page=1&pageSize=10 - 200 null application/json; charset=utf-8 31.1451ms
+2026-09-07 22:47:30.277 -05:00 [INF] User profile is available. Using 'C:\Users\Goyatsu\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-09-07 22:47:31.140 -05:00 [INF] Now listening on: https://localhost:7061
+2026-09-07 22:47:31.142 -05:00 [INF] Now listening on: http://localhost:5002
+2026-09-07 22:47:31.202 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-09-07 22:47:31.203 -05:00 [INF] Hosting environment: Development
+2026-09-07 22:47:31.205 -05:00 [INF] Content root path: C:\Users\Goyatsu\Desktop\SistemaGestionNotas\SistemaGestionNotas\SistemaGestionNotas.Estudiantes.API
+2026-09-07 22:47:31.863 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7061/ - null null
+2026-09-07 22:47:32.202 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7061/ - 404 0 null 348.3509ms
+2026-09-07 22:47:32.208 -05:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7061/, Response status code: 404
+2026-09-07 22:52:24.422 -05:00 [INF] User profile is available. Using 'C:\Users\Goyatsu\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-09-07 22:52:24.803 -05:00 [INF] Now listening on: https://localhost:7061
+2026-09-07 22:52:24.804 -05:00 [INF] Now listening on: http://localhost:5002
+2026-09-07 22:52:24.861 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-09-07 22:52:24.862 -05:00 [INF] Hosting environment: Development
+2026-09-07 22:52:24.863 -05:00 [INF] Content root path: C:\Users\Goyatsu\Desktop\SistemaGestionNotas\SistemaGestionNotas\SistemaGestionNotas.Estudiantes.API
+2026-09-07 22:52:25.276 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7061/ - null null
+2026-09-07 22:52:25.483 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7061/ - 404 0 null 213.6946ms
+2026-09-07 22:52:25.490 -05:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7061/, Response status code: 404
+2026-09-07 23:10:35.492 -05:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7061/api/Estudiantes - null null
+2026-09-07 23:10:35.498 -05:00 [INF] CORS policy execution successful.
+2026-09-07 23:10:35.500 -05:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7061/api/Estudiantes - 204 null null 8.0871ms
+2026-09-07 23:10:35.503 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7061/api/Estudiantes - null null
+2026-09-07 23:10:35.506 -05:00 [INF] CORS policy execution successful.
+2026-09-07 23:10:35.553 -05:00 [INF] Executing endpoint 'Estudiantes.API.Controllers.EstudiantesController.GetAll (Estudiantes.API)'
+2026-09-07 23:10:35.570 -05:00 [INF] Route matched with {action = "GetAll", controller = "Estudiantes"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(Int32, Int32) on controller Estudiantes.API.Controllers.EstudiantesController (Estudiantes.API).
+2026-09-07 23:10:36.401 -05:00 [INF] Executed DbCommand (20ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Estudiantes] AS [e]
+2026-09-07 23:10:36.470 -05:00 [INF] Executed DbCommand (19ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[Nombre], [e].[UsuarioId]
+FROM [Estudiantes] AS [e]
+ORDER BY [e].[Id]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2026-09-07 23:10:36.483 -05:00 [INF] Executing OkObjectResult, writing value of type 'Estudiantes.Application.Common.Paginacion`1[[Estudiantes.Application.DTOs.EstudianteDto, Estudiantes.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-09-07 23:10:36.492 -05:00 [INF] Executed action Estudiantes.API.Controllers.EstudiantesController.GetAll (Estudiantes.API) in 917.9194ms
+2026-09-07 23:10:36.493 -05:00 [INF] Executed endpoint 'Estudiantes.API.Controllers.EstudiantesController.GetAll (Estudiantes.API)'
+2026-09-07 23:10:36.499 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7061/api/Estudiantes - 200 null application/json; charset=utf-8 996.7032ms
+2026-09-07 23:13:27.732 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7061/api/Estudiantes?page=1&pageSize=10 - null null
+2026-09-07 23:13:27.738 -05:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '8/09/2026 3:27:54 a. m.', Current time (UTC): '8/09/2026 4:13:27 a. m.'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2026-09-07 23:13:27.753 -05:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '8/09/2026 3:27:54 a. m.', Current time (UTC): '8/09/2026 4:13:27 a. m.'.
+2026-09-07 23:13:27.756 -05:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Admin|Profesor)
+2026-09-07 23:13:27.761 -05:00 [INF] AuthenticationScheme: Bearer was challenged.
+2026-09-07 23:13:27.761 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7061/api/Estudiantes?page=1&pageSize=10 - 401 0 null 29.7245ms
+2026-09-07 23:13:41.199 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7061/api/Estudiantes?page=1&pageSize=10 - null null
+2026-09-07 23:13:41.205 -05:00 [INF] Executing endpoint 'Estudiantes.API.Controllers.EstudiantesController.GetAll (Estudiantes.API)'
+2026-09-07 23:13:41.206 -05:00 [INF] Route matched with {action = "GetAll", controller = "Estudiantes"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(Int32, Int32) on controller Estudiantes.API.Controllers.EstudiantesController (Estudiantes.API).
+2026-09-07 23:13:41.251 -05:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Estudiantes] AS [e]
+2026-09-07 23:13:41.254 -05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[Nombre], [e].[UsuarioId]
+FROM [Estudiantes] AS [e]
+ORDER BY [e].[Id]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2026-09-07 23:13:41.257 -05:00 [INF] Executing OkObjectResult, writing value of type 'Estudiantes.Application.Common.Paginacion`1[[Estudiantes.Application.DTOs.EstudianteDto, Estudiantes.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-09-07 23:13:41.258 -05:00 [INF] Executed action Estudiantes.API.Controllers.EstudiantesController.GetAll (Estudiantes.API) in 50.1864ms
+2026-09-07 23:13:41.259 -05:00 [INF] Executed endpoint 'Estudiantes.API.Controllers.EstudiantesController.GetAll (Estudiantes.API)'
+2026-09-07 23:13:41.260 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7061/api/Estudiantes?page=1&pageSize=10 - 200 null application/json; charset=utf-8 60.8182ms
+2026-09-07 23:22:54.209 -05:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7061/api/Estudiantes - null null
+2026-09-07 23:22:54.212 -05:00 [INF] CORS policy execution successful.
+2026-09-07 23:22:54.213 -05:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7061/api/Estudiantes - 204 null null 3.3893ms
+2026-09-07 23:22:54.214 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7061/api/Estudiantes - null null
+2026-09-07 23:22:54.217 -05:00 [INF] CORS policy execution successful.
+2026-09-07 23:22:54.218 -05:00 [INF] Executing endpoint 'Estudiantes.API.Controllers.EstudiantesController.GetAll (Estudiantes.API)'
+2026-09-07 23:22:54.218 -05:00 [INF] Route matched with {action = "GetAll", controller = "Estudiantes"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(Int32, Int32) on controller Estudiantes.API.Controllers.EstudiantesController (Estudiantes.API).
+2026-09-07 23:22:54.235 -05:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Estudiantes] AS [e]
+2026-09-07 23:22:54.239 -05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[Nombre], [e].[UsuarioId]
+FROM [Estudiantes] AS [e]
+ORDER BY [e].[Id]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2026-09-07 23:22:54.241 -05:00 [INF] Executing OkObjectResult, writing value of type 'Estudiantes.Application.Common.Paginacion`1[[Estudiantes.Application.DTOs.EstudianteDto, Estudiantes.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-09-07 23:22:54.242 -05:00 [INF] Executed action Estudiantes.API.Controllers.EstudiantesController.GetAll (Estudiantes.API) in 22.3802ms
+2026-09-07 23:22:54.243 -05:00 [INF] Executed endpoint 'Estudiantes.API.Controllers.EstudiantesController.GetAll (Estudiantes.API)'
+2026-09-07 23:22:54.244 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7061/api/Estudiantes - 200 null application/json; charset=utf-8 30.6717ms
+2026-09-07 23:23:01.966 -05:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7061/api/Estudiantes?page=1&pageSize=10 - null null
+2026-09-07 23:23:01.969 -05:00 [INF] CORS policy execution successful.
+2026-09-07 23:23:01.970 -05:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7061/api/Estudiantes?page=1&pageSize=10 - 204 null null 3.7262ms
+2026-09-07 23:23:01.971 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7061/api/Estudiantes?page=1&pageSize=10 - null null
+2026-09-07 23:23:01.976 -05:00 [INF] CORS policy execution successful.
+2026-09-07 23:23:01.977 -05:00 [INF] Executing endpoint 'Estudiantes.API.Controllers.EstudiantesController.GetAll (Estudiantes.API)'
+2026-09-07 23:23:01.978 -05:00 [INF] Route matched with {action = "GetAll", controller = "Estudiantes"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(Int32, Int32) on controller Estudiantes.API.Controllers.EstudiantesController (Estudiantes.API).
+2026-09-07 23:23:01.981 -05:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Estudiantes] AS [e]
+2026-09-07 23:23:01.984 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[Nombre], [e].[UsuarioId]
+FROM [Estudiantes] AS [e]
+ORDER BY [e].[Id]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2026-09-07 23:23:01.987 -05:00 [INF] Executing OkObjectResult, writing value of type 'Estudiantes.Application.Common.Paginacion`1[[Estudiantes.Application.DTOs.EstudianteDto, Estudiantes.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-09-07 23:23:01.989 -05:00 [INF] Executed action Estudiantes.API.Controllers.EstudiantesController.GetAll (Estudiantes.API) in 9.2938ms
+2026-09-07 23:23:01.990 -05:00 [INF] Executed endpoint 'Estudiantes.API.Controllers.EstudiantesController.GetAll (Estudiantes.API)'
+2026-09-07 23:23:01.991 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7061/api/Estudiantes?page=1&pageSize=10 - 200 null application/json; charset=utf-8 20.0021ms
+2026-09-07 23:25:37.857 -05:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7061/api/Estudiantes?page=1&pageSize=10 - null null
+2026-09-07 23:25:37.862 -05:00 [INF] CORS policy execution successful.
+2026-09-07 23:25:37.863 -05:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7061/api/Estudiantes?page=1&pageSize=10 - 204 null null 6.8271ms
+2026-09-07 23:25:37.864 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7061/api/Estudiantes?page=1&pageSize=10 - null null
+2026-09-07 23:25:37.868 -05:00 [INF] CORS policy execution successful.
+2026-09-07 23:25:37.869 -05:00 [INF] Executing endpoint 'Estudiantes.API.Controllers.EstudiantesController.GetAll (Estudiantes.API)'
+2026-09-07 23:25:37.870 -05:00 [INF] Route matched with {action = "GetAll", controller = "Estudiantes"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(Int32, Int32) on controller Estudiantes.API.Controllers.EstudiantesController (Estudiantes.API).
+2026-09-07 23:25:37.874 -05:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Estudiantes] AS [e]
+2026-09-07 23:25:37.877 -05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[Nombre], [e].[UsuarioId]
+FROM [Estudiantes] AS [e]
+ORDER BY [e].[Id]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2026-09-07 23:25:37.879 -05:00 [INF] Executing OkObjectResult, writing value of type 'Estudiantes.Application.Common.Paginacion`1[[Estudiantes.Application.DTOs.EstudianteDto, Estudiantes.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-09-07 23:25:37.881 -05:00 [INF] Executed action Estudiantes.API.Controllers.EstudiantesController.GetAll (Estudiantes.API) in 9.1426ms
+2026-09-07 23:25:37.882 -05:00 [INF] Executed endpoint 'Estudiantes.API.Controllers.EstudiantesController.GetAll (Estudiantes.API)'
+2026-09-07 23:25:37.883 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7061/api/Estudiantes?page=1&pageSize=10 - 200 null application/json; charset=utf-8 18.5528ms
+2026-09-07 23:26:02.663 -05:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7061/api/Estudiantes?page=1&pageSize=10 - null null
+2026-09-07 23:26:02.669 -05:00 [INF] CORS policy execution successful.
+2026-09-07 23:26:02.669 -05:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7061/api/Estudiantes?page=1&pageSize=10 - 204 null null 6.394ms
+2026-09-07 23:26:02.671 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7061/api/Estudiantes?page=1&pageSize=10 - null null
+2026-09-07 23:26:02.674 -05:00 [INF] CORS policy execution successful.
+2026-09-07 23:26:02.675 -05:00 [INF] Executing endpoint 'Estudiantes.API.Controllers.EstudiantesController.GetAll (Estudiantes.API)'
+2026-09-07 23:26:02.676 -05:00 [INF] Route matched with {action = "GetAll", controller = "Estudiantes"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(Int32, Int32) on controller Estudiantes.API.Controllers.EstudiantesController (Estudiantes.API).
+2026-09-07 23:26:02.680 -05:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Estudiantes] AS [e]
+2026-09-07 23:26:02.683 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[Nombre], [e].[UsuarioId]
+FROM [Estudiantes] AS [e]
+ORDER BY [e].[Id]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2026-09-07 23:26:02.685 -05:00 [INF] Executing OkObjectResult, writing value of type 'Estudiantes.Application.Common.Paginacion`1[[Estudiantes.Application.DTOs.EstudianteDto, Estudiantes.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-09-07 23:26:02.687 -05:00 [INF] Executed action Estudiantes.API.Controllers.EstudiantesController.GetAll (Estudiantes.API) in 9.0785ms
+2026-09-07 23:26:02.688 -05:00 [INF] Executed endpoint 'Estudiantes.API.Controllers.EstudiantesController.GetAll (Estudiantes.API)'
+2026-09-07 23:26:02.689 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7061/api/Estudiantes?page=1&pageSize=10 - 200 null application/json; charset=utf-8 18.1369ms
+2026-09-07 23:27:38.526 -05:00 [INF] Request starting HTTP/1.1 POST https://localhost:7061/api/Estudiantes - application/json; charset=utf-8 null
+2026-09-07 23:27:38.529 -05:00 [INF] Executing endpoint 'Estudiantes.API.Controllers.EstudiantesController.Create (Estudiantes.API)'
+2026-09-07 23:27:38.533 -05:00 [INF] Route matched with {action = "Create", controller = "Estudiantes"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(Estudiantes.Application.DTOs.CreateEstudianteDto) on controller Estudiantes.API.Controllers.EstudiantesController (Estudiantes.API).
+2026-09-07 23:27:38.651 -05:00 [INF] Executed DbCommand (2ms) [Parameters=[@p0='?' (Size = 100), @p1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Estudiantes] ([Nombre], [UsuarioId])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1);
+2026-09-07 23:27:38.673 -05:00 [INF] Estudiante creado correctamente. IdEstudiante: 3, UsuarioId: 4
+2026-09-07 23:27:38.675 -05:00 [INF] Executing CreatedAtActionResult, writing value of type 'Estudiantes.Application.DTOs.EstudianteDto'.
+2026-09-07 23:27:38.693 -05:00 [INF] Executed action Estudiantes.API.Controllers.EstudiantesController.Create (Estudiantes.API) in 158.3048ms
+2026-09-07 23:27:38.694 -05:00 [INF] Executed endpoint 'Estudiantes.API.Controllers.EstudiantesController.Create (Estudiantes.API)'
+2026-09-07 23:27:38.695 -05:00 [INF] Request finished HTTP/1.1 POST https://localhost:7061/api/Estudiantes - 201 null application/json; charset=utf-8 171.1252ms
+2026-09-07 23:28:07.497 -05:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7061/api/Estudiantes?page=1&pageSize=1 - null null
+2026-09-07 23:28:07.505 -05:00 [INF] CORS policy execution successful.
+2026-09-07 23:28:07.507 -05:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7061/api/Estudiantes?page=1&pageSize=1 - 204 null null 9.1836ms
+2026-09-07 23:28:07.508 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7061/api/Estudiantes?page=1&pageSize=1 - null null
+2026-09-07 23:28:07.514 -05:00 [INF] CORS policy execution successful.
+2026-09-07 23:28:07.515 -05:00 [INF] Executing endpoint 'Estudiantes.API.Controllers.EstudiantesController.GetAll (Estudiantes.API)'
+2026-09-07 23:28:07.516 -05:00 [INF] Route matched with {action = "GetAll", controller = "Estudiantes"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(Int32, Int32) on controller Estudiantes.API.Controllers.EstudiantesController (Estudiantes.API).
+2026-09-07 23:28:07.521 -05:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Estudiantes] AS [e]
+2026-09-07 23:28:07.526 -05:00 [INF] Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[Nombre], [e].[UsuarioId]
+FROM [Estudiantes] AS [e]
+ORDER BY [e].[Id]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2026-09-07 23:28:07.529 -05:00 [INF] Executing OkObjectResult, writing value of type 'Estudiantes.Application.Common.Paginacion`1[[Estudiantes.Application.DTOs.EstudianteDto, Estudiantes.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-09-07 23:28:07.531 -05:00 [INF] Executed action Estudiantes.API.Controllers.EstudiantesController.GetAll (Estudiantes.API) in 12.5359ms
+2026-09-07 23:28:07.532 -05:00 [INF] Executed endpoint 'Estudiantes.API.Controllers.EstudiantesController.GetAll (Estudiantes.API)'
+2026-09-07 23:28:07.534 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7061/api/Estudiantes?page=1&pageSize=1 - 200 null application/json; charset=utf-8 25.8206ms
+2026-09-07 23:28:09.577 -05:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7061/api/Estudiantes?page=2&pageSize=1 - null null
+2026-09-07 23:28:09.579 -05:00 [INF] CORS policy execution successful.
+2026-09-07 23:28:09.580 -05:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7061/api/Estudiantes?page=2&pageSize=1 - 204 null null 2.9158ms
+2026-09-07 23:28:09.581 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7061/api/Estudiantes?page=2&pageSize=1 - null null
+2026-09-07 23:28:09.584 -05:00 [INF] CORS policy execution successful.
+2026-09-07 23:28:09.584 -05:00 [INF] Executing endpoint 'Estudiantes.API.Controllers.EstudiantesController.GetAll (Estudiantes.API)'
+2026-09-07 23:28:09.585 -05:00 [INF] Route matched with {action = "GetAll", controller = "Estudiantes"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(Int32, Int32) on controller Estudiantes.API.Controllers.EstudiantesController (Estudiantes.API).
+2026-09-07 23:28:09.588 -05:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Estudiantes] AS [e]
+2026-09-07 23:28:09.595 -05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[Nombre], [e].[UsuarioId]
+FROM [Estudiantes] AS [e]
+ORDER BY [e].[Id]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_0 ROWS ONLY
+2026-09-07 23:28:09.597 -05:00 [INF] Executing OkObjectResult, writing value of type 'Estudiantes.Application.Common.Paginacion`1[[Estudiantes.Application.DTOs.EstudianteDto, Estudiantes.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-09-07 23:28:09.598 -05:00 [INF] Executed action Estudiantes.API.Controllers.EstudiantesController.GetAll (Estudiantes.API) in 11.1354ms
+2026-09-07 23:28:09.599 -05:00 [INF] Executed endpoint 'Estudiantes.API.Controllers.EstudiantesController.GetAll (Estudiantes.API)'
+2026-09-07 23:28:09.600 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7061/api/Estudiantes?page=2&pageSize=1 - 200 null application/json; charset=utf-8 19.3155ms
+2026-09-07 23:28:11.099 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7061/api/Estudiantes?page=1&pageSize=1 - null null
+2026-09-07 23:28:11.101 -05:00 [INF] CORS policy execution successful.
+2026-09-07 23:28:11.102 -05:00 [INF] Executing endpoint 'Estudiantes.API.Controllers.EstudiantesController.GetAll (Estudiantes.API)'
+2026-09-07 23:28:11.103 -05:00 [INF] Route matched with {action = "GetAll", controller = "Estudiantes"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(Int32, Int32) on controller Estudiantes.API.Controllers.EstudiantesController (Estudiantes.API).
+2026-09-07 23:28:11.106 -05:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Estudiantes] AS [e]
+2026-09-07 23:28:11.109 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[Nombre], [e].[UsuarioId]
+FROM [Estudiantes] AS [e]
+ORDER BY [e].[Id]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2026-09-07 23:28:11.111 -05:00 [INF] Executing OkObjectResult, writing value of type 'Estudiantes.Application.Common.Paginacion`1[[Estudiantes.Application.DTOs.EstudianteDto, Estudiantes.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-09-07 23:28:11.112 -05:00 [INF] Executed action Estudiantes.API.Controllers.EstudiantesController.GetAll (Estudiantes.API) in 7.9593ms
+2026-09-07 23:28:11.113 -05:00 [INF] Executed endpoint 'Estudiantes.API.Controllers.EstudiantesController.GetAll (Estudiantes.API)'
+2026-09-07 23:28:11.114 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7061/api/Estudiantes?page=1&pageSize=1 - 200 null application/json; charset=utf-8 15.5403ms
+2026-09-07 23:28:11.866 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7061/api/Estudiantes?page=2&pageSize=1 - null null
+2026-09-07 23:28:11.868 -05:00 [INF] CORS policy execution successful.
+2026-09-07 23:28:11.869 -05:00 [INF] Executing endpoint 'Estudiantes.API.Controllers.EstudiantesController.GetAll (Estudiantes.API)'
+2026-09-07 23:28:11.869 -05:00 [INF] Route matched with {action = "GetAll", controller = "Estudiantes"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(Int32, Int32) on controller Estudiantes.API.Controllers.EstudiantesController (Estudiantes.API).
+2026-09-07 23:28:11.872 -05:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Estudiantes] AS [e]
+2026-09-07 23:28:11.875 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[Nombre], [e].[UsuarioId]
+FROM [Estudiantes] AS [e]
+ORDER BY [e].[Id]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_0 ROWS ONLY
+2026-09-07 23:28:11.877 -05:00 [INF] Executing OkObjectResult, writing value of type 'Estudiantes.Application.Common.Paginacion`1[[Estudiantes.Application.DTOs.EstudianteDto, Estudiantes.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-09-07 23:28:11.878 -05:00 [INF] Executed action Estudiantes.API.Controllers.EstudiantesController.GetAll (Estudiantes.API) in 6.9052ms
+2026-09-07 23:28:11.879 -05:00 [INF] Executed endpoint 'Estudiantes.API.Controllers.EstudiantesController.GetAll (Estudiantes.API)'
+2026-09-07 23:28:11.879 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7061/api/Estudiantes?page=2&pageSize=1 - 200 null application/json; charset=utf-8 13.7479ms
+2026-09-07 23:28:12.753 -05:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7061/api/Estudiantes?page=1&pageSize=1 - null null
+2026-09-07 23:28:12.755 -05:00 [INF] CORS policy execution successful.
+2026-09-07 23:28:12.756 -05:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7061/api/Estudiantes?page=1&pageSize=1 - 204 null null 2.9503ms
+2026-09-07 23:28:12.757 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7061/api/Estudiantes?page=1&pageSize=1 - null null
+2026-09-07 23:28:12.761 -05:00 [INF] CORS policy execution successful.
+2026-09-07 23:28:12.762 -05:00 [INF] Executing endpoint 'Estudiantes.API.Controllers.EstudiantesController.GetAll (Estudiantes.API)'
+2026-09-07 23:28:12.762 -05:00 [INF] Route matched with {action = "GetAll", controller = "Estudiantes"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(Int32, Int32) on controller Estudiantes.API.Controllers.EstudiantesController (Estudiantes.API).
+2026-09-07 23:28:12.766 -05:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Estudiantes] AS [e]
+2026-09-07 23:28:12.768 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[Nombre], [e].[UsuarioId]
+FROM [Estudiantes] AS [e]
+ORDER BY [e].[Id]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2026-09-07 23:28:12.770 -05:00 [INF] Executing OkObjectResult, writing value of type 'Estudiantes.Application.Common.Paginacion`1[[Estudiantes.Application.DTOs.EstudianteDto, Estudiantes.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-09-07 23:28:12.771 -05:00 [INF] Executed action Estudiantes.API.Controllers.EstudiantesController.GetAll (Estudiantes.API) in 7.0169ms
+2026-09-07 23:28:12.772 -05:00 [INF] Executed endpoint 'Estudiantes.API.Controllers.EstudiantesController.GetAll (Estudiantes.API)'
+2026-09-07 23:28:12.773 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7061/api/Estudiantes?page=1&pageSize=1 - 200 null application/json; charset=utf-8 16.1105ms
+2026-09-07 23:28:13.333 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7061/api/Estudiantes?page=2&pageSize=1 - null null
+2026-09-07 23:28:13.335 -05:00 [INF] CORS policy execution successful.
+2026-09-07 23:28:13.336 -05:00 [INF] Executing endpoint 'Estudiantes.API.Controllers.EstudiantesController.GetAll (Estudiantes.API)'
+2026-09-07 23:28:13.336 -05:00 [INF] Route matched with {action = "GetAll", controller = "Estudiantes"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(Int32, Int32) on controller Estudiantes.API.Controllers.EstudiantesController (Estudiantes.API).
+2026-09-07 23:28:13.340 -05:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Estudiantes] AS [e]
+2026-09-07 23:28:13.342 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[Nombre], [e].[UsuarioId]
+FROM [Estudiantes] AS [e]
+ORDER BY [e].[Id]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_0 ROWS ONLY
+2026-09-07 23:28:13.344 -05:00 [INF] Executing OkObjectResult, writing value of type 'Estudiantes.Application.Common.Paginacion`1[[Estudiantes.Application.DTOs.EstudianteDto, Estudiantes.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-09-07 23:28:13.345 -05:00 [INF] Executed action Estudiantes.API.Controllers.EstudiantesController.GetAll (Estudiantes.API) in 6.8356ms
+2026-09-07 23:28:13.346 -05:00 [INF] Executed endpoint 'Estudiantes.API.Controllers.EstudiantesController.GetAll (Estudiantes.API)'
+2026-09-07 23:28:13.347 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7061/api/Estudiantes?page=2&pageSize=1 - 200 null application/json; charset=utf-8 13.6875ms
+2026-09-07 23:28:14.158 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7061/api/Estudiantes?page=1&pageSize=1 - null null
+2026-09-07 23:28:14.160 -05:00 [INF] CORS policy execution successful.
+2026-09-07 23:28:14.161 -05:00 [INF] Executing endpoint 'Estudiantes.API.Controllers.EstudiantesController.GetAll (Estudiantes.API)'
+2026-09-07 23:28:14.162 -05:00 [INF] Route matched with {action = "GetAll", controller = "Estudiantes"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(Int32, Int32) on controller Estudiantes.API.Controllers.EstudiantesController (Estudiantes.API).
+2026-09-07 23:28:14.165 -05:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Estudiantes] AS [e]
+2026-09-07 23:28:14.167 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[Nombre], [e].[UsuarioId]
+FROM [Estudiantes] AS [e]
+ORDER BY [e].[Id]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2026-09-07 23:28:14.169 -05:00 [INF] Executing OkObjectResult, writing value of type 'Estudiantes.Application.Common.Paginacion`1[[Estudiantes.Application.DTOs.EstudianteDto, Estudiantes.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-09-07 23:28:14.170 -05:00 [INF] Executed action Estudiantes.API.Controllers.EstudiantesController.GetAll (Estudiantes.API) in 6.782ms
+2026-09-07 23:28:14.171 -05:00 [INF] Executed endpoint 'Estudiantes.API.Controllers.EstudiantesController.GetAll (Estudiantes.API)'
+2026-09-07 23:28:14.172 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7061/api/Estudiantes?page=1&pageSize=1 - 200 null application/json; charset=utf-8 13.7659ms
+2026-09-07 23:28:14.730 -05:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7061/api/Estudiantes?page=2&pageSize=1 - null null
+2026-09-07 23:28:14.732 -05:00 [INF] CORS policy execution successful.
+2026-09-07 23:28:14.733 -05:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7061/api/Estudiantes?page=2&pageSize=1 - 204 null null 2.7267ms
+2026-09-07 23:28:14.734 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7061/api/Estudiantes?page=2&pageSize=1 - null null
+2026-09-07 23:28:14.737 -05:00 [INF] CORS policy execution successful.
+2026-09-07 23:28:14.738 -05:00 [INF] Executing endpoint 'Estudiantes.API.Controllers.EstudiantesController.GetAll (Estudiantes.API)'
+2026-09-07 23:28:14.739 -05:00 [INF] Route matched with {action = "GetAll", controller = "Estudiantes"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(Int32, Int32) on controller Estudiantes.API.Controllers.EstudiantesController (Estudiantes.API).
+2026-09-07 23:28:14.742 -05:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Estudiantes] AS [e]
+2026-09-07 23:28:14.745 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[Nombre], [e].[UsuarioId]
+FROM [Estudiantes] AS [e]
+ORDER BY [e].[Id]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_0 ROWS ONLY
+2026-09-07 23:28:14.747 -05:00 [INF] Executing OkObjectResult, writing value of type 'Estudiantes.Application.Common.Paginacion`1[[Estudiantes.Application.DTOs.EstudianteDto, Estudiantes.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-09-07 23:28:14.748 -05:00 [INF] Executed action Estudiantes.API.Controllers.EstudiantesController.GetAll (Estudiantes.API) in 7.3787ms
+2026-09-07 23:28:14.749 -05:00 [INF] Executed endpoint 'Estudiantes.API.Controllers.EstudiantesController.GetAll (Estudiantes.API)'
+2026-09-07 23:28:14.750 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7061/api/Estudiantes?page=2&pageSize=1 - 200 null application/json; charset=utf-8 16.288ms
+2026-09-07 23:28:15.182 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7061/api/Estudiantes?page=1&pageSize=1 - null null
+2026-09-07 23:28:15.185 -05:00 [INF] CORS policy execution successful.
+2026-09-07 23:28:15.185 -05:00 [INF] Executing endpoint 'Estudiantes.API.Controllers.EstudiantesController.GetAll (Estudiantes.API)'
+2026-09-07 23:28:15.186 -05:00 [INF] Route matched with {action = "GetAll", controller = "Estudiantes"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(Int32, Int32) on controller Estudiantes.API.Controllers.EstudiantesController (Estudiantes.API).
+2026-09-07 23:28:15.189 -05:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Estudiantes] AS [e]
+2026-09-07 23:28:15.192 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[Nombre], [e].[UsuarioId]
+FROM [Estudiantes] AS [e]
+ORDER BY [e].[Id]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2026-09-07 23:28:15.194 -05:00 [INF] Executing OkObjectResult, writing value of type 'Estudiantes.Application.Common.Paginacion`1[[Estudiantes.Application.DTOs.EstudianteDto, Estudiantes.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-09-07 23:28:15.195 -05:00 [INF] Executed action Estudiantes.API.Controllers.EstudiantesController.GetAll (Estudiantes.API) in 7.3936ms
+2026-09-07 23:28:15.196 -05:00 [INF] Executed endpoint 'Estudiantes.API.Controllers.EstudiantesController.GetAll (Estudiantes.API)'
+2026-09-07 23:28:15.197 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7061/api/Estudiantes?page=1&pageSize=1 - 200 null application/json; charset=utf-8 15.1252ms
+2026-09-07 23:28:15.592 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7061/api/Estudiantes?page=2&pageSize=1 - null null
+2026-09-07 23:28:15.594 -05:00 [INF] CORS policy execution successful.
+2026-09-07 23:28:15.595 -05:00 [INF] Executing endpoint 'Estudiantes.API.Controllers.EstudiantesController.GetAll (Estudiantes.API)'
+2026-09-07 23:28:15.595 -05:00 [INF] Route matched with {action = "GetAll", controller = "Estudiantes"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(Int32, Int32) on controller Estudiantes.API.Controllers.EstudiantesController (Estudiantes.API).
+2026-09-07 23:28:15.599 -05:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Estudiantes] AS [e]
+2026-09-07 23:28:15.601 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[Nombre], [e].[UsuarioId]
+FROM [Estudiantes] AS [e]
+ORDER BY [e].[Id]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_0 ROWS ONLY
+2026-09-07 23:28:15.603 -05:00 [INF] Executing OkObjectResult, writing value of type 'Estudiantes.Application.Common.Paginacion`1[[Estudiantes.Application.DTOs.EstudianteDto, Estudiantes.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-09-07 23:28:15.604 -05:00 [INF] Executed action Estudiantes.API.Controllers.EstudiantesController.GetAll (Estudiantes.API) in 7.4664ms
+2026-09-07 23:28:15.605 -05:00 [INF] Executed endpoint 'Estudiantes.API.Controllers.EstudiantesController.GetAll (Estudiantes.API)'
+2026-09-07 23:28:15.606 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7061/api/Estudiantes?page=2&pageSize=1 - 200 null application/json; charset=utf-8 14.1431ms
+2026-09-07 23:28:16.035 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7061/api/Estudiantes?page=1&pageSize=1 - null null
+2026-09-07 23:28:16.037 -05:00 [INF] CORS policy execution successful.
+2026-09-07 23:28:16.038 -05:00 [INF] Executing endpoint 'Estudiantes.API.Controllers.EstudiantesController.GetAll (Estudiantes.API)'
+2026-09-07 23:28:16.039 -05:00 [INF] Route matched with {action = "GetAll", controller = "Estudiantes"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(Int32, Int32) on controller Estudiantes.API.Controllers.EstudiantesController (Estudiantes.API).
+2026-09-07 23:28:16.042 -05:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Estudiantes] AS [e]
+2026-09-07 23:28:16.045 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[Nombre], [e].[UsuarioId]
+FROM [Estudiantes] AS [e]
+ORDER BY [e].[Id]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2026-09-07 23:28:16.047 -05:00 [INF] Executing OkObjectResult, writing value of type 'Estudiantes.Application.Common.Paginacion`1[[Estudiantes.Application.DTOs.EstudianteDto, Estudiantes.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-09-07 23:28:16.048 -05:00 [INF] Executed action Estudiantes.API.Controllers.EstudiantesController.GetAll (Estudiantes.API) in 7.8095ms
+2026-09-07 23:28:16.050 -05:00 [INF] Executed endpoint 'Estudiantes.API.Controllers.EstudiantesController.GetAll (Estudiantes.API)'
+2026-09-07 23:28:16.050 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7061/api/Estudiantes?page=1&pageSize=1 - 200 null application/json; charset=utf-8 15.3975ms
+2026-09-07 23:28:16.579 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7061/api/Estudiantes?page=2&pageSize=1 - null null
+2026-09-07 23:28:16.581 -05:00 [INF] CORS policy execution successful.
+2026-09-07 23:28:16.582 -05:00 [INF] Executing endpoint 'Estudiantes.API.Controllers.EstudiantesController.GetAll (Estudiantes.API)'
+2026-09-07 23:28:16.583 -05:00 [INF] Route matched with {action = "GetAll", controller = "Estudiantes"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(Int32, Int32) on controller Estudiantes.API.Controllers.EstudiantesController (Estudiantes.API).
+2026-09-07 23:28:16.586 -05:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Estudiantes] AS [e]
+2026-09-07 23:28:16.589 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[Nombre], [e].[UsuarioId]
+FROM [Estudiantes] AS [e]
+ORDER BY [e].[Id]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_0 ROWS ONLY
+2026-09-07 23:28:16.591 -05:00 [INF] Executing OkObjectResult, writing value of type 'Estudiantes.Application.Common.Paginacion`1[[Estudiantes.Application.DTOs.EstudianteDto, Estudiantes.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-09-07 23:28:16.592 -05:00 [INF] Executed action Estudiantes.API.Controllers.EstudiantesController.GetAll (Estudiantes.API) in 7.4743ms
+2026-09-07 23:28:16.593 -05:00 [INF] Executed endpoint 'Estudiantes.API.Controllers.EstudiantesController.GetAll (Estudiantes.API)'
+2026-09-07 23:28:16.594 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7061/api/Estudiantes?page=2&pageSize=1 - 200 null application/json; charset=utf-8 14.9312ms
+2026-09-07 23:28:16.972 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7061/api/Estudiantes?page=1&pageSize=1 - null null
+2026-09-07 23:28:16.974 -05:00 [INF] CORS policy execution successful.
+2026-09-07 23:28:16.975 -05:00 [INF] Executing endpoint 'Estudiantes.API.Controllers.EstudiantesController.GetAll (Estudiantes.API)'
+2026-09-07 23:28:16.976 -05:00 [INF] Route matched with {action = "GetAll", controller = "Estudiantes"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(Int32, Int32) on controller Estudiantes.API.Controllers.EstudiantesController (Estudiantes.API).
+2026-09-07 23:28:16.979 -05:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Estudiantes] AS [e]
+2026-09-07 23:28:16.985 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[Nombre], [e].[UsuarioId]
+FROM [Estudiantes] AS [e]
+ORDER BY [e].[Id]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2026-09-07 23:28:16.987 -05:00 [INF] Executing OkObjectResult, writing value of type 'Estudiantes.Application.Common.Paginacion`1[[Estudiantes.Application.DTOs.EstudianteDto, Estudiantes.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-09-07 23:28:16.988 -05:00 [INF] Executed action Estudiantes.API.Controllers.EstudiantesController.GetAll (Estudiantes.API) in 10.5445ms
+2026-09-07 23:28:16.989 -05:00 [INF] Executed endpoint 'Estudiantes.API.Controllers.EstudiantesController.GetAll (Estudiantes.API)'
+2026-09-07 23:28:16.990 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7061/api/Estudiantes?page=1&pageSize=1 - 200 null application/json; charset=utf-8 17.8925ms
+2026-09-07 23:28:20.188 -05:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7061/api/Estudiantes?page=1&pageSize=10 - null null
+2026-09-07 23:28:20.190 -05:00 [INF] CORS policy execution successful.
+2026-09-07 23:28:20.191 -05:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7061/api/Estudiantes?page=1&pageSize=10 - 204 null null 3.1285ms
+2026-09-07 23:28:20.192 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7061/api/Estudiantes?page=1&pageSize=10 - null null
+2026-09-07 23:28:20.196 -05:00 [INF] CORS policy execution successful.
+2026-09-07 23:28:20.197 -05:00 [INF] Executing endpoint 'Estudiantes.API.Controllers.EstudiantesController.GetAll (Estudiantes.API)'
+2026-09-07 23:28:20.197 -05:00 [INF] Route matched with {action = "GetAll", controller = "Estudiantes"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(Int32, Int32) on controller Estudiantes.API.Controllers.EstudiantesController (Estudiantes.API).
+2026-09-07 23:28:20.201 -05:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Estudiantes] AS [e]
+2026-09-07 23:28:20.203 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[Nombre], [e].[UsuarioId]
+FROM [Estudiantes] AS [e]
+ORDER BY [e].[Id]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2026-09-07 23:28:20.206 -05:00 [INF] Executing OkObjectResult, writing value of type 'Estudiantes.Application.Common.Paginacion`1[[Estudiantes.Application.DTOs.EstudianteDto, Estudiantes.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-09-07 23:28:20.207 -05:00 [INF] Executed action Estudiantes.API.Controllers.EstudiantesController.GetAll (Estudiantes.API) in 7.783ms
+2026-09-07 23:28:20.208 -05:00 [INF] Executed endpoint 'Estudiantes.API.Controllers.EstudiantesController.GetAll (Estudiantes.API)'
+2026-09-07 23:28:20.209 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7061/api/Estudiantes?page=1&pageSize=10 - 200 null application/json; charset=utf-8 17.2836ms
+2026-09-07 23:32:53.171 -05:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7061/api/Estudiantes?page=1&pageSize=10 - null null
+2026-09-07 23:32:53.176 -05:00 [INF] CORS policy execution successful.
+2026-09-07 23:32:53.177 -05:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7061/api/Estudiantes?page=1&pageSize=10 - 204 null null 6.3763ms
+2026-09-07 23:32:53.178 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7061/api/Estudiantes?page=1&pageSize=10 - null null
+2026-09-07 23:32:53.181 -05:00 [INF] CORS policy execution successful.
+2026-09-07 23:32:53.182 -05:00 [INF] Executing endpoint 'Estudiantes.API.Controllers.EstudiantesController.GetAll (Estudiantes.API)'
+2026-09-07 23:32:53.183 -05:00 [INF] Route matched with {action = "GetAll", controller = "Estudiantes"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(Int32, Int32) on controller Estudiantes.API.Controllers.EstudiantesController (Estudiantes.API).
+2026-09-07 23:32:53.187 -05:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Estudiantes] AS [e]
+2026-09-07 23:32:53.190 -05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[Nombre], [e].[UsuarioId]
+FROM [Estudiantes] AS [e]
+ORDER BY [e].[Id]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2026-09-07 23:32:53.192 -05:00 [INF] Executing OkObjectResult, writing value of type 'Estudiantes.Application.Common.Paginacion`1[[Estudiantes.Application.DTOs.EstudianteDto, Estudiantes.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-09-07 23:32:53.194 -05:00 [INF] Executed action Estudiantes.API.Controllers.EstudiantesController.GetAll (Estudiantes.API) in 9.3311ms
+2026-09-07 23:32:53.195 -05:00 [INF] Executed endpoint 'Estudiantes.API.Controllers.EstudiantesController.GetAll (Estudiantes.API)'
+2026-09-07 23:32:53.196 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7061/api/Estudiantes?page=1&pageSize=10 - 200 null application/json; charset=utf-8 17.7043ms
+2026-09-07 23:33:10.085 -05:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7061/api/Estudiantes?page=1&pageSize=10 - null null
+2026-09-07 23:33:10.088 -05:00 [INF] CORS policy execution successful.
+2026-09-07 23:33:10.088 -05:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7061/api/Estudiantes?page=1&pageSize=10 - 204 null null 3.3432ms
+2026-09-07 23:33:10.090 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7061/api/Estudiantes?page=1&pageSize=10 - null null
+2026-09-07 23:33:10.093 -05:00 [INF] CORS policy execution successful.
+2026-09-07 23:33:10.094 -05:00 [INF] Executing endpoint 'Estudiantes.API.Controllers.EstudiantesController.GetAll (Estudiantes.API)'
+2026-09-07 23:33:10.095 -05:00 [INF] Route matched with {action = "GetAll", controller = "Estudiantes"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(Int32, Int32) on controller Estudiantes.API.Controllers.EstudiantesController (Estudiantes.API).
+2026-09-07 23:33:10.099 -05:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Estudiantes] AS [e]
+2026-09-07 23:33:10.102 -05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[Nombre], [e].[UsuarioId]
+FROM [Estudiantes] AS [e]
+ORDER BY [e].[Id]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2026-09-07 23:33:10.106 -05:00 [INF] Executing OkObjectResult, writing value of type 'Estudiantes.Application.Common.Paginacion`1[[Estudiantes.Application.DTOs.EstudianteDto, Estudiantes.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-09-07 23:33:10.107 -05:00 [INF] Executed action Estudiantes.API.Controllers.EstudiantesController.GetAll (Estudiantes.API) in 10.2318ms
+2026-09-07 23:33:10.108 -05:00 [INF] Executed endpoint 'Estudiantes.API.Controllers.EstudiantesController.GetAll (Estudiantes.API)'
+2026-09-07 23:33:10.109 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7061/api/Estudiantes?page=1&pageSize=10 - 200 null application/json; charset=utf-8 19.2344ms
+2026-09-07 23:40:40.065 -05:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7061/api/Estudiantes?page=1&pageSize=10 - null null
+2026-09-07 23:40:40.072 -05:00 [INF] CORS policy execution successful.
+2026-09-07 23:40:40.073 -05:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7061/api/Estudiantes?page=1&pageSize=10 - 204 null null 8.3514ms
+2026-09-07 23:40:40.074 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7061/api/Estudiantes?page=1&pageSize=10 - null null
+2026-09-07 23:40:40.078 -05:00 [INF] CORS policy execution successful.
+2026-09-07 23:40:40.079 -05:00 [INF] Executing endpoint 'Estudiantes.API.Controllers.EstudiantesController.GetAll (Estudiantes.API)'
+2026-09-07 23:40:40.080 -05:00 [INF] Route matched with {action = "GetAll", controller = "Estudiantes"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(Int32, Int32) on controller Estudiantes.API.Controllers.EstudiantesController (Estudiantes.API).
+2026-09-07 23:40:40.093 -05:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Estudiantes] AS [e]
+2026-09-07 23:40:40.097 -05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[Nombre], [e].[UsuarioId]
+FROM [Estudiantes] AS [e]
+ORDER BY [e].[Id]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2026-09-07 23:40:40.099 -05:00 [INF] Executing OkObjectResult, writing value of type 'Estudiantes.Application.Common.Paginacion`1[[Estudiantes.Application.DTOs.EstudianteDto, Estudiantes.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-09-07 23:40:40.100 -05:00 [INF] Executed action Estudiantes.API.Controllers.EstudiantesController.GetAll (Estudiantes.API) in 17.4012ms
+2026-09-07 23:40:40.102 -05:00 [INF] Executed endpoint 'Estudiantes.API.Controllers.EstudiantesController.GetAll (Estudiantes.API)'
+2026-09-07 23:40:40.103 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7061/api/Estudiantes?page=1&pageSize=10 - 200 null application/json; charset=utf-8 29.1101ms
+2026-09-07 23:48:20.950 -05:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7061/api/Estudiantes - null null
+2026-09-07 23:48:20.953 -05:00 [INF] CORS policy execution successful.
+2026-09-07 23:48:20.953 -05:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7061/api/Estudiantes - 204 null null 3.7142ms
+2026-09-07 23:48:20.954 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7061/api/Estudiantes - null null
+2026-09-07 23:48:20.958 -05:00 [INF] CORS policy execution successful.
+2026-09-07 23:48:20.959 -05:00 [INF] Executing endpoint 'Estudiantes.API.Controllers.EstudiantesController.GetAll (Estudiantes.API)'
+2026-09-07 23:48:20.960 -05:00 [INF] Route matched with {action = "GetAll", controller = "Estudiantes"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(Int32, Int32) on controller Estudiantes.API.Controllers.EstudiantesController (Estudiantes.API).
+2026-09-07 23:48:20.970 -05:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Estudiantes] AS [e]
+2026-09-07 23:48:20.972 -05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[Nombre], [e].[UsuarioId]
+FROM [Estudiantes] AS [e]
+ORDER BY [e].[Id]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2026-09-07 23:48:20.975 -05:00 [INF] Executing OkObjectResult, writing value of type 'Estudiantes.Application.Common.Paginacion`1[[Estudiantes.Application.DTOs.EstudianteDto, Estudiantes.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-09-07 23:48:20.976 -05:00 [INF] Executed action Estudiantes.API.Controllers.EstudiantesController.GetAll (Estudiantes.API) in 13.9446ms
+2026-09-07 23:48:20.977 -05:00 [INF] Executed endpoint 'Estudiantes.API.Controllers.EstudiantesController.GetAll (Estudiantes.API)'
+2026-09-07 23:48:20.978 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7061/api/Estudiantes - 200 null application/json; charset=utf-8 23.5876ms
+2026-09-07 23:52:32.566 -05:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7061/api/Estudiantes - null null
+2026-09-07 23:52:32.572 -05:00 [INF] CORS policy execution successful.
+2026-09-07 23:52:32.572 -05:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7061/api/Estudiantes - 204 null null 6.2458ms
+2026-09-07 23:52:32.576 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7061/api/Estudiantes - null null
+2026-09-07 23:52:32.581 -05:00 [INF] CORS policy execution successful.
+2026-09-07 23:52:32.582 -05:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Admin|Profesor)
+2026-09-07 23:52:32.584 -05:00 [INF] AuthenticationScheme: Bearer was forbidden.
+2026-09-07 23:52:32.585 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7061/api/Estudiantes - 403 0 null 9.9191ms
+2026-09-07 23:52:40.346 -05:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7061/api/Estudiantes - null null
+2026-09-07 23:52:40.348 -05:00 [INF] CORS policy execution successful.
+2026-09-07 23:52:40.349 -05:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7061/api/Estudiantes - 204 null null 2.7277ms
+2026-09-07 23:52:40.350 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7061/api/Estudiantes - null null
+2026-09-07 23:52:40.353 -05:00 [INF] CORS policy execution successful.
+2026-09-07 23:52:40.354 -05:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Admin|Profesor)
+2026-09-07 23:52:40.355 -05:00 [INF] AuthenticationScheme: Bearer was forbidden.
+2026-09-07 23:52:40.356 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7061/api/Estudiantes - 403 0 null 6.2655ms
+2026-09-07 23:57:04.641 -05:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7061/api/Estudiantes - null null
+2026-09-07 23:57:04.645 -05:00 [INF] CORS policy execution successful.
+2026-09-07 23:57:04.645 -05:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7061/api/Estudiantes - 204 null null 5.4062ms
+2026-09-07 23:57:04.648 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7061/api/Estudiantes - null null
+2026-09-07 23:57:04.653 -05:00 [INF] CORS policy execution successful.
+2026-09-07 23:57:04.654 -05:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Admin|Profesor)
+2026-09-07 23:57:04.654 -05:00 [INF] AuthenticationScheme: Bearer was forbidden.
+2026-09-07 23:57:04.655 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7061/api/Estudiantes - 403 0 null 7.2048ms
+2026-09-07 23:57:51.750 -05:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7061/api/Estudiantes - null null
+2026-09-07 23:57:51.756 -05:00 [INF] CORS policy execution successful.
+2026-09-07 23:57:51.756 -05:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7061/api/Estudiantes - 204 null null 6.4218ms
+2026-09-07 23:57:51.761 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7061/api/Estudiantes - null null
+2026-09-07 23:57:51.764 -05:00 [INF] CORS policy execution successful.
+2026-09-07 23:57:51.765 -05:00 [INF] Executing endpoint 'Estudiantes.API.Controllers.EstudiantesController.GetAll (Estudiantes.API)'
+2026-09-07 23:57:51.766 -05:00 [INF] Route matched with {action = "GetAll", controller = "Estudiantes"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(Int32, Int32) on controller Estudiantes.API.Controllers.EstudiantesController (Estudiantes.API).
+2026-09-07 23:57:51.776 -05:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Estudiantes] AS [e]
+2026-09-07 23:57:51.779 -05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[Nombre], [e].[UsuarioId]
+FROM [Estudiantes] AS [e]
+ORDER BY [e].[Id]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2026-09-07 23:57:51.781 -05:00 [INF] Executing OkObjectResult, writing value of type 'Estudiantes.Application.Common.Paginacion`1[[Estudiantes.Application.DTOs.EstudianteDto, Estudiantes.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-09-07 23:57:51.782 -05:00 [INF] Executed action Estudiantes.API.Controllers.EstudiantesController.GetAll (Estudiantes.API) in 14.804ms
+2026-09-07 23:57:51.783 -05:00 [INF] Executed endpoint 'Estudiantes.API.Controllers.EstudiantesController.GetAll (Estudiantes.API)'
+2026-09-07 23:57:51.784 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7061/api/Estudiantes - 200 null application/json; charset=utf-8 23.6204ms
+2026-09-07 23:57:59.063 -05:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7061/api/Estudiantes?page=1&pageSize=10 - null null
+2026-09-07 23:57:59.065 -05:00 [INF] CORS policy execution successful.
+2026-09-07 23:57:59.066 -05:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7061/api/Estudiantes?page=1&pageSize=10 - 204 null null 2.9512ms
+2026-09-07 23:57:59.067 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7061/api/Estudiantes?page=1&pageSize=10 - null null
+2026-09-07 23:57:59.070 -05:00 [INF] CORS policy execution successful.
+2026-09-07 23:57:59.071 -05:00 [INF] Executing endpoint 'Estudiantes.API.Controllers.EstudiantesController.GetAll (Estudiantes.API)'
+2026-09-07 23:57:59.072 -05:00 [INF] Route matched with {action = "GetAll", controller = "Estudiantes"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(Int32, Int32) on controller Estudiantes.API.Controllers.EstudiantesController (Estudiantes.API).
+2026-09-07 23:57:59.075 -05:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Estudiantes] AS [e]
+2026-09-07 23:57:59.077 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[Nombre], [e].[UsuarioId]
+FROM [Estudiantes] AS [e]
+ORDER BY [e].[Id]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2026-09-07 23:57:59.079 -05:00 [INF] Executing OkObjectResult, writing value of type 'Estudiantes.Application.Common.Paginacion`1[[Estudiantes.Application.DTOs.EstudianteDto, Estudiantes.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-09-07 23:57:59.081 -05:00 [INF] Executed action Estudiantes.API.Controllers.EstudiantesController.GetAll (Estudiantes.API) in 6.9063ms
+2026-09-07 23:57:59.082 -05:00 [INF] Executed endpoint 'Estudiantes.API.Controllers.EstudiantesController.GetAll (Estudiantes.API)'
+2026-09-07 23:57:59.082 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7061/api/Estudiantes?page=1&pageSize=10 - 200 null application/json; charset=utf-8 15.4728ms
+2026-09-07 23:58:04.528 -05:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7061/api/Estudiantes - null null
+2026-09-07 23:58:04.530 -05:00 [INF] CORS policy execution successful.
+2026-09-07 23:58:04.530 -05:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7061/api/Estudiantes - 204 null null 3.1108ms
+2026-09-07 23:58:30.702 -05:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7061/api/Estudiantes - null null
+2026-09-07 23:58:30.707 -05:00 [INF] CORS policy execution successful.
+2026-09-07 23:58:30.708 -05:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7061/api/Estudiantes - 204 null null 6.1041ms
+2026-09-07 23:58:30.709 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7061/api/Estudiantes - null null
+2026-09-07 23:58:30.712 -05:00 [INF] CORS policy execution successful.
+2026-09-07 23:58:30.713 -05:00 [INF] Executing endpoint 'Estudiantes.API.Controllers.EstudiantesController.GetAll (Estudiantes.API)'
+2026-09-07 23:58:30.714 -05:00 [INF] Route matched with {action = "GetAll", controller = "Estudiantes"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(Int32, Int32) on controller Estudiantes.API.Controllers.EstudiantesController (Estudiantes.API).
+2026-09-07 23:58:30.717 -05:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Estudiantes] AS [e]
+2026-09-07 23:58:30.719 -05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[Nombre], [e].[UsuarioId]
+FROM [Estudiantes] AS [e]
+ORDER BY [e].[Id]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2026-09-07 23:58:30.721 -05:00 [INF] Executing OkObjectResult, writing value of type 'Estudiantes.Application.Common.Paginacion`1[[Estudiantes.Application.DTOs.EstudianteDto, Estudiantes.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-09-07 23:58:30.722 -05:00 [INF] Executed action Estudiantes.API.Controllers.EstudiantesController.GetAll (Estudiantes.API) in 7.2046ms
+2026-09-07 23:58:30.723 -05:00 [INF] Executed endpoint 'Estudiantes.API.Controllers.EstudiantesController.GetAll (Estudiantes.API)'
+2026-09-07 23:58:30.724 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7061/api/Estudiantes - 200 null application/json; charset=utf-8 15.666ms
+2026-09-07 23:58:34.376 -05:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7061/api/Estudiantes?page=1&pageSize=10 - null null
+2026-09-07 23:58:34.378 -05:00 [INF] CORS policy execution successful.
+2026-09-07 23:58:34.379 -05:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7061/api/Estudiantes?page=1&pageSize=10 - 204 null null 2.8298ms
+2026-09-07 23:58:34.380 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7061/api/Estudiantes?page=1&pageSize=10 - null null
+2026-09-07 23:58:34.383 -05:00 [INF] CORS policy execution successful.
+2026-09-07 23:58:34.384 -05:00 [INF] Executing endpoint 'Estudiantes.API.Controllers.EstudiantesController.GetAll (Estudiantes.API)'
+2026-09-07 23:58:34.385 -05:00 [INF] Route matched with {action = "GetAll", controller = "Estudiantes"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(Int32, Int32) on controller Estudiantes.API.Controllers.EstudiantesController (Estudiantes.API).
+2026-09-07 23:58:34.390 -05:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Estudiantes] AS [e]
+2026-09-07 23:58:34.392 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[Nombre], [e].[UsuarioId]
+FROM [Estudiantes] AS [e]
+ORDER BY [e].[Id]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2026-09-07 23:58:34.394 -05:00 [INF] Executing OkObjectResult, writing value of type 'Estudiantes.Application.Common.Paginacion`1[[Estudiantes.Application.DTOs.EstudianteDto, Estudiantes.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-09-07 23:58:34.395 -05:00 [INF] Executed action Estudiantes.API.Controllers.EstudiantesController.GetAll (Estudiantes.API) in 8.9603ms
+2026-09-07 23:58:34.396 -05:00 [INF] Executed endpoint 'Estudiantes.API.Controllers.EstudiantesController.GetAll (Estudiantes.API)'
+2026-09-07 23:58:34.397 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7061/api/Estudiantes?page=1&pageSize=10 - 200 null application/json; charset=utf-8 17.4637ms

@@ -40,3 +40,21 @@ OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
 2026-09-07 21:30:44.306 -05:00 [INF] Executed action Profesores.API.Controllers.ProfesoresController.GetAll (Profesores.API) in 97.5075ms
 2026-09-07 21:30:44.308 -05:00 [INF] Executed endpoint 'Profesores.API.Controllers.ProfesoresController.GetAll (Profesores.API)'
 2026-09-07 21:30:44.309 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7116/api/Profesores?page=1&pageSize=10 - 200 null application/json; charset=utf-8 112.1689ms
+2026-09-07 22:47:30.277 -05:00 [INF] User profile is available. Using 'C:\Users\Goyatsu\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-09-07 22:47:31.095 -05:00 [INF] Now listening on: https://localhost:7116
+2026-09-07 22:47:31.098 -05:00 [INF] Now listening on: http://localhost:5156
+2026-09-07 22:47:31.199 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-09-07 22:47:31.200 -05:00 [INF] Hosting environment: Development
+2026-09-07 22:47:31.201 -05:00 [INF] Content root path: C:\Users\Goyatsu\Desktop\SistemaGestionNotas\SistemaGestionNotas\Profesores.API
+2026-09-07 22:47:31.863 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7116/ - null null
+2026-09-07 22:47:32.193 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7116/ - 404 0 null 331.6743ms
+2026-09-07 22:47:32.202 -05:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7116/, Response status code: 404
+2026-09-07 22:52:24.422 -05:00 [INF] User profile is available. Using 'C:\Users\Goyatsu\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-09-07 22:52:24.791 -05:00 [INF] Now listening on: https://localhost:7116
+2026-09-07 22:52:24.793 -05:00 [INF] Now listening on: http://localhost:5156
+2026-09-07 22:52:24.865 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-09-07 22:52:24.866 -05:00 [INF] Hosting environment: Development
+2026-09-07 22:52:24.867 -05:00 [INF] Content root path: C:\Users\Goyatsu\Desktop\SistemaGestionNotas\SistemaGestionNotas\Profesores.API
+2026-09-07 22:52:25.288 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7116/ - null null
+2026-09-07 22:52:25.475 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7116/ - 404 0 null 188.773ms
+2026-09-07 22:52:25.482 -05:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7116/, Response status code: 404

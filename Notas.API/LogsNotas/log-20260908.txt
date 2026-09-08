@@ -1,0 +1,1643 @@
+2026-09-08 01:01:47.104 -05:00 [INF] User profile is available. Using 'C:\Users\Goyatsu\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-09-08 01:01:47.830 -05:00 [INF] Now listening on: https://localhost:7290
+2026-09-08 01:01:47.832 -05:00 [INF] Now listening on: http://localhost:5032
+2026-09-08 01:01:47.979 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-09-08 01:01:47.985 -05:00 [INF] Hosting environment: Development
+2026-09-08 01:01:48.013 -05:00 [INF] Content root path: C:\Users\Goyatsu\Desktop\SistemaGestionNotas\SistemaGestionNotas\Notas.API
+2026-09-08 01:01:48.217 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7290/ - null null
+2026-09-08 01:01:48.482 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7290/ - 404 0 null 265.7473ms
+2026-09-08 01:01:48.490 -05:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7290/, Response status code: 404
+2026-09-08 01:09:38.209 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7290/api/Notas/mis-notas?page=1&pageSize=10 - null null
+2026-09-08 01:09:38.260 -05:00 [INF] Executing endpoint 'Notas.API.Controllers.NotasController.GetMisNotas (Notas.API)'
+2026-09-08 01:09:38.277 -05:00 [INF] Route matched with {action = "GetMisNotas", controller = "Notas"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetMisNotas(Int32, Int32) on controller Notas.API.Controllers.NotasController (Notas.API).
+2026-09-08 01:09:38.415 -05:00 [INF] Start processing HTTP request GET https://localhost:7061/api/Estudiantes/ObtenerIdEstudiante
+2026-09-08 01:09:38.419 -05:00 [INF] Sending HTTP request GET https://localhost:7061/api/Estudiantes/ObtenerIdEstudiante
+2026-09-08 01:09:38.513 -05:00 [INF] Received HTTP response headers after 91.811ms - 200
+2026-09-08 01:09:38.515 -05:00 [INF] End processing HTTP request after 103.2489ms - 200
+2026-09-08 01:09:39.328 -05:00 [INF] Executed DbCommand (34ms) [Parameters=[@__idEstudiante_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Notas] AS [n]
+INNER JOIN [Estudiantes] AS [e] ON [n].[IdEstudiante] = [e].[Id]
+INNER JOIN [Profesores] AS [p] ON [n].[IdProfesor] = [p].[Id]
+WHERE [n].[IdEstudiante] = @__idEstudiante_0
+2026-09-08 01:09:39.366 -05:00 [INF] Executed DbCommand (6ms) [Parameters=[@__idEstudiante_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id], [n].[Nombre], [n].[IdEstudiante], [e].[Nombre] AS [NombreEstudiante], [n].[IdProfesor], [p].[Nombre] AS [NombreProfesor], [n].[Valor]
+FROM [Notas] AS [n]
+INNER JOIN [Estudiantes] AS [e] ON [n].[IdEstudiante] = [e].[Id]
+INNER JOIN [Profesores] AS [p] ON [n].[IdProfesor] = [p].[Id]
+WHERE [n].[IdEstudiante] = @__idEstudiante_0
+ORDER BY [n].[Id]
+OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY
+2026-09-08 01:09:39.375 -05:00 [INF] Executing OkObjectResult, writing value of type 'Notas.Application.Common.Paginacion`1[[Notas.Application.DTOs.NotaDto, Notas.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-09-08 01:09:39.388 -05:00 [INF] Executed action Notas.API.Controllers.NotasController.GetMisNotas (Notas.API) in 1107.1452ms
+2026-09-08 01:09:39.390 -05:00 [INF] Executed endpoint 'Notas.API.Controllers.NotasController.GetMisNotas (Notas.API)'
+2026-09-08 01:09:39.396 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7290/api/Notas/mis-notas?page=1&pageSize=10 - 200 null application/json; charset=utf-8 1187.6368ms
+2026-09-08 07:38:22.924 -05:00 [INF] User profile is available. Using 'C:\Users\Goyatsu\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-09-08 07:38:23.299 -05:00 [INF] Now listening on: https://localhost:7290
+2026-09-08 07:38:23.303 -05:00 [INF] Now listening on: http://localhost:5032
+2026-09-08 07:38:23.384 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-09-08 07:38:23.385 -05:00 [INF] Hosting environment: Development
+2026-09-08 07:38:23.386 -05:00 [INF] Content root path: C:\Users\Goyatsu\Desktop\SistemaGestionNotas\SistemaGestionNotas\Notas.API
+2026-09-08 07:38:23.636 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7290/ - null null
+2026-09-08 07:38:23.834 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7290/ - 404 0 null 199.1678ms
+2026-09-08 07:38:23.842 -05:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7290/, Response status code: 404
+2026-09-08 07:48:40.006 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7290/api/Notas?page=1&pageSize=10 - null null
+2026-09-08 07:48:40.057 -05:00 [INF] Executing endpoint 'Notas.API.Controllers.NotasController.GetAll (Notas.API)'
+2026-09-08 07:48:40.075 -05:00 [INF] Route matched with {action = "GetAll", controller = "Notas"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(Int32, Int32) on controller Notas.API.Controllers.NotasController (Notas.API).
+2026-09-08 07:48:41.046 -05:00 [INF] Executed DbCommand (23ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Notas] AS [n]
+INNER JOIN [Estudiantes] AS [e] ON [n].[IdEstudiante] = [e].[Id]
+INNER JOIN [Profesores] AS [p] ON [n].[IdProfesor] = [p].[Id]
+2026-09-08 07:48:41.103 -05:00 [INF] Executed DbCommand (18ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id], [n].[Nombre], [n].[IdEstudiante], [e].[Nombre] AS [NombreEstudiante], [n].[IdProfesor], [p].[Nombre] AS [NombreProfesor], [n].[Valor]
+FROM [Notas] AS [n]
+INNER JOIN [Estudiantes] AS [e] ON [n].[IdEstudiante] = [e].[Id]
+INNER JOIN [Profesores] AS [p] ON [n].[IdProfesor] = [p].[Id]
+ORDER BY [n].[Id]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2026-09-08 07:48:41.114 -05:00 [INF] Executing OkObjectResult, writing value of type 'Notas.Application.Common.Paginacion`1[[Notas.Application.DTOs.NotaDto, Notas.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-09-08 07:48:41.127 -05:00 [INF] Executed action Notas.API.Controllers.NotasController.GetAll (Notas.API) in 1047.857ms
+2026-09-08 07:48:41.128 -05:00 [INF] Executed endpoint 'Notas.API.Controllers.NotasController.GetAll (Notas.API)'
+2026-09-08 07:48:41.136 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7290/api/Notas?page=1&pageSize=10 - 200 null application/json; charset=utf-8 1130.2243ms
+2026-09-08 07:54:37.442 -05:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7290/api/Notas?page=1&pageSize=10 - null null
+2026-09-08 07:54:37.451 -05:00 [INF] CORS policy execution successful.
+2026-09-08 07:54:37.454 -05:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7290/api/Notas?page=1&pageSize=10 - 204 null null 12.1326ms
+2026-09-08 07:54:37.456 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7290/api/Notas?page=1&pageSize=10 - null null
+2026-09-08 07:54:37.459 -05:00 [INF] CORS policy execution successful.
+2026-09-08 07:54:37.463 -05:00 [INF] Executing endpoint 'Notas.API.Controllers.NotasController.GetAll (Notas.API)'
+2026-09-08 07:54:37.465 -05:00 [INF] Route matched with {action = "GetAll", controller = "Notas"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(Int32, Int32) on controller Notas.API.Controllers.NotasController (Notas.API).
+2026-09-08 07:54:37.527 -05:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Notas] AS [n]
+INNER JOIN [Estudiantes] AS [e] ON [n].[IdEstudiante] = [e].[Id]
+INNER JOIN [Profesores] AS [p] ON [n].[IdProfesor] = [p].[Id]
+2026-09-08 07:54:37.534 -05:00 [INF] Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id], [n].[Nombre], [n].[IdEstudiante], [e].[Nombre] AS [NombreEstudiante], [n].[IdProfesor], [p].[Nombre] AS [NombreProfesor], [n].[Valor]
+FROM [Notas] AS [n]
+INNER JOIN [Estudiantes] AS [e] ON [n].[IdEstudiante] = [e].[Id]
+INNER JOIN [Profesores] AS [p] ON [n].[IdProfesor] = [p].[Id]
+ORDER BY [n].[Id]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2026-09-08 07:54:37.538 -05:00 [INF] Executing OkObjectResult, writing value of type 'Notas.Application.Common.Paginacion`1[[Notas.Application.DTOs.NotaDto, Notas.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-09-08 07:54:37.540 -05:00 [INF] Executed action Notas.API.Controllers.NotasController.GetAll (Notas.API) in 73.7095ms
+2026-09-08 07:54:37.542 -05:00 [INF] Executed endpoint 'Notas.API.Controllers.NotasController.GetAll (Notas.API)'
+2026-09-08 07:54:37.543 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7290/api/Notas?page=1&pageSize=10 - 200 null application/json; charset=utf-8 87.8141ms
+2026-09-08 07:56:26.232 -05:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7290/api/Notas?page=1&pageSize=10 - null null
+2026-09-08 07:56:26.240 -05:00 [INF] CORS policy execution successful.
+2026-09-08 07:56:26.241 -05:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7290/api/Notas?page=1&pageSize=10 - 204 null null 9.1844ms
+2026-09-08 07:56:26.242 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7290/api/Notas?page=1&pageSize=10 - null null
+2026-09-08 07:56:26.246 -05:00 [INF] CORS policy execution successful.
+2026-09-08 07:56:26.251 -05:00 [INF] Executing endpoint 'Notas.API.Controllers.NotasController.GetAll (Notas.API)'
+2026-09-08 07:56:26.252 -05:00 [INF] Route matched with {action = "GetAll", controller = "Notas"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(Int32, Int32) on controller Notas.API.Controllers.NotasController (Notas.API).
+2026-09-08 07:56:26.273 -05:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Notas] AS [n]
+INNER JOIN [Estudiantes] AS [e] ON [n].[IdEstudiante] = [e].[Id]
+INNER JOIN [Profesores] AS [p] ON [n].[IdProfesor] = [p].[Id]
+2026-09-08 07:56:26.282 -05:00 [INF] Executed DbCommand (5ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id], [n].[Nombre], [n].[IdEstudiante], [e].[Nombre] AS [NombreEstudiante], [n].[IdProfesor], [p].[Nombre] AS [NombreProfesor], [n].[Valor]
+FROM [Notas] AS [n]
+INNER JOIN [Estudiantes] AS [e] ON [n].[IdEstudiante] = [e].[Id]
+INNER JOIN [Profesores] AS [p] ON [n].[IdProfesor] = [p].[Id]
+ORDER BY [n].[Id]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2026-09-08 07:56:26.285 -05:00 [INF] Executing OkObjectResult, writing value of type 'Notas.Application.Common.Paginacion`1[[Notas.Application.DTOs.NotaDto, Notas.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-09-08 07:56:26.288 -05:00 [INF] Executed action Notas.API.Controllers.NotasController.GetAll (Notas.API) in 33.6755ms
+2026-09-08 07:56:26.289 -05:00 [INF] Executed endpoint 'Notas.API.Controllers.NotasController.GetAll (Notas.API)'
+2026-09-08 07:56:26.292 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7290/api/Notas?page=1&pageSize=10 - 200 null application/json; charset=utf-8 49.4679ms
+2026-09-08 07:56:47.218 -05:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7290/api/Notas?page=1&pageSize=10 - null null
+2026-09-08 07:56:47.221 -05:00 [INF] CORS policy execution successful.
+2026-09-08 07:56:47.222 -05:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7290/api/Notas?page=1&pageSize=10 - 204 null null 3.9995ms
+2026-09-08 07:56:47.224 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7290/api/Notas?page=1&pageSize=10 - null null
+2026-09-08 07:56:47.228 -05:00 [INF] CORS policy execution successful.
+2026-09-08 07:56:47.229 -05:00 [INF] Executing endpoint 'Notas.API.Controllers.NotasController.GetAll (Notas.API)'
+2026-09-08 07:56:47.230 -05:00 [INF] Route matched with {action = "GetAll", controller = "Notas"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(Int32, Int32) on controller Notas.API.Controllers.NotasController (Notas.API).
+2026-09-08 07:56:47.235 -05:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Notas] AS [n]
+INNER JOIN [Estudiantes] AS [e] ON [n].[IdEstudiante] = [e].[Id]
+INNER JOIN [Profesores] AS [p] ON [n].[IdProfesor] = [p].[Id]
+2026-09-08 07:56:47.241 -05:00 [INF] Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id], [n].[Nombre], [n].[IdEstudiante], [e].[Nombre] AS [NombreEstudiante], [n].[IdProfesor], [p].[Nombre] AS [NombreProfesor], [n].[Valor]
+FROM [Notas] AS [n]
+INNER JOIN [Estudiantes] AS [e] ON [n].[IdEstudiante] = [e].[Id]
+INNER JOIN [Profesores] AS [p] ON [n].[IdProfesor] = [p].[Id]
+ORDER BY [n].[Id]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2026-09-08 07:56:47.243 -05:00 [INF] Executing OkObjectResult, writing value of type 'Notas.Application.Common.Paginacion`1[[Notas.Application.DTOs.NotaDto, Notas.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-09-08 07:56:47.245 -05:00 [INF] Executed action Notas.API.Controllers.NotasController.GetAll (Notas.API) in 13.5883ms
+2026-09-08 07:56:47.246 -05:00 [INF] Executed endpoint 'Notas.API.Controllers.NotasController.GetAll (Notas.API)'
+2026-09-08 07:56:47.247 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7290/api/Notas?page=1&pageSize=10 - 200 null application/json; charset=utf-8 22.8178ms
+2026-09-08 07:56:52.409 -05:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7290/api/Notas?page=1&pageSize=10 - null null
+2026-09-08 07:56:52.411 -05:00 [INF] CORS policy execution successful.
+2026-09-08 07:56:52.411 -05:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7290/api/Notas?page=1&pageSize=10 - 204 null null 2.7876ms
+2026-09-08 07:56:52.413 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7290/api/Notas?page=1&pageSize=10 - null null
+2026-09-08 07:56:52.416 -05:00 [INF] CORS policy execution successful.
+2026-09-08 07:56:52.417 -05:00 [INF] Executing endpoint 'Notas.API.Controllers.NotasController.GetAll (Notas.API)'
+2026-09-08 07:56:52.418 -05:00 [INF] Route matched with {action = "GetAll", controller = "Notas"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(Int32, Int32) on controller Notas.API.Controllers.NotasController (Notas.API).
+2026-09-08 07:56:52.422 -05:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Notas] AS [n]
+INNER JOIN [Estudiantes] AS [e] ON [n].[IdEstudiante] = [e].[Id]
+INNER JOIN [Profesores] AS [p] ON [n].[IdProfesor] = [p].[Id]
+2026-09-08 07:56:52.426 -05:00 [INF] Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id], [n].[Nombre], [n].[IdEstudiante], [e].[Nombre] AS [NombreEstudiante], [n].[IdProfesor], [p].[Nombre] AS [NombreProfesor], [n].[Valor]
+FROM [Notas] AS [n]
+INNER JOIN [Estudiantes] AS [e] ON [n].[IdEstudiante] = [e].[Id]
+INNER JOIN [Profesores] AS [p] ON [n].[IdProfesor] = [p].[Id]
+ORDER BY [n].[Id]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2026-09-08 07:56:52.429 -05:00 [INF] Executing OkObjectResult, writing value of type 'Notas.Application.Common.Paginacion`1[[Notas.Application.DTOs.NotaDto, Notas.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-09-08 07:56:52.430 -05:00 [INF] Executed action Notas.API.Controllers.NotasController.GetAll (Notas.API) in 10.7153ms
+2026-09-08 07:56:52.431 -05:00 [INF] Executed endpoint 'Notas.API.Controllers.NotasController.GetAll (Notas.API)'
+2026-09-08 07:56:52.432 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7290/api/Notas?page=1&pageSize=10 - 200 null application/json; charset=utf-8 19.5626ms
+2026-09-08 07:57:09.411 -05:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7290/api/Notas?page=1&pageSize=10 - null null
+2026-09-08 07:57:09.413 -05:00 [INF] CORS policy execution successful.
+2026-09-08 07:57:09.414 -05:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7290/api/Notas?page=1&pageSize=10 - 204 null null 2.934ms
+2026-09-08 07:57:09.416 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7290/api/Notas?page=1&pageSize=10 - null null
+2026-09-08 07:57:09.420 -05:00 [INF] CORS policy execution successful.
+2026-09-08 07:57:09.421 -05:00 [INF] Executing endpoint 'Notas.API.Controllers.NotasController.GetAll (Notas.API)'
+2026-09-08 07:57:09.422 -05:00 [INF] Route matched with {action = "GetAll", controller = "Notas"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(Int32, Int32) on controller Notas.API.Controllers.NotasController (Notas.API).
+2026-09-08 07:57:09.428 -05:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Notas] AS [n]
+INNER JOIN [Estudiantes] AS [e] ON [n].[IdEstudiante] = [e].[Id]
+INNER JOIN [Profesores] AS [p] ON [n].[IdProfesor] = [p].[Id]
+2026-09-08 07:57:09.434 -05:00 [INF] Executed DbCommand (3ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id], [n].[Nombre], [n].[IdEstudiante], [e].[Nombre] AS [NombreEstudiante], [n].[IdProfesor], [p].[Nombre] AS [NombreProfesor], [n].[Valor]
+FROM [Notas] AS [n]
+INNER JOIN [Estudiantes] AS [e] ON [n].[IdEstudiante] = [e].[Id]
+INNER JOIN [Profesores] AS [p] ON [n].[IdProfesor] = [p].[Id]
+ORDER BY [n].[Id]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2026-09-08 07:57:09.436 -05:00 [INF] Executing OkObjectResult, writing value of type 'Notas.Application.Common.Paginacion`1[[Notas.Application.DTOs.NotaDto, Notas.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-09-08 07:57:09.438 -05:00 [INF] Executed action Notas.API.Controllers.NotasController.GetAll (Notas.API) in 13.2236ms
+2026-09-08 07:57:09.439 -05:00 [INF] Executed endpoint 'Notas.API.Controllers.NotasController.GetAll (Notas.API)'
+2026-09-08 07:57:09.440 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7290/api/Notas?page=1&pageSize=10 - 200 null application/json; charset=utf-8 24.3097ms
+2026-09-08 07:58:03.051 -05:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7290/api/Notas?page=1&pageSize=10 - null null
+2026-09-08 07:58:03.057 -05:00 [INF] CORS policy execution successful.
+2026-09-08 07:58:03.058 -05:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7290/api/Notas?page=1&pageSize=10 - 204 null null 6.9352ms
+2026-09-08 07:58:03.060 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7290/api/Notas?page=1&pageSize=10 - null null
+2026-09-08 07:58:03.065 -05:00 [INF] CORS policy execution successful.
+2026-09-08 07:58:03.067 -05:00 [INF] Executing endpoint 'Notas.API.Controllers.NotasController.GetAll (Notas.API)'
+2026-09-08 07:58:03.068 -05:00 [INF] Route matched with {action = "GetAll", controller = "Notas"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(Int32, Int32) on controller Notas.API.Controllers.NotasController (Notas.API).
+2026-09-08 07:58:03.076 -05:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Notas] AS [n]
+INNER JOIN [Estudiantes] AS [e] ON [n].[IdEstudiante] = [e].[Id]
+INNER JOIN [Profesores] AS [p] ON [n].[IdProfesor] = [p].[Id]
+2026-09-08 07:58:03.082 -05:00 [INF] Executed DbCommand (3ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id], [n].[Nombre], [n].[IdEstudiante], [e].[Nombre] AS [NombreEstudiante], [n].[IdProfesor], [p].[Nombre] AS [NombreProfesor], [n].[Valor]
+FROM [Notas] AS [n]
+INNER JOIN [Estudiantes] AS [e] ON [n].[IdEstudiante] = [e].[Id]
+INNER JOIN [Profesores] AS [p] ON [n].[IdProfesor] = [p].[Id]
+ORDER BY [n].[Id]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2026-09-08 07:58:03.086 -05:00 [INF] Executing OkObjectResult, writing value of type 'Notas.Application.Common.Paginacion`1[[Notas.Application.DTOs.NotaDto, Notas.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-09-08 07:58:03.090 -05:00 [INF] Executed action Notas.API.Controllers.NotasController.GetAll (Notas.API) in 18.1506ms
+2026-09-08 07:58:03.091 -05:00 [INF] Executed endpoint 'Notas.API.Controllers.NotasController.GetAll (Notas.API)'
+2026-09-08 07:58:03.092 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7290/api/Notas?page=1&pageSize=10 - 200 null application/json; charset=utf-8 32.1581ms
+2026-09-08 07:59:06.220 -05:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7290/api/Notas?page=1&pageSize=10 - null null
+2026-09-08 07:59:06.223 -05:00 [INF] CORS policy execution successful.
+2026-09-08 07:59:06.224 -05:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7290/api/Notas?page=1&pageSize=10 - 204 null null 6.1656ms
+2026-09-08 07:59:06.226 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7290/api/Notas?page=1&pageSize=10 - null null
+2026-09-08 07:59:06.233 -05:00 [INF] CORS policy execution successful.
+2026-09-08 07:59:06.234 -05:00 [INF] Executing endpoint 'Notas.API.Controllers.NotasController.GetAll (Notas.API)'
+2026-09-08 07:59:06.235 -05:00 [INF] Route matched with {action = "GetAll", controller = "Notas"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(Int32, Int32) on controller Notas.API.Controllers.NotasController (Notas.API).
+2026-09-08 07:59:06.242 -05:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Notas] AS [n]
+INNER JOIN [Estudiantes] AS [e] ON [n].[IdEstudiante] = [e].[Id]
+INNER JOIN [Profesores] AS [p] ON [n].[IdProfesor] = [p].[Id]
+2026-09-08 07:59:06.249 -05:00 [INF] Executed DbCommand (3ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id], [n].[Nombre], [n].[IdEstudiante], [e].[Nombre] AS [NombreEstudiante], [n].[IdProfesor], [p].[Nombre] AS [NombreProfesor], [n].[Valor]
+FROM [Notas] AS [n]
+INNER JOIN [Estudiantes] AS [e] ON [n].[IdEstudiante] = [e].[Id]
+INNER JOIN [Profesores] AS [p] ON [n].[IdProfesor] = [p].[Id]
+ORDER BY [n].[Id]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2026-09-08 07:59:06.253 -05:00 [INF] Executing OkObjectResult, writing value of type 'Notas.Application.Common.Paginacion`1[[Notas.Application.DTOs.NotaDto, Notas.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-09-08 07:59:06.255 -05:00 [INF] Executed action Notas.API.Controllers.NotasController.GetAll (Notas.API) in 18.2967ms
+2026-09-08 07:59:06.257 -05:00 [INF] Executed endpoint 'Notas.API.Controllers.NotasController.GetAll (Notas.API)'
+2026-09-08 07:59:06.258 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7290/api/Notas?page=1&pageSize=10 - 200 null application/json; charset=utf-8 31.8158ms
+2026-09-08 07:59:09.544 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7290/api/Notas?page=1&pageSize=10 - null null
+2026-09-08 07:59:09.547 -05:00 [INF] CORS policy execution successful.
+2026-09-08 07:59:09.548 -05:00 [INF] Executing endpoint 'Notas.API.Controllers.NotasController.GetAll (Notas.API)'
+2026-09-08 07:59:09.550 -05:00 [INF] Route matched with {action = "GetAll", controller = "Notas"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(Int32, Int32) on controller Notas.API.Controllers.NotasController (Notas.API).
+2026-09-08 07:59:09.556 -05:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Notas] AS [n]
+INNER JOIN [Estudiantes] AS [e] ON [n].[IdEstudiante] = [e].[Id]
+INNER JOIN [Profesores] AS [p] ON [n].[IdProfesor] = [p].[Id]
+2026-09-08 07:59:09.562 -05:00 [INF] Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id], [n].[Nombre], [n].[IdEstudiante], [e].[Nombre] AS [NombreEstudiante], [n].[IdProfesor], [p].[Nombre] AS [NombreProfesor], [n].[Valor]
+FROM [Notas] AS [n]
+INNER JOIN [Estudiantes] AS [e] ON [n].[IdEstudiante] = [e].[Id]
+INNER JOIN [Profesores] AS [p] ON [n].[IdProfesor] = [p].[Id]
+ORDER BY [n].[Id]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2026-09-08 07:59:09.564 -05:00 [INF] Executing OkObjectResult, writing value of type 'Notas.Application.Common.Paginacion`1[[Notas.Application.DTOs.NotaDto, Notas.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-09-08 07:59:09.566 -05:00 [INF] Executed action Notas.API.Controllers.NotasController.GetAll (Notas.API) in 13.9503ms
+2026-09-08 07:59:09.567 -05:00 [INF] Executed endpoint 'Notas.API.Controllers.NotasController.GetAll (Notas.API)'
+2026-09-08 07:59:09.567 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7290/api/Notas?page=1&pageSize=10 - 200 null application/json; charset=utf-8 23.2849ms
+2026-09-08 07:59:31.040 -05:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7290/api/Notas?page=1&pageSize=10 - null null
+2026-09-08 07:59:31.042 -05:00 [INF] CORS policy execution successful.
+2026-09-08 07:59:31.043 -05:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7290/api/Notas?page=1&pageSize=10 - 204 null null 2.7296ms
+2026-09-08 07:59:31.044 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7290/api/Notas?page=1&pageSize=10 - null null
+2026-09-08 07:59:31.047 -05:00 [INF] CORS policy execution successful.
+2026-09-08 07:59:31.048 -05:00 [INF] Executing endpoint 'Notas.API.Controllers.NotasController.GetAll (Notas.API)'
+2026-09-08 07:59:31.049 -05:00 [INF] Route matched with {action = "GetAll", controller = "Notas"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(Int32, Int32) on controller Notas.API.Controllers.NotasController (Notas.API).
+2026-09-08 07:59:31.053 -05:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Notas] AS [n]
+INNER JOIN [Estudiantes] AS [e] ON [n].[IdEstudiante] = [e].[Id]
+INNER JOIN [Profesores] AS [p] ON [n].[IdProfesor] = [p].[Id]
+2026-09-08 07:59:31.058 -05:00 [INF] Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id], [n].[Nombre], [n].[IdEstudiante], [e].[Nombre] AS [NombreEstudiante], [n].[IdProfesor], [p].[Nombre] AS [NombreProfesor], [n].[Valor]
+FROM [Notas] AS [n]
+INNER JOIN [Estudiantes] AS [e] ON [n].[IdEstudiante] = [e].[Id]
+INNER JOIN [Profesores] AS [p] ON [n].[IdProfesor] = [p].[Id]
+ORDER BY [n].[Id]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2026-09-08 07:59:31.060 -05:00 [INF] Executing OkObjectResult, writing value of type 'Notas.Application.Common.Paginacion`1[[Notas.Application.DTOs.NotaDto, Notas.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-09-08 07:59:31.061 -05:00 [INF] Executed action Notas.API.Controllers.NotasController.GetAll (Notas.API) in 10.6243ms
+2026-09-08 07:59:31.062 -05:00 [INF] Executed endpoint 'Notas.API.Controllers.NotasController.GetAll (Notas.API)'
+2026-09-08 07:59:31.064 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7290/api/Notas?page=1&pageSize=10 - 200 null application/json; charset=utf-8 19.5314ms
+2026-09-08 08:01:49.411 -05:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7290/api/Notas?page=1&pageSize=10 - null null
+2026-09-08 08:01:49.416 -05:00 [INF] CORS policy execution successful.
+2026-09-08 08:01:49.417 -05:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7290/api/Notas?page=1&pageSize=10 - 204 null null 5.9329ms
+2026-09-08 08:01:49.418 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7290/api/Notas?page=1&pageSize=10 - null null
+2026-09-08 08:01:49.421 -05:00 [INF] CORS policy execution successful.
+2026-09-08 08:01:49.422 -05:00 [INF] Executing endpoint 'Notas.API.Controllers.NotasController.GetAll (Notas.API)'
+2026-09-08 08:01:49.422 -05:00 [INF] Route matched with {action = "GetAll", controller = "Notas"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(Int32, Int32) on controller Notas.API.Controllers.NotasController (Notas.API).
+2026-09-08 08:01:49.427 -05:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Notas] AS [n]
+INNER JOIN [Estudiantes] AS [e] ON [n].[IdEstudiante] = [e].[Id]
+INNER JOIN [Profesores] AS [p] ON [n].[IdProfesor] = [p].[Id]
+2026-09-08 08:01:49.431 -05:00 [INF] Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id], [n].[Nombre], [n].[IdEstudiante], [e].[Nombre] AS [NombreEstudiante], [n].[IdProfesor], [p].[Nombre] AS [NombreProfesor], [n].[Valor]
+FROM [Notas] AS [n]
+INNER JOIN [Estudiantes] AS [e] ON [n].[IdEstudiante] = [e].[Id]
+INNER JOIN [Profesores] AS [p] ON [n].[IdProfesor] = [p].[Id]
+ORDER BY [n].[Id]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2026-09-08 08:01:49.433 -05:00 [INF] Executing OkObjectResult, writing value of type 'Notas.Application.Common.Paginacion`1[[Notas.Application.DTOs.NotaDto, Notas.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-09-08 08:01:49.434 -05:00 [INF] Executed action Notas.API.Controllers.NotasController.GetAll (Notas.API) in 10.0569ms
+2026-09-08 08:01:49.435 -05:00 [INF] Executed endpoint 'Notas.API.Controllers.NotasController.GetAll (Notas.API)'
+2026-09-08 08:01:49.436 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7290/api/Notas?page=1&pageSize=10 - 200 null application/json; charset=utf-8 17.8937ms
+2026-09-08 08:02:21.326 -05:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7290/api/Notas?page=1&pageSize=10 - null null
+2026-09-08 08:02:21.331 -05:00 [INF] CORS policy execution successful.
+2026-09-08 08:02:21.331 -05:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7290/api/Notas?page=1&pageSize=10 - 204 null null 5.4014ms
+2026-09-08 08:02:21.332 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7290/api/Notas?page=1&pageSize=10 - null null
+2026-09-08 08:02:21.336 -05:00 [INF] CORS policy execution successful.
+2026-09-08 08:02:21.337 -05:00 [INF] Executing endpoint 'Notas.API.Controllers.NotasController.GetAll (Notas.API)'
+2026-09-08 08:02:21.338 -05:00 [INF] Route matched with {action = "GetAll", controller = "Notas"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(Int32, Int32) on controller Notas.API.Controllers.NotasController (Notas.API).
+2026-09-08 08:02:21.342 -05:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Notas] AS [n]
+INNER JOIN [Estudiantes] AS [e] ON [n].[IdEstudiante] = [e].[Id]
+INNER JOIN [Profesores] AS [p] ON [n].[IdProfesor] = [p].[Id]
+2026-09-08 08:02:21.346 -05:00 [INF] Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id], [n].[Nombre], [n].[IdEstudiante], [e].[Nombre] AS [NombreEstudiante], [n].[IdProfesor], [p].[Nombre] AS [NombreProfesor], [n].[Valor]
+FROM [Notas] AS [n]
+INNER JOIN [Estudiantes] AS [e] ON [n].[IdEstudiante] = [e].[Id]
+INNER JOIN [Profesores] AS [p] ON [n].[IdProfesor] = [p].[Id]
+ORDER BY [n].[Id]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2026-09-08 08:02:21.349 -05:00 [INF] Executing OkObjectResult, writing value of type 'Notas.Application.Common.Paginacion`1[[Notas.Application.DTOs.NotaDto, Notas.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-09-08 08:02:21.350 -05:00 [INF] Executed action Notas.API.Controllers.NotasController.GetAll (Notas.API) in 10.2607ms
+2026-09-08 08:02:21.351 -05:00 [INF] Executed endpoint 'Notas.API.Controllers.NotasController.GetAll (Notas.API)'
+2026-09-08 08:02:21.352 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7290/api/Notas?page=1&pageSize=10 - 200 null application/json; charset=utf-8 19.2941ms
+2026-09-08 08:03:07.772 -05:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7290/api/Notas?page=1&pageSize=10 - null null
+2026-09-08 08:03:07.780 -05:00 [INF] CORS policy execution successful.
+2026-09-08 08:03:07.781 -05:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7290/api/Notas?page=1&pageSize=10 - 204 null null 8.8596ms
+2026-09-08 08:03:07.783 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7290/api/Notas?page=1&pageSize=10 - null null
+2026-09-08 08:03:07.787 -05:00 [INF] CORS policy execution successful.
+2026-09-08 08:03:07.788 -05:00 [INF] Executing endpoint 'Notas.API.Controllers.NotasController.GetAll (Notas.API)'
+2026-09-08 08:03:07.789 -05:00 [INF] Route matched with {action = "GetAll", controller = "Notas"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(Int32, Int32) on controller Notas.API.Controllers.NotasController (Notas.API).
+2026-09-08 08:03:07.796 -05:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Notas] AS [n]
+INNER JOIN [Estudiantes] AS [e] ON [n].[IdEstudiante] = [e].[Id]
+INNER JOIN [Profesores] AS [p] ON [n].[IdProfesor] = [p].[Id]
+2026-09-08 08:03:07.805 -05:00 [INF] Executed DbCommand (4ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id], [n].[Nombre], [n].[IdEstudiante], [e].[Nombre] AS [NombreEstudiante], [n].[IdProfesor], [p].[Nombre] AS [NombreProfesor], [n].[Valor]
+FROM [Notas] AS [n]
+INNER JOIN [Estudiantes] AS [e] ON [n].[IdEstudiante] = [e].[Id]
+INNER JOIN [Profesores] AS [p] ON [n].[IdProfesor] = [p].[Id]
+ORDER BY [n].[Id]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2026-09-08 08:03:07.809 -05:00 [INF] Executing OkObjectResult, writing value of type 'Notas.Application.Common.Paginacion`1[[Notas.Application.DTOs.NotaDto, Notas.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-09-08 08:03:07.812 -05:00 [INF] Executed action Notas.API.Controllers.NotasController.GetAll (Notas.API) in 19.9887ms
+2026-09-08 08:03:07.813 -05:00 [INF] Executed endpoint 'Notas.API.Controllers.NotasController.GetAll (Notas.API)'
+2026-09-08 08:03:07.815 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7290/api/Notas?page=1&pageSize=10 - 200 null application/json; charset=utf-8 31.8178ms
+2026-09-08 08:03:31.137 -05:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7290/api/Notas/mis-notas?page=1&pageSize=10 - null null
+2026-09-08 08:03:31.139 -05:00 [INF] CORS policy execution successful.
+2026-09-08 08:03:31.140 -05:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7290/api/Notas/mis-notas?page=1&pageSize=10 - 204 null null 2.7029ms
+2026-09-08 08:03:31.142 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7290/api/Notas/mis-notas?page=1&pageSize=10 - null null
+2026-09-08 08:03:31.145 -05:00 [INF] CORS policy execution successful.
+2026-09-08 08:03:31.146 -05:00 [INF] Executing endpoint 'Notas.API.Controllers.NotasController.GetMisNotas (Notas.API)'
+2026-09-08 08:03:31.150 -05:00 [INF] Route matched with {action = "GetMisNotas", controller = "Notas"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetMisNotas(Int32, Int32) on controller Notas.API.Controllers.NotasController (Notas.API).
+2026-09-08 08:03:31.163 -05:00 [INF] Start processing HTTP request GET https://localhost:7061/api/Estudiantes/ObtenerIdEstudiante
+2026-09-08 08:03:31.166 -05:00 [INF] Sending HTTP request GET https://localhost:7061/api/Estudiantes/ObtenerIdEstudiante
+2026-09-08 08:03:31.299 -05:00 [INF] Received HTTP response headers after 130.7929ms - 200
+2026-09-08 08:03:31.301 -05:00 [INF] End processing HTTP request after 139.6774ms - 200
+2026-09-08 08:03:31.326 -05:00 [INF] Executed DbCommand (2ms) [Parameters=[@__idEstudiante_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Notas] AS [n]
+INNER JOIN [Estudiantes] AS [e] ON [n].[IdEstudiante] = [e].[Id]
+INNER JOIN [Profesores] AS [p] ON [n].[IdProfesor] = [p].[Id]
+WHERE [n].[IdEstudiante] = @__idEstudiante_0
+2026-09-08 08:03:31.332 -05:00 [INF] Executed DbCommand (2ms) [Parameters=[@__idEstudiante_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id], [n].[Nombre], [n].[IdEstudiante], [e].[Nombre] AS [NombreEstudiante], [n].[IdProfesor], [p].[Nombre] AS [NombreProfesor], [n].[Valor]
+FROM [Notas] AS [n]
+INNER JOIN [Estudiantes] AS [e] ON [n].[IdEstudiante] = [e].[Id]
+INNER JOIN [Profesores] AS [p] ON [n].[IdProfesor] = [p].[Id]
+WHERE [n].[IdEstudiante] = @__idEstudiante_0
+ORDER BY [n].[Id]
+OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY
+2026-09-08 08:03:31.334 -05:00 [INF] Executing OkObjectResult, writing value of type 'Notas.Application.Common.Paginacion`1[[Notas.Application.DTOs.NotaDto, Notas.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-09-08 08:03:31.335 -05:00 [INF] Executed action Notas.API.Controllers.NotasController.GetMisNotas (Notas.API) in 183.3133ms
+2026-09-08 08:03:31.337 -05:00 [INF] Executed endpoint 'Notas.API.Controllers.NotasController.GetMisNotas (Notas.API)'
+2026-09-08 08:03:31.338 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7290/api/Notas/mis-notas?page=1&pageSize=10 - 200 null application/json; charset=utf-8 196.658ms
+2026-09-08 08:04:10.425 -05:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7290/api/Notas/mis-notas?page=1&pageSize=10 - null null
+2026-09-08 08:04:10.428 -05:00 [INF] CORS policy execution successful.
+2026-09-08 08:04:10.429 -05:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7290/api/Notas/mis-notas?page=1&pageSize=10 - 204 null null 3.5715ms
+2026-09-08 08:04:10.430 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7290/api/Notas/mis-notas?page=1&pageSize=10 - null null
+2026-09-08 08:04:10.434 -05:00 [INF] CORS policy execution successful.
+2026-09-08 08:04:10.435 -05:00 [INF] Executing endpoint 'Notas.API.Controllers.NotasController.GetMisNotas (Notas.API)'
+2026-09-08 08:04:10.436 -05:00 [INF] Route matched with {action = "GetMisNotas", controller = "Notas"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetMisNotas(Int32, Int32) on controller Notas.API.Controllers.NotasController (Notas.API).
+2026-09-08 08:04:10.438 -05:00 [INF] Start processing HTTP request GET https://localhost:7061/api/Estudiantes/ObtenerIdEstudiante
+2026-09-08 08:04:10.440 -05:00 [INF] Sending HTTP request GET https://localhost:7061/api/Estudiantes/ObtenerIdEstudiante
+2026-09-08 08:04:10.481 -05:00 [INF] Received HTTP response headers after 39.8871ms - 200
+2026-09-08 08:04:10.482 -05:00 [INF] End processing HTTP request after 44.1028ms - 200
+2026-09-08 08:04:10.490 -05:00 [INF] Executed DbCommand (2ms) [Parameters=[@__idEstudiante_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Notas] AS [n]
+INNER JOIN [Estudiantes] AS [e] ON [n].[IdEstudiante] = [e].[Id]
+INNER JOIN [Profesores] AS [p] ON [n].[IdProfesor] = [p].[Id]
+WHERE [n].[IdEstudiante] = @__idEstudiante_0
+2026-09-08 08:04:10.495 -05:00 [INF] Executed DbCommand (2ms) [Parameters=[@__idEstudiante_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id], [n].[Nombre], [n].[IdEstudiante], [e].[Nombre] AS [NombreEstudiante], [n].[IdProfesor], [p].[Nombre] AS [NombreProfesor], [n].[Valor]
+FROM [Notas] AS [n]
+INNER JOIN [Estudiantes] AS [e] ON [n].[IdEstudiante] = [e].[Id]
+INNER JOIN [Profesores] AS [p] ON [n].[IdProfesor] = [p].[Id]
+WHERE [n].[IdEstudiante] = @__idEstudiante_0
+ORDER BY [n].[Id]
+OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY
+2026-09-08 08:04:10.499 -05:00 [INF] Executing OkObjectResult, writing value of type 'Notas.Application.Common.Paginacion`1[[Notas.Application.DTOs.NotaDto, Notas.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-09-08 08:04:10.501 -05:00 [INF] Executed action Notas.API.Controllers.NotasController.GetMisNotas (Notas.API) in 62.9449ms
+2026-09-08 08:04:10.502 -05:00 [INF] Executed endpoint 'Notas.API.Controllers.NotasController.GetMisNotas (Notas.API)'
+2026-09-08 08:04:10.503 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7290/api/Notas/mis-notas?page=1&pageSize=10 - 200 null application/json; charset=utf-8 73.2144ms
+2026-09-08 08:04:13.571 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7290/api/Notas/mis-notas?page=1&pageSize=10 - null null
+2026-09-08 08:04:13.573 -05:00 [INF] CORS policy execution successful.
+2026-09-08 08:04:13.574 -05:00 [INF] Executing endpoint 'Notas.API.Controllers.NotasController.GetMisNotas (Notas.API)'
+2026-09-08 08:04:13.575 -05:00 [INF] Route matched with {action = "GetMisNotas", controller = "Notas"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetMisNotas(Int32, Int32) on controller Notas.API.Controllers.NotasController (Notas.API).
+2026-09-08 08:04:13.577 -05:00 [INF] Start processing HTTP request GET https://localhost:7061/api/Estudiantes/ObtenerIdEstudiante
+2026-09-08 08:04:13.578 -05:00 [INF] Sending HTTP request GET https://localhost:7061/api/Estudiantes/ObtenerIdEstudiante
+2026-09-08 08:04:13.591 -05:00 [INF] Received HTTP response headers after 12.0197ms - 200
+2026-09-08 08:04:13.592 -05:00 [INF] End processing HTTP request after 15.0135ms - 200
+2026-09-08 08:04:13.596 -05:00 [INF] Executed DbCommand (2ms) [Parameters=[@__idEstudiante_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Notas] AS [n]
+INNER JOIN [Estudiantes] AS [e] ON [n].[IdEstudiante] = [e].[Id]
+INNER JOIN [Profesores] AS [p] ON [n].[IdProfesor] = [p].[Id]
+WHERE [n].[IdEstudiante] = @__idEstudiante_0
+2026-09-08 08:04:13.601 -05:00 [INF] Executed DbCommand (2ms) [Parameters=[@__idEstudiante_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id], [n].[Nombre], [n].[IdEstudiante], [e].[Nombre] AS [NombreEstudiante], [n].[IdProfesor], [p].[Nombre] AS [NombreProfesor], [n].[Valor]
+FROM [Notas] AS [n]
+INNER JOIN [Estudiantes] AS [e] ON [n].[IdEstudiante] = [e].[Id]
+INNER JOIN [Profesores] AS [p] ON [n].[IdProfesor] = [p].[Id]
+WHERE [n].[IdEstudiante] = @__idEstudiante_0
+ORDER BY [n].[Id]
+OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY
+2026-09-08 08:04:13.604 -05:00 [INF] Executing OkObjectResult, writing value of type 'Notas.Application.Common.Paginacion`1[[Notas.Application.DTOs.NotaDto, Notas.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-09-08 08:04:13.605 -05:00 [INF] Executed action Notas.API.Controllers.NotasController.GetMisNotas (Notas.API) in 28.539ms
+2026-09-08 08:04:13.606 -05:00 [INF] Executed endpoint 'Notas.API.Controllers.NotasController.GetMisNotas (Notas.API)'
+2026-09-08 08:04:13.607 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7290/api/Notas/mis-notas?page=1&pageSize=10 - 200 null application/json; charset=utf-8 35.9098ms
+2026-09-08 08:05:10.167 -05:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7290/api/Notas/mis-notas?page=1&pageSize=10 - null null
+2026-09-08 08:05:10.173 -05:00 [INF] CORS policy execution successful.
+2026-09-08 08:05:10.173 -05:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7290/api/Notas/mis-notas?page=1&pageSize=10 - 204 null null 6.1576ms
+2026-09-08 08:05:10.174 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7290/api/Notas/mis-notas?page=1&pageSize=10 - null null
+2026-09-08 08:05:10.178 -05:00 [INF] CORS policy execution successful.
+2026-09-08 08:05:10.178 -05:00 [INF] Executing endpoint 'Notas.API.Controllers.NotasController.GetMisNotas (Notas.API)'
+2026-09-08 08:05:10.179 -05:00 [INF] Route matched with {action = "GetMisNotas", controller = "Notas"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetMisNotas(Int32, Int32) on controller Notas.API.Controllers.NotasController (Notas.API).
+2026-09-08 08:05:10.181 -05:00 [INF] Start processing HTTP request GET https://localhost:7061/api/Estudiantes/ObtenerIdEstudiante
+2026-09-08 08:05:10.182 -05:00 [INF] Sending HTTP request GET https://localhost:7061/api/Estudiantes/ObtenerIdEstudiante
+2026-09-08 08:05:10.196 -05:00 [INF] Received HTTP response headers after 12.4904ms - 200
+2026-09-08 08:05:10.197 -05:00 [INF] End processing HTTP request after 15.2157ms - 200
+2026-09-08 08:05:10.203 -05:00 [INF] Executed DbCommand (2ms) [Parameters=[@__idEstudiante_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Notas] AS [n]
+INNER JOIN [Estudiantes] AS [e] ON [n].[IdEstudiante] = [e].[Id]
+INNER JOIN [Profesores] AS [p] ON [n].[IdProfesor] = [p].[Id]
+WHERE [n].[IdEstudiante] = @__idEstudiante_0
+2026-09-08 08:05:10.208 -05:00 [INF] Executed DbCommand (2ms) [Parameters=[@__idEstudiante_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id], [n].[Nombre], [n].[IdEstudiante], [e].[Nombre] AS [NombreEstudiante], [n].[IdProfesor], [p].[Nombre] AS [NombreProfesor], [n].[Valor]
+FROM [Notas] AS [n]
+INNER JOIN [Estudiantes] AS [e] ON [n].[IdEstudiante] = [e].[Id]
+INNER JOIN [Profesores] AS [p] ON [n].[IdProfesor] = [p].[Id]
+WHERE [n].[IdEstudiante] = @__idEstudiante_0
+ORDER BY [n].[Id]
+OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY
+2026-09-08 08:05:10.211 -05:00 [INF] Executing OkObjectResult, writing value of type 'Notas.Application.Common.Paginacion`1[[Notas.Application.DTOs.NotaDto, Notas.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-09-08 08:05:10.212 -05:00 [INF] Executed action Notas.API.Controllers.NotasController.GetMisNotas (Notas.API) in 31.0566ms
+2026-09-08 08:05:10.213 -05:00 [INF] Executed endpoint 'Notas.API.Controllers.NotasController.GetMisNotas (Notas.API)'
+2026-09-08 08:05:10.214 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7290/api/Notas/mis-notas?page=1&pageSize=10 - 200 null application/json; charset=utf-8 39.605ms
+2026-09-08 08:05:16.545 -05:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7290/api/Notas/mis-notas?page=1&pageSize=10 - null null
+2026-09-08 08:05:16.547 -05:00 [INF] CORS policy execution successful.
+2026-09-08 08:05:16.548 -05:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7290/api/Notas/mis-notas?page=1&pageSize=10 - 204 null null 3.0673ms
+2026-09-08 08:05:16.549 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7290/api/Notas/mis-notas?page=1&pageSize=10 - null null
+2026-09-08 08:05:16.553 -05:00 [INF] CORS policy execution successful.
+2026-09-08 08:05:16.554 -05:00 [INF] Executing endpoint 'Notas.API.Controllers.NotasController.GetMisNotas (Notas.API)'
+2026-09-08 08:05:16.555 -05:00 [INF] Route matched with {action = "GetMisNotas", controller = "Notas"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetMisNotas(Int32, Int32) on controller Notas.API.Controllers.NotasController (Notas.API).
+2026-09-08 08:05:16.557 -05:00 [INF] Start processing HTTP request GET https://localhost:7061/api/Estudiantes/ObtenerIdEstudiante
+2026-09-08 08:05:16.558 -05:00 [INF] Sending HTTP request GET https://localhost:7061/api/Estudiantes/ObtenerIdEstudiante
+2026-09-08 08:05:16.570 -05:00 [INF] Received HTTP response headers after 10.8943ms - 200
+2026-09-08 08:05:16.571 -05:00 [INF] End processing HTTP request after 13.8866ms - 200
+2026-09-08 08:05:16.575 -05:00 [INF] Executed DbCommand (2ms) [Parameters=[@__idEstudiante_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Notas] AS [n]
+INNER JOIN [Estudiantes] AS [e] ON [n].[IdEstudiante] = [e].[Id]
+INNER JOIN [Profesores] AS [p] ON [n].[IdProfesor] = [p].[Id]
+WHERE [n].[IdEstudiante] = @__idEstudiante_0
+2026-09-08 08:05:16.580 -05:00 [INF] Executed DbCommand (2ms) [Parameters=[@__idEstudiante_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id], [n].[Nombre], [n].[IdEstudiante], [e].[Nombre] AS [NombreEstudiante], [n].[IdProfesor], [p].[Nombre] AS [NombreProfesor], [n].[Valor]
+FROM [Notas] AS [n]
+INNER JOIN [Estudiantes] AS [e] ON [n].[IdEstudiante] = [e].[Id]
+INNER JOIN [Profesores] AS [p] ON [n].[IdProfesor] = [p].[Id]
+WHERE [n].[IdEstudiante] = @__idEstudiante_0
+ORDER BY [n].[Id]
+OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY
+2026-09-08 08:05:16.582 -05:00 [INF] Executing OkObjectResult, writing value of type 'Notas.Application.Common.Paginacion`1[[Notas.Application.DTOs.NotaDto, Notas.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-09-08 08:05:16.583 -05:00 [INF] Executed action Notas.API.Controllers.NotasController.GetMisNotas (Notas.API) in 26.3745ms
+2026-09-08 08:05:16.584 -05:00 [INF] Executed endpoint 'Notas.API.Controllers.NotasController.GetMisNotas (Notas.API)'
+2026-09-08 08:05:16.585 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7290/api/Notas/mis-notas?page=1&pageSize=10 - 200 null application/json; charset=utf-8 35.6688ms
+2026-09-08 08:07:12.141 -05:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7290/api/Notas/mis-notas?page=1&pageSize=10 - null null
+2026-09-08 08:07:12.146 -05:00 [INF] CORS policy execution successful.
+2026-09-08 08:07:12.147 -05:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7290/api/Notas/mis-notas?page=1&pageSize=10 - 204 null null 5.7912ms
+2026-09-08 08:07:12.148 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7290/api/Notas/mis-notas?page=1&pageSize=10 - null null
+2026-09-08 08:07:12.151 -05:00 [INF] CORS policy execution successful.
+2026-09-08 08:07:12.152 -05:00 [INF] Executing endpoint 'Notas.API.Controllers.NotasController.GetMisNotas (Notas.API)'
+2026-09-08 08:07:12.153 -05:00 [INF] Route matched with {action = "GetMisNotas", controller = "Notas"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetMisNotas(Int32, Int32) on controller Notas.API.Controllers.NotasController (Notas.API).
+2026-09-08 08:07:12.155 -05:00 [INF] Start processing HTTP request GET https://localhost:7061/api/Estudiantes/ObtenerIdEstudiante
+2026-09-08 08:07:12.155 -05:00 [INF] Sending HTTP request GET https://localhost:7061/api/Estudiantes/ObtenerIdEstudiante
+2026-09-08 08:07:12.176 -05:00 [INF] Received HTTP response headers after 20.0125ms - 200
+2026-09-08 08:07:12.177 -05:00 [INF] End processing HTTP request after 22.6466ms - 200
+2026-09-08 08:07:12.182 -05:00 [INF] Executed DbCommand (2ms) [Parameters=[@__idEstudiante_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Notas] AS [n]
+INNER JOIN [Estudiantes] AS [e] ON [n].[IdEstudiante] = [e].[Id]
+INNER JOIN [Profesores] AS [p] ON [n].[IdProfesor] = [p].[Id]
+WHERE [n].[IdEstudiante] = @__idEstudiante_0
+2026-09-08 08:07:12.187 -05:00 [INF] Executed DbCommand (2ms) [Parameters=[@__idEstudiante_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id], [n].[Nombre], [n].[IdEstudiante], [e].[Nombre] AS [NombreEstudiante], [n].[IdProfesor], [p].[Nombre] AS [NombreProfesor], [n].[Valor]
+FROM [Notas] AS [n]
+INNER JOIN [Estudiantes] AS [e] ON [n].[IdEstudiante] = [e].[Id]
+INNER JOIN [Profesores] AS [p] ON [n].[IdProfesor] = [p].[Id]
+WHERE [n].[IdEstudiante] = @__idEstudiante_0
+ORDER BY [n].[Id]
+OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY
+2026-09-08 08:07:12.189 -05:00 [INF] Executing OkObjectResult, writing value of type 'Notas.Application.Common.Paginacion`1[[Notas.Application.DTOs.NotaDto, Notas.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-09-08 08:07:12.191 -05:00 [INF] Executed action Notas.API.Controllers.NotasController.GetMisNotas (Notas.API) in 36.3366ms
+2026-09-08 08:07:12.192 -05:00 [INF] Executed endpoint 'Notas.API.Controllers.NotasController.GetMisNotas (Notas.API)'
+2026-09-08 08:07:12.192 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7290/api/Notas/mis-notas?page=1&pageSize=10 - 200 null application/json; charset=utf-8 44.5953ms
+2026-09-08 08:09:28.629 -05:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7290/api/Notas?page=1&pageSize=10 - null null
+2026-09-08 08:09:28.633 -05:00 [INF] CORS policy execution successful.
+2026-09-08 08:09:28.633 -05:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7290/api/Notas?page=1&pageSize=10 - 204 null null 4.733ms
+2026-09-08 08:09:28.635 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7290/api/Notas?page=1&pageSize=10 - null null
+2026-09-08 08:09:28.638 -05:00 [INF] CORS policy execution successful.
+2026-09-08 08:09:28.639 -05:00 [INF] Executing endpoint 'Notas.API.Controllers.NotasController.GetAll (Notas.API)'
+2026-09-08 08:09:28.640 -05:00 [INF] Route matched with {action = "GetAll", controller = "Notas"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(Int32, Int32) on controller Notas.API.Controllers.NotasController (Notas.API).
+2026-09-08 08:09:28.644 -05:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Notas] AS [n]
+INNER JOIN [Estudiantes] AS [e] ON [n].[IdEstudiante] = [e].[Id]
+INNER JOIN [Profesores] AS [p] ON [n].[IdProfesor] = [p].[Id]
+2026-09-08 08:09:28.648 -05:00 [INF] Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id], [n].[Nombre], [n].[IdEstudiante], [e].[Nombre] AS [NombreEstudiante], [n].[IdProfesor], [p].[Nombre] AS [NombreProfesor], [n].[Valor]
+FROM [Notas] AS [n]
+INNER JOIN [Estudiantes] AS [e] ON [n].[IdEstudiante] = [e].[Id]
+INNER JOIN [Profesores] AS [p] ON [n].[IdProfesor] = [p].[Id]
+ORDER BY [n].[Id]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2026-09-08 08:09:28.650 -05:00 [INF] Executing OkObjectResult, writing value of type 'Notas.Application.Common.Paginacion`1[[Notas.Application.DTOs.NotaDto, Notas.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-09-08 08:09:28.651 -05:00 [INF] Executed action Notas.API.Controllers.NotasController.GetAll (Notas.API) in 9.9476ms
+2026-09-08 08:09:28.652 -05:00 [INF] Executed endpoint 'Notas.API.Controllers.NotasController.GetAll (Notas.API)'
+2026-09-08 08:09:28.653 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7290/api/Notas?page=1&pageSize=10 - 200 null application/json; charset=utf-8 18.294ms
+2026-09-08 08:12:59.356 -05:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7290/api/Notas?page=1&pageSize=10 - null null
+2026-09-08 08:12:59.361 -05:00 [INF] CORS policy execution successful.
+2026-09-08 08:12:59.362 -05:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7290/api/Notas?page=1&pageSize=10 - 204 null null 5.6972ms
+2026-09-08 08:12:59.366 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7290/api/Notas?page=1&pageSize=10 - null null
+2026-09-08 08:12:59.370 -05:00 [INF] CORS policy execution successful.
+2026-09-08 08:12:59.371 -05:00 [INF] Executing endpoint 'Notas.API.Controllers.NotasController.GetAll (Notas.API)'
+2026-09-08 08:12:59.371 -05:00 [INF] Route matched with {action = "GetAll", controller = "Notas"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(Int32, Int32) on controller Notas.API.Controllers.NotasController (Notas.API).
+2026-09-08 08:12:59.375 -05:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Notas] AS [n]
+INNER JOIN [Estudiantes] AS [e] ON [n].[IdEstudiante] = [e].[Id]
+INNER JOIN [Profesores] AS [p] ON [n].[IdProfesor] = [p].[Id]
+2026-09-08 08:12:59.380 -05:00 [INF] Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id], [n].[Nombre], [n].[IdEstudiante], [e].[Nombre] AS [NombreEstudiante], [n].[IdProfesor], [p].[Nombre] AS [NombreProfesor], [n].[Valor]
+FROM [Notas] AS [n]
+INNER JOIN [Estudiantes] AS [e] ON [n].[IdEstudiante] = [e].[Id]
+INNER JOIN [Profesores] AS [p] ON [n].[IdProfesor] = [p].[Id]
+ORDER BY [n].[Id]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2026-09-08 08:12:59.382 -05:00 [INF] Executing OkObjectResult, writing value of type 'Notas.Application.Common.Paginacion`1[[Notas.Application.DTOs.NotaDto, Notas.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-09-08 08:12:59.383 -05:00 [INF] Executed action Notas.API.Controllers.NotasController.GetAll (Notas.API) in 10.4551ms
+2026-09-08 08:12:59.384 -05:00 [INF] Executed endpoint 'Notas.API.Controllers.NotasController.GetAll (Notas.API)'
+2026-09-08 08:12:59.385 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7290/api/Notas?page=1&pageSize=10 - 200 null application/json; charset=utf-8 18.8997ms
+2026-09-08 08:13:01.353 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7290/api/Notas?page=1&pageSize=10 - null null
+2026-09-08 08:13:01.355 -05:00 [INF] CORS policy execution successful.
+2026-09-08 08:13:01.355 -05:00 [INF] Executing endpoint 'Notas.API.Controllers.NotasController.GetAll (Notas.API)'
+2026-09-08 08:13:01.356 -05:00 [INF] Route matched with {action = "GetAll", controller = "Notas"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(Int32, Int32) on controller Notas.API.Controllers.NotasController (Notas.API).
+2026-09-08 08:13:01.361 -05:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Notas] AS [n]
+INNER JOIN [Estudiantes] AS [e] ON [n].[IdEstudiante] = [e].[Id]
+INNER JOIN [Profesores] AS [p] ON [n].[IdProfesor] = [p].[Id]
+2026-09-08 08:13:01.365 -05:00 [INF] Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id], [n].[Nombre], [n].[IdEstudiante], [e].[Nombre] AS [NombreEstudiante], [n].[IdProfesor], [p].[Nombre] AS [NombreProfesor], [n].[Valor]
+FROM [Notas] AS [n]
+INNER JOIN [Estudiantes] AS [e] ON [n].[IdEstudiante] = [e].[Id]
+INNER JOIN [Profesores] AS [p] ON [n].[IdProfesor] = [p].[Id]
+ORDER BY [n].[Id]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2026-09-08 08:13:01.368 -05:00 [INF] Executing OkObjectResult, writing value of type 'Notas.Application.Common.Paginacion`1[[Notas.Application.DTOs.NotaDto, Notas.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-09-08 08:13:01.369 -05:00 [INF] Executed action Notas.API.Controllers.NotasController.GetAll (Notas.API) in 10.7335ms
+2026-09-08 08:13:01.370 -05:00 [INF] Executed endpoint 'Notas.API.Controllers.NotasController.GetAll (Notas.API)'
+2026-09-08 08:13:01.371 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7290/api/Notas?page=1&pageSize=10 - 200 null application/json; charset=utf-8 18.0133ms
+2026-09-08 08:14:06.125 -05:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7290/api/Notas - null null
+2026-09-08 08:14:06.130 -05:00 [INF] CORS policy execution successful.
+2026-09-08 08:14:06.131 -05:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7290/api/Notas - 204 null null 5.6452ms
+2026-09-08 08:14:06.132 -05:00 [INF] Request starting HTTP/2 POST https://localhost:7290/api/Notas - application/json 48
+2026-09-08 08:14:06.135 -05:00 [INF] CORS policy execution successful.
+2026-09-08 08:14:06.135 -05:00 [INF] Executing endpoint 'Notas.API.Controllers.NotasController.Create (Notas.API)'
+2026-09-08 08:14:06.139 -05:00 [INF] Route matched with {action = "Create", controller = "Notas"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(Notas.Application.DTOs.CreateNotaDto) on controller Notas.API.Controllers.NotasController (Notas.API).
+2026-09-08 08:14:06.154 -05:00 [INF] Start processing HTTP request GET https://localhost:7061/api/Estudiantes/1
+2026-09-08 08:14:06.155 -05:00 [INF] Sending HTTP request GET https://localhost:7061/api/Estudiantes/1
+2026-09-08 08:14:06.211 -05:00 [INF] Received HTTP response headers after 55.0432ms - 200
+2026-09-08 08:14:06.212 -05:00 [INF] End processing HTTP request after 58.0917ms - 200
+2026-09-08 08:14:06.214 -05:00 [INF] Estudiante validado correctamente desde Estudiantes.API. IdEstudiante: 1
+2026-09-08 08:14:06.215 -05:00 [INF] Start processing HTTP request GET https://localhost:7116/api/Profesores/ObtenerIdProfesor
+2026-09-08 08:14:06.216 -05:00 [INF] Sending HTTP request GET https://localhost:7116/api/Profesores/ObtenerIdProfesor
+2026-09-08 08:14:06.300 -05:00 [INF] Received HTTP response headers after 82.6744ms - 403
+2026-09-08 08:14:06.301 -05:00 [INF] End processing HTTP request after 85.421ms - 403
+2026-09-08 08:14:06.302 -05:00 [WRN] No fue posible obtener el profesor autenticado desde Profesores.API. StatusCode: 403
+2026-09-08 08:14:06.303 -05:00 [WRN] No se pudo obtener el profesor asociado al usuario autenticado.
+2026-09-08 08:14:06.382 -05:00 [INF] Executed action Notas.API.Controllers.NotasController.Create (Notas.API) in 240.9912ms
+2026-09-08 08:14:06.383 -05:00 [INF] Executed endpoint 'Notas.API.Controllers.NotasController.Create (Notas.API)'
+2026-09-08 08:14:06.425 -05:00 [WRN] Error de validación.
+Notas.Application.Common.ValidationException: No se pudo obtener el profesor autenticado.
+   at Notas.Application.Services.NotaService.CreateAsync(CreateNotaDto dto) in C:\Users\Goyatsu\Desktop\SistemaGestionNotas\SistemaGestionNotas\Notas.Application\Services\NotaService.cs:line 101
+   at Notas.API.Controllers.NotasController.Create(CreateNotaDto dto) in C:\Users\Goyatsu\Desktop\SistemaGestionNotas\SistemaGestionNotas\Notas.API\Controllers\NotasController.cs:line 80
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Notas.API.Middlewares.ExceptionHandlingMiddleware.InvokeAsync(HttpContext context) in C:\Users\Goyatsu\Desktop\SistemaGestionNotas\SistemaGestionNotas\Notas.API\Middlewares\ExceptionHandlingMiddleware.cs:line 23
+2026-09-08 08:14:06.474 -05:00 [INF] Request finished HTTP/2 POST https://localhost:7290/api/Notas - 400 null application/json; charset=utf-8 342.0992ms
+2026-09-08 08:14:32.771 -05:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7290/api/Notas?page=1&pageSize=10 - null null
+2026-09-08 08:14:32.778 -05:00 [INF] CORS policy execution successful.
+2026-09-08 08:14:32.779 -05:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7290/api/Notas?page=1&pageSize=10 - 204 null null 7.4832ms
+2026-09-08 08:14:32.780 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7290/api/Notas?page=1&pageSize=10 - null null
+2026-09-08 08:14:32.783 -05:00 [INF] CORS policy execution successful.
+2026-09-08 08:14:32.784 -05:00 [INF] Executing endpoint 'Notas.API.Controllers.NotasController.GetAll (Notas.API)'
+2026-09-08 08:14:32.785 -05:00 [INF] Route matched with {action = "GetAll", controller = "Notas"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(Int32, Int32) on controller Notas.API.Controllers.NotasController (Notas.API).
+2026-09-08 08:14:32.788 -05:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Notas] AS [n]
+INNER JOIN [Estudiantes] AS [e] ON [n].[IdEstudiante] = [e].[Id]
+INNER JOIN [Profesores] AS [p] ON [n].[IdProfesor] = [p].[Id]
+2026-09-08 08:14:32.792 -05:00 [INF] Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id], [n].[Nombre], [n].[IdEstudiante], [e].[Nombre] AS [NombreEstudiante], [n].[IdProfesor], [p].[Nombre] AS [NombreProfesor], [n].[Valor]
+FROM [Notas] AS [n]
+INNER JOIN [Estudiantes] AS [e] ON [n].[IdEstudiante] = [e].[Id]
+INNER JOIN [Profesores] AS [p] ON [n].[IdProfesor] = [p].[Id]
+ORDER BY [n].[Id]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2026-09-08 08:14:32.794 -05:00 [INF] Executing OkObjectResult, writing value of type 'Notas.Application.Common.Paginacion`1[[Notas.Application.DTOs.NotaDto, Notas.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-09-08 08:14:32.796 -05:00 [INF] Executed action Notas.API.Controllers.NotasController.GetAll (Notas.API) in 9.6046ms
+2026-09-08 08:14:32.797 -05:00 [INF] Executed endpoint 'Notas.API.Controllers.NotasController.GetAll (Notas.API)'
+2026-09-08 08:14:32.798 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7290/api/Notas?page=1&pageSize=10 - 200 null application/json; charset=utf-8 17.9185ms
+2026-09-08 08:14:58.401 -05:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7290/api/Notas - null null
+2026-09-08 08:14:58.406 -05:00 [INF] CORS policy execution successful.
+2026-09-08 08:14:58.407 -05:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7290/api/Notas - 204 null null 6.6576ms
+2026-09-08 08:14:58.409 -05:00 [INF] Request starting HTTP/2 POST https://localhost:7290/api/Notas - application/json 48
+2026-09-08 08:14:58.412 -05:00 [INF] CORS policy execution successful.
+2026-09-08 08:14:58.413 -05:00 [INF] Executing endpoint 'Notas.API.Controllers.NotasController.Create (Notas.API)'
+2026-09-08 08:14:58.414 -05:00 [INF] Route matched with {action = "Create", controller = "Notas"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(Notas.Application.DTOs.CreateNotaDto) on controller Notas.API.Controllers.NotasController (Notas.API).
+2026-09-08 08:14:58.416 -05:00 [INF] Start processing HTTP request GET https://localhost:7061/api/Estudiantes/1
+2026-09-08 08:14:58.417 -05:00 [INF] Sending HTTP request GET https://localhost:7061/api/Estudiantes/1
+2026-09-08 08:14:58.433 -05:00 [INF] Received HTTP response headers after 14.7167ms - 200
+2026-09-08 08:14:58.434 -05:00 [INF] End processing HTTP request after 17.7231ms - 200
+2026-09-08 08:14:58.435 -05:00 [INF] Estudiante validado correctamente desde Estudiantes.API. IdEstudiante: 1
+2026-09-08 08:14:58.436 -05:00 [INF] Start processing HTTP request GET https://localhost:7116/api/Profesores/ObtenerIdProfesor
+2026-09-08 08:14:58.437 -05:00 [INF] Sending HTTP request GET https://localhost:7116/api/Profesores/ObtenerIdProfesor
+2026-09-08 08:14:59.362 -05:00 [INF] Received HTTP response headers after 924.1458ms - 200
+2026-09-08 08:14:59.363 -05:00 [INF] End processing HTTP request after 927.1097ms - 200
+2026-09-08 08:14:59.368 -05:00 [INF] Profesor autenticado obtenido correctamente. IdProfesor: 2
+2026-09-08 08:14:59.475 -05:00 [INF] Executed DbCommand (7ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Int32), @p2='?' (Size = 100), @p3='?' (Precision = 3) (Scale = 2) (DbType = Decimal)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Notas] ([IdEstudiante], [IdProfesor], [Nombre], [Valor])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3);
+2026-09-08 08:14:59.492 -05:00 [INF] Nota creada correctamente. IdNota: 3, IdEstudiante: 1, IdProfesor: 2, Valor: 2.7
+2026-09-08 08:14:59.494 -05:00 [INF] Executing CreatedAtActionResult, writing value of type 'Notas.Application.DTOs.NotaDto'.
+2026-09-08 08:14:59.508 -05:00 [INF] Executed action Notas.API.Controllers.NotasController.Create (Notas.API) in 1092.5789ms
+2026-09-08 08:14:59.509 -05:00 [INF] Executed endpoint 'Notas.API.Controllers.NotasController.Create (Notas.API)'
+2026-09-08 08:14:59.510 -05:00 [INF] Request finished HTTP/2 POST https://localhost:7290/api/Notas - 201 null application/json; charset=utf-8 1101.0754ms
+2026-09-08 08:15:00.784 -05:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7290/api/Notas?page=1&pageSize=10 - null null
+2026-09-08 08:15:00.786 -05:00 [INF] CORS policy execution successful.
+2026-09-08 08:15:00.787 -05:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7290/api/Notas?page=1&pageSize=10 - 204 null null 2.6662ms
+2026-09-08 08:15:00.788 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7290/api/Notas?page=1&pageSize=10 - null null
+2026-09-08 08:15:00.792 -05:00 [INF] CORS policy execution successful.
+2026-09-08 08:15:00.793 -05:00 [INF] Executing endpoint 'Notas.API.Controllers.NotasController.GetAll (Notas.API)'
+2026-09-08 08:15:00.793 -05:00 [INF] Route matched with {action = "GetAll", controller = "Notas"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(Int32, Int32) on controller Notas.API.Controllers.NotasController (Notas.API).
+2026-09-08 08:15:00.797 -05:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Notas] AS [n]
+INNER JOIN [Estudiantes] AS [e] ON [n].[IdEstudiante] = [e].[Id]
+INNER JOIN [Profesores] AS [p] ON [n].[IdProfesor] = [p].[Id]
+2026-09-08 08:15:00.801 -05:00 [INF] Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id], [n].[Nombre], [n].[IdEstudiante], [e].[Nombre] AS [NombreEstudiante], [n].[IdProfesor], [p].[Nombre] AS [NombreProfesor], [n].[Valor]
+FROM [Notas] AS [n]
+INNER JOIN [Estudiantes] AS [e] ON [n].[IdEstudiante] = [e].[Id]
+INNER JOIN [Profesores] AS [p] ON [n].[IdProfesor] = [p].[Id]
+ORDER BY [n].[Id]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2026-09-08 08:15:00.804 -05:00 [INF] Executing OkObjectResult, writing value of type 'Notas.Application.Common.Paginacion`1[[Notas.Application.DTOs.NotaDto, Notas.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-09-08 08:15:00.805 -05:00 [INF] Executed action Notas.API.Controllers.NotasController.GetAll (Notas.API) in 10.1374ms
+2026-09-08 08:15:00.806 -05:00 [INF] Executed endpoint 'Notas.API.Controllers.NotasController.GetAll (Notas.API)'
+2026-09-08 08:15:00.807 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7290/api/Notas?page=1&pageSize=10 - 200 null application/json; charset=utf-8 19.0769ms
+2026-09-08 08:17:03.694 -05:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7290/api/Notas?page=1&pageSize=10 - null null
+2026-09-08 08:17:03.701 -05:00 [INF] CORS policy execution successful.
+2026-09-08 08:17:03.702 -05:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7290/api/Notas?page=1&pageSize=10 - 204 null null 7.6462ms
+2026-09-08 08:17:03.703 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7290/api/Notas?page=1&pageSize=10 - null null
+2026-09-08 08:17:03.708 -05:00 [INF] CORS policy execution successful.
+2026-09-08 08:17:03.709 -05:00 [INF] Executing endpoint 'Notas.API.Controllers.NotasController.GetAll (Notas.API)'
+2026-09-08 08:17:03.710 -05:00 [INF] Route matched with {action = "GetAll", controller = "Notas"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(Int32, Int32) on controller Notas.API.Controllers.NotasController (Notas.API).
+2026-09-08 08:17:03.716 -05:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Notas] AS [n]
+INNER JOIN [Estudiantes] AS [e] ON [n].[IdEstudiante] = [e].[Id]
+INNER JOIN [Profesores] AS [p] ON [n].[IdProfesor] = [p].[Id]
+2026-09-08 08:17:03.722 -05:00 [INF] Executed DbCommand (3ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id], [n].[Nombre], [n].[IdEstudiante], [e].[Nombre] AS [NombreEstudiante], [n].[IdProfesor], [p].[Nombre] AS [NombreProfesor], [n].[Valor]
+FROM [Notas] AS [n]
+INNER JOIN [Estudiantes] AS [e] ON [n].[IdEstudiante] = [e].[Id]
+INNER JOIN [Profesores] AS [p] ON [n].[IdProfesor] = [p].[Id]
+ORDER BY [n].[Id]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2026-09-08 08:17:03.725 -05:00 [INF] Executing OkObjectResult, writing value of type 'Notas.Application.Common.Paginacion`1[[Notas.Application.DTOs.NotaDto, Notas.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-09-08 08:17:03.727 -05:00 [INF] Executed action Notas.API.Controllers.NotasController.GetAll (Notas.API) in 14.4042ms
+2026-09-08 08:17:03.728 -05:00 [INF] Executed endpoint 'Notas.API.Controllers.NotasController.GetAll (Notas.API)'
+2026-09-08 08:17:03.730 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7290/api/Notas?page=1&pageSize=10 - 200 null application/json; charset=utf-8 26.2218ms
+2026-09-08 08:17:21.347 -05:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7290/api/Notas?page=1&pageSize=10 - null null
+2026-09-08 08:17:21.349 -05:00 [INF] CORS policy execution successful.
+2026-09-08 08:17:21.349 -05:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7290/api/Notas?page=1&pageSize=10 - 204 null null 2.7572ms
+2026-09-08 08:17:21.350 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7290/api/Notas?page=1&pageSize=10 - null null
+2026-09-08 08:17:21.353 -05:00 [INF] CORS policy execution successful.
+2026-09-08 08:17:21.354 -05:00 [INF] Executing endpoint 'Notas.API.Controllers.NotasController.GetAll (Notas.API)'
+2026-09-08 08:17:21.355 -05:00 [INF] Route matched with {action = "GetAll", controller = "Notas"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(Int32, Int32) on controller Notas.API.Controllers.NotasController (Notas.API).
+2026-09-08 08:17:21.359 -05:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Notas] AS [n]
+INNER JOIN [Estudiantes] AS [e] ON [n].[IdEstudiante] = [e].[Id]
+INNER JOIN [Profesores] AS [p] ON [n].[IdProfesor] = [p].[Id]
+2026-09-08 08:17:21.364 -05:00 [INF] Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id], [n].[Nombre], [n].[IdEstudiante], [e].[Nombre] AS [NombreEstudiante], [n].[IdProfesor], [p].[Nombre] AS [NombreProfesor], [n].[Valor]
+FROM [Notas] AS [n]
+INNER JOIN [Estudiantes] AS [e] ON [n].[IdEstudiante] = [e].[Id]
+INNER JOIN [Profesores] AS [p] ON [n].[IdProfesor] = [p].[Id]
+ORDER BY [n].[Id]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2026-09-08 08:17:21.366 -05:00 [INF] Executing OkObjectResult, writing value of type 'Notas.Application.Common.Paginacion`1[[Notas.Application.DTOs.NotaDto, Notas.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-09-08 08:17:21.368 -05:00 [INF] Executed action Notas.API.Controllers.NotasController.GetAll (Notas.API) in 11.0071ms
+2026-09-08 08:17:21.369 -05:00 [INF] Executed endpoint 'Notas.API.Controllers.NotasController.GetAll (Notas.API)'
+2026-09-08 08:17:21.370 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7290/api/Notas?page=1&pageSize=10 - 200 null application/json; charset=utf-8 19.3573ms
+2026-09-08 08:17:56.066 -05:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7290/api/Notas?page=1&pageSize=10 - null null
+2026-09-08 08:17:56.072 -05:00 [INF] CORS policy execution successful.
+2026-09-08 08:17:56.073 -05:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7290/api/Notas?page=1&pageSize=10 - 204 null null 6.4085ms
+2026-09-08 08:17:56.074 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7290/api/Notas?page=1&pageSize=10 - null null
+2026-09-08 08:17:56.078 -05:00 [INF] CORS policy execution successful.
+2026-09-08 08:17:56.079 -05:00 [INF] Executing endpoint 'Notas.API.Controllers.NotasController.GetAll (Notas.API)'
+2026-09-08 08:17:56.080 -05:00 [INF] Route matched with {action = "GetAll", controller = "Notas"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(Int32, Int32) on controller Notas.API.Controllers.NotasController (Notas.API).
+2026-09-08 08:17:56.085 -05:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Notas] AS [n]
+INNER JOIN [Estudiantes] AS [e] ON [n].[IdEstudiante] = [e].[Id]
+INNER JOIN [Profesores] AS [p] ON [n].[IdProfesor] = [p].[Id]
+2026-09-08 08:17:56.089 -05:00 [INF] Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id], [n].[Nombre], [n].[IdEstudiante], [e].[Nombre] AS [NombreEstudiante], [n].[IdProfesor], [p].[Nombre] AS [NombreProfesor], [n].[Valor]
+FROM [Notas] AS [n]
+INNER JOIN [Estudiantes] AS [e] ON [n].[IdEstudiante] = [e].[Id]
+INNER JOIN [Profesores] AS [p] ON [n].[IdProfesor] = [p].[Id]
+ORDER BY [n].[Id]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2026-09-08 08:17:56.092 -05:00 [INF] Executing OkObjectResult, writing value of type 'Notas.Application.Common.Paginacion`1[[Notas.Application.DTOs.NotaDto, Notas.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-09-08 08:17:56.094 -05:00 [INF] Executed action Notas.API.Controllers.NotasController.GetAll (Notas.API) in 11.8614ms
+2026-09-08 08:17:56.095 -05:00 [INF] Executed endpoint 'Notas.API.Controllers.NotasController.GetAll (Notas.API)'
+2026-09-08 08:17:56.096 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7290/api/Notas?page=1&pageSize=10 - 200 null application/json; charset=utf-8 22.3997ms
+2026-09-08 08:18:11.767 -05:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7290/api/Notas?page=1&pageSize=10 - null null
+2026-09-08 08:18:11.770 -05:00 [INF] CORS policy execution successful.
+2026-09-08 08:18:11.770 -05:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7290/api/Notas?page=1&pageSize=10 - 204 null null 2.8079ms
+2026-09-08 08:18:11.771 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7290/api/Notas?page=1&pageSize=10 - null null
+2026-09-08 08:18:11.775 -05:00 [INF] CORS policy execution successful.
+2026-09-08 08:18:11.776 -05:00 [INF] Executing endpoint 'Notas.API.Controllers.NotasController.GetAll (Notas.API)'
+2026-09-08 08:18:11.777 -05:00 [INF] Route matched with {action = "GetAll", controller = "Notas"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(Int32, Int32) on controller Notas.API.Controllers.NotasController (Notas.API).
+2026-09-08 08:18:11.782 -05:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Notas] AS [n]
+INNER JOIN [Estudiantes] AS [e] ON [n].[IdEstudiante] = [e].[Id]
+INNER JOIN [Profesores] AS [p] ON [n].[IdProfesor] = [p].[Id]
+2026-09-08 08:18:11.788 -05:00 [INF] Executed DbCommand (3ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id], [n].[Nombre], [n].[IdEstudiante], [e].[Nombre] AS [NombreEstudiante], [n].[IdProfesor], [p].[Nombre] AS [NombreProfesor], [n].[Valor]
+FROM [Notas] AS [n]
+INNER JOIN [Estudiantes] AS [e] ON [n].[IdEstudiante] = [e].[Id]
+INNER JOIN [Profesores] AS [p] ON [n].[IdProfesor] = [p].[Id]
+ORDER BY [n].[Id]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2026-09-08 08:18:11.791 -05:00 [INF] Executing OkObjectResult, writing value of type 'Notas.Application.Common.Paginacion`1[[Notas.Application.DTOs.NotaDto, Notas.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-09-08 08:18:11.793 -05:00 [INF] Executed action Notas.API.Controllers.NotasController.GetAll (Notas.API) in 13.9462ms
+2026-09-08 08:18:11.794 -05:00 [INF] Executed endpoint 'Notas.API.Controllers.NotasController.GetAll (Notas.API)'
+2026-09-08 08:18:11.795 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7290/api/Notas?page=1&pageSize=10 - 200 null application/json; charset=utf-8 23.4477ms
+2026-09-08 08:18:14.180 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7290/api/Notas?page=1&pageSize=10 - null null
+2026-09-08 08:18:14.182 -05:00 [INF] CORS policy execution successful.
+2026-09-08 08:18:14.183 -05:00 [INF] Executing endpoint 'Notas.API.Controllers.NotasController.GetAll (Notas.API)'
+2026-09-08 08:18:14.184 -05:00 [INF] Route matched with {action = "GetAll", controller = "Notas"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(Int32, Int32) on controller Notas.API.Controllers.NotasController (Notas.API).
+2026-09-08 08:18:14.188 -05:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Notas] AS [n]
+INNER JOIN [Estudiantes] AS [e] ON [n].[IdEstudiante] = [e].[Id]
+INNER JOIN [Profesores] AS [p] ON [n].[IdProfesor] = [p].[Id]
+2026-09-08 08:18:14.191 -05:00 [INF] Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id], [n].[Nombre], [n].[IdEstudiante], [e].[Nombre] AS [NombreEstudiante], [n].[IdProfesor], [p].[Nombre] AS [NombreProfesor], [n].[Valor]
+FROM [Notas] AS [n]
+INNER JOIN [Estudiantes] AS [e] ON [n].[IdEstudiante] = [e].[Id]
+INNER JOIN [Profesores] AS [p] ON [n].[IdProfesor] = [p].[Id]
+ORDER BY [n].[Id]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2026-09-08 08:18:14.194 -05:00 [INF] Executing OkObjectResult, writing value of type 'Notas.Application.Common.Paginacion`1[[Notas.Application.DTOs.NotaDto, Notas.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-09-08 08:18:14.195 -05:00 [INF] Executed action Notas.API.Controllers.NotasController.GetAll (Notas.API) in 9.4787ms
+2026-09-08 08:18:14.196 -05:00 [INF] Executed endpoint 'Notas.API.Controllers.NotasController.GetAll (Notas.API)'
+2026-09-08 08:18:14.196 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7290/api/Notas?page=1&pageSize=10 - 200 null application/json; charset=utf-8 16.3447ms
+2026-09-08 08:21:00.502 -05:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7290/api/Notas?page=1&pageSize=10 - null null
+2026-09-08 08:21:00.507 -05:00 [INF] CORS policy execution successful.
+2026-09-08 08:21:00.507 -05:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7290/api/Notas?page=1&pageSize=10 - 204 null null 5.6248ms
+2026-09-08 08:21:00.510 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7290/api/Notas?page=1&pageSize=10 - null null
+2026-09-08 08:21:00.517 -05:00 [INF] CORS policy execution successful.
+2026-09-08 08:21:00.518 -05:00 [INF] Executing endpoint 'Notas.API.Controllers.NotasController.GetAll (Notas.API)'
+2026-09-08 08:21:00.519 -05:00 [INF] Route matched with {action = "GetAll", controller = "Notas"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(Int32, Int32) on controller Notas.API.Controllers.NotasController (Notas.API).
+2026-09-08 08:21:00.523 -05:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Notas] AS [n]
+INNER JOIN [Estudiantes] AS [e] ON [n].[IdEstudiante] = [e].[Id]
+INNER JOIN [Profesores] AS [p] ON [n].[IdProfesor] = [p].[Id]
+2026-09-08 08:21:00.526 -05:00 [INF] Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id], [n].[Nombre], [n].[IdEstudiante], [e].[Nombre] AS [NombreEstudiante], [n].[IdProfesor], [p].[Nombre] AS [NombreProfesor], [n].[Valor]
+FROM [Notas] AS [n]
+INNER JOIN [Estudiantes] AS [e] ON [n].[IdEstudiante] = [e].[Id]
+INNER JOIN [Profesores] AS [p] ON [n].[IdProfesor] = [p].[Id]
+ORDER BY [n].[Id]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2026-09-08 08:21:00.528 -05:00 [INF] Executing OkObjectResult, writing value of type 'Notas.Application.Common.Paginacion`1[[Notas.Application.DTOs.NotaDto, Notas.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-09-08 08:21:00.529 -05:00 [INF] Executed action Notas.API.Controllers.NotasController.GetAll (Notas.API) in 9.2315ms
+2026-09-08 08:21:00.530 -05:00 [INF] Executed endpoint 'Notas.API.Controllers.NotasController.GetAll (Notas.API)'
+2026-09-08 08:21:00.531 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7290/api/Notas?page=1&pageSize=10 - 200 null application/json; charset=utf-8 21.3635ms
+2026-09-08 08:21:18.836 -05:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7290/api/Notas?page=1&pageSize=10 - null null
+2026-09-08 08:21:18.838 -05:00 [INF] CORS policy execution successful.
+2026-09-08 08:21:18.839 -05:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7290/api/Notas?page=1&pageSize=10 - 204 null null 2.6995ms
+2026-09-08 08:21:18.840 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7290/api/Notas?page=1&pageSize=10 - null null
+2026-09-08 08:21:18.844 -05:00 [INF] CORS policy execution successful.
+2026-09-08 08:21:18.845 -05:00 [INF] Executing endpoint 'Notas.API.Controllers.NotasController.GetAll (Notas.API)'
+2026-09-08 08:21:18.846 -05:00 [INF] Route matched with {action = "GetAll", controller = "Notas"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(Int32, Int32) on controller Notas.API.Controllers.NotasController (Notas.API).
+2026-09-08 08:21:18.851 -05:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Notas] AS [n]
+INNER JOIN [Estudiantes] AS [e] ON [n].[IdEstudiante] = [e].[Id]
+INNER JOIN [Profesores] AS [p] ON [n].[IdProfesor] = [p].[Id]
+2026-09-08 08:21:18.856 -05:00 [INF] Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id], [n].[Nombre], [n].[IdEstudiante], [e].[Nombre] AS [NombreEstudiante], [n].[IdProfesor], [p].[Nombre] AS [NombreProfesor], [n].[Valor]
+FROM [Notas] AS [n]
+INNER JOIN [Estudiantes] AS [e] ON [n].[IdEstudiante] = [e].[Id]
+INNER JOIN [Profesores] AS [p] ON [n].[IdProfesor] = [p].[Id]
+ORDER BY [n].[Id]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2026-09-08 08:21:18.858 -05:00 [INF] Executing OkObjectResult, writing value of type 'Notas.Application.Common.Paginacion`1[[Notas.Application.DTOs.NotaDto, Notas.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-09-08 08:21:18.860 -05:00 [INF] Executed action Notas.API.Controllers.NotasController.GetAll (Notas.API) in 11.724ms
+2026-09-08 08:21:18.861 -05:00 [INF] Executed endpoint 'Notas.API.Controllers.NotasController.GetAll (Notas.API)'
+2026-09-08 08:21:18.861 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7290/api/Notas?page=1&pageSize=10 - 200 null application/json; charset=utf-8 21.1716ms
+2026-09-08 08:21:38.925 -05:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7290/api/Notas?page=1&pageSize=10 - null null
+2026-09-08 08:21:38.931 -05:00 [INF] CORS policy execution successful.
+2026-09-08 08:21:38.932 -05:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7290/api/Notas?page=1&pageSize=10 - 204 null null 6.5851ms
+2026-09-08 08:21:38.933 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7290/api/Notas?page=1&pageSize=10 - null null
+2026-09-08 08:21:38.937 -05:00 [INF] CORS policy execution successful.
+2026-09-08 08:21:38.938 -05:00 [INF] Executing endpoint 'Notas.API.Controllers.NotasController.GetAll (Notas.API)'
+2026-09-08 08:21:38.939 -05:00 [INF] Route matched with {action = "GetAll", controller = "Notas"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(Int32, Int32) on controller Notas.API.Controllers.NotasController (Notas.API).
+2026-09-08 08:21:38.944 -05:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Notas] AS [n]
+INNER JOIN [Estudiantes] AS [e] ON [n].[IdEstudiante] = [e].[Id]
+INNER JOIN [Profesores] AS [p] ON [n].[IdProfesor] = [p].[Id]
+2026-09-08 08:21:38.949 -05:00 [INF] Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id], [n].[Nombre], [n].[IdEstudiante], [e].[Nombre] AS [NombreEstudiante], [n].[IdProfesor], [p].[Nombre] AS [NombreProfesor], [n].[Valor]
+FROM [Notas] AS [n]
+INNER JOIN [Estudiantes] AS [e] ON [n].[IdEstudiante] = [e].[Id]
+INNER JOIN [Profesores] AS [p] ON [n].[IdProfesor] = [p].[Id]
+ORDER BY [n].[Id]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2026-09-08 08:21:38.952 -05:00 [INF] Executing OkObjectResult, writing value of type 'Notas.Application.Common.Paginacion`1[[Notas.Application.DTOs.NotaDto, Notas.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-09-08 08:21:38.953 -05:00 [INF] Executed action Notas.API.Controllers.NotasController.GetAll (Notas.API) in 11.8729ms
+2026-09-08 08:21:38.954 -05:00 [INF] Executed endpoint 'Notas.API.Controllers.NotasController.GetAll (Notas.API)'
+2026-09-08 08:21:38.955 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7290/api/Notas?page=1&pageSize=10 - 200 null application/json; charset=utf-8 22.368ms
+2026-09-08 08:21:43.669 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7290/api/Notas?page=1&pageSize=10 - null null
+2026-09-08 08:21:43.671 -05:00 [INF] CORS policy execution successful.
+2026-09-08 08:21:43.672 -05:00 [INF] Executing endpoint 'Notas.API.Controllers.NotasController.GetAll (Notas.API)'
+2026-09-08 08:21:43.672 -05:00 [INF] Route matched with {action = "GetAll", controller = "Notas"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(Int32, Int32) on controller Notas.API.Controllers.NotasController (Notas.API).
+2026-09-08 08:21:43.676 -05:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Notas] AS [n]
+INNER JOIN [Estudiantes] AS [e] ON [n].[IdEstudiante] = [e].[Id]
+INNER JOIN [Profesores] AS [p] ON [n].[IdProfesor] = [p].[Id]
+2026-09-08 08:21:43.680 -05:00 [INF] Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id], [n].[Nombre], [n].[IdEstudiante], [e].[Nombre] AS [NombreEstudiante], [n].[IdProfesor], [p].[Nombre] AS [NombreProfesor], [n].[Valor]
+FROM [Notas] AS [n]
+INNER JOIN [Estudiantes] AS [e] ON [n].[IdEstudiante] = [e].[Id]
+INNER JOIN [Profesores] AS [p] ON [n].[IdProfesor] = [p].[Id]
+ORDER BY [n].[Id]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2026-09-08 08:21:43.682 -05:00 [INF] Executing OkObjectResult, writing value of type 'Notas.Application.Common.Paginacion`1[[Notas.Application.DTOs.NotaDto, Notas.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-09-08 08:21:43.683 -05:00 [INF] Executed action Notas.API.Controllers.NotasController.GetAll (Notas.API) in 9.3216ms
+2026-09-08 08:21:43.684 -05:00 [INF] Executed endpoint 'Notas.API.Controllers.NotasController.GetAll (Notas.API)'
+2026-09-08 08:21:43.685 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7290/api/Notas?page=1&pageSize=10 - 200 null application/json; charset=utf-8 16.4277ms
+2026-09-08 08:22:40.372 -05:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7290/api/Notas?page=1&pageSize=10 - null null
+2026-09-08 08:22:40.378 -05:00 [INF] CORS policy execution successful.
+2026-09-08 08:22:40.379 -05:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7290/api/Notas?page=1&pageSize=10 - 204 null null 7.2441ms
+2026-09-08 08:22:40.382 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7290/api/Notas?page=1&pageSize=10 - null null
+2026-09-08 08:22:40.388 -05:00 [INF] CORS policy execution successful.
+2026-09-08 08:22:40.389 -05:00 [INF] Executing endpoint 'Notas.API.Controllers.NotasController.GetAll (Notas.API)'
+2026-09-08 08:22:40.390 -05:00 [INF] Route matched with {action = "GetAll", controller = "Notas"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(Int32, Int32) on controller Notas.API.Controllers.NotasController (Notas.API).
+2026-09-08 08:22:40.395 -05:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Notas] AS [n]
+INNER JOIN [Estudiantes] AS [e] ON [n].[IdEstudiante] = [e].[Id]
+INNER JOIN [Profesores] AS [p] ON [n].[IdProfesor] = [p].[Id]
+2026-09-08 08:22:40.400 -05:00 [INF] Executed DbCommand (3ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id], [n].[Nombre], [n].[IdEstudiante], [e].[Nombre] AS [NombreEstudiante], [n].[IdProfesor], [p].[Nombre] AS [NombreProfesor], [n].[Valor]
+FROM [Notas] AS [n]
+INNER JOIN [Estudiantes] AS [e] ON [n].[IdEstudiante] = [e].[Id]
+INNER JOIN [Profesores] AS [p] ON [n].[IdProfesor] = [p].[Id]
+ORDER BY [n].[Id]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2026-09-08 08:22:40.402 -05:00 [INF] Executing OkObjectResult, writing value of type 'Notas.Application.Common.Paginacion`1[[Notas.Application.DTOs.NotaDto, Notas.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-09-08 08:22:40.404 -05:00 [INF] Executed action Notas.API.Controllers.NotasController.GetAll (Notas.API) in 12.0344ms
+2026-09-08 08:22:40.405 -05:00 [INF] Executed endpoint 'Notas.API.Controllers.NotasController.GetAll (Notas.API)'
+2026-09-08 08:22:40.406 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7290/api/Notas?page=1&pageSize=10 - 200 null application/json; charset=utf-8 25.3507ms
+2026-09-08 08:22:45.527 -05:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7290/api/Notas?page=1&pageSize=10 - null null
+2026-09-08 08:22:45.530 -05:00 [INF] CORS policy execution successful.
+2026-09-08 08:22:45.530 -05:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7290/api/Notas?page=1&pageSize=10 - 204 null null 3.102ms
+2026-09-08 08:22:45.531 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7290/api/Notas?page=1&pageSize=10 - null null
+2026-09-08 08:22:45.535 -05:00 [INF] CORS policy execution successful.
+2026-09-08 08:22:45.536 -05:00 [INF] Executing endpoint 'Notas.API.Controllers.NotasController.GetAll (Notas.API)'
+2026-09-08 08:22:45.536 -05:00 [INF] Route matched with {action = "GetAll", controller = "Notas"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(Int32, Int32) on controller Notas.API.Controllers.NotasController (Notas.API).
+2026-09-08 08:22:45.540 -05:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Notas] AS [n]
+INNER JOIN [Estudiantes] AS [e] ON [n].[IdEstudiante] = [e].[Id]
+INNER JOIN [Profesores] AS [p] ON [n].[IdProfesor] = [p].[Id]
+2026-09-08 08:22:45.544 -05:00 [INF] Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id], [n].[Nombre], [n].[IdEstudiante], [e].[Nombre] AS [NombreEstudiante], [n].[IdProfesor], [p].[Nombre] AS [NombreProfesor], [n].[Valor]
+FROM [Notas] AS [n]
+INNER JOIN [Estudiantes] AS [e] ON [n].[IdEstudiante] = [e].[Id]
+INNER JOIN [Profesores] AS [p] ON [n].[IdProfesor] = [p].[Id]
+ORDER BY [n].[Id]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2026-09-08 08:22:45.546 -05:00 [INF] Executing OkObjectResult, writing value of type 'Notas.Application.Common.Paginacion`1[[Notas.Application.DTOs.NotaDto, Notas.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-09-08 08:22:45.547 -05:00 [INF] Executed action Notas.API.Controllers.NotasController.GetAll (Notas.API) in 9.1016ms
+2026-09-08 08:22:45.548 -05:00 [INF] Executed endpoint 'Notas.API.Controllers.NotasController.GetAll (Notas.API)'
+2026-09-08 08:22:45.549 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7290/api/Notas?page=1&pageSize=10 - 200 null application/json; charset=utf-8 17.5704ms
+2026-09-08 08:22:56.297 -05:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7290/api/Notas?page=1&pageSize=10 - null null
+2026-09-08 08:22:56.299 -05:00 [INF] CORS policy execution successful.
+2026-09-08 08:22:56.300 -05:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7290/api/Notas?page=1&pageSize=10 - 204 null null 2.8614ms
+2026-09-08 08:22:56.301 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7290/api/Notas?page=1&pageSize=10 - null null
+2026-09-08 08:22:56.305 -05:00 [INF] CORS policy execution successful.
+2026-09-08 08:22:56.307 -05:00 [INF] Executing endpoint 'Notas.API.Controllers.NotasController.GetAll (Notas.API)'
+2026-09-08 08:22:56.310 -05:00 [INF] Route matched with {action = "GetAll", controller = "Notas"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(Int32, Int32) on controller Notas.API.Controllers.NotasController (Notas.API).
+2026-09-08 08:22:56.316 -05:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Notas] AS [n]
+INNER JOIN [Estudiantes] AS [e] ON [n].[IdEstudiante] = [e].[Id]
+INNER JOIN [Profesores] AS [p] ON [n].[IdProfesor] = [p].[Id]
+2026-09-08 08:22:56.321 -05:00 [INF] Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id], [n].[Nombre], [n].[IdEstudiante], [e].[Nombre] AS [NombreEstudiante], [n].[IdProfesor], [p].[Nombre] AS [NombreProfesor], [n].[Valor]
+FROM [Notas] AS [n]
+INNER JOIN [Estudiantes] AS [e] ON [n].[IdEstudiante] = [e].[Id]
+INNER JOIN [Profesores] AS [p] ON [n].[IdProfesor] = [p].[Id]
+ORDER BY [n].[Id]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2026-09-08 08:22:56.323 -05:00 [INF] Executing OkObjectResult, writing value of type 'Notas.Application.Common.Paginacion`1[[Notas.Application.DTOs.NotaDto, Notas.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-09-08 08:22:56.324 -05:00 [INF] Executed action Notas.API.Controllers.NotasController.GetAll (Notas.API) in 11.8463ms
+2026-09-08 08:22:56.325 -05:00 [INF] Executed endpoint 'Notas.API.Controllers.NotasController.GetAll (Notas.API)'
+2026-09-08 08:22:56.326 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7290/api/Notas?page=1&pageSize=10 - 200 null application/json; charset=utf-8 24.7177ms
+2026-09-08 08:24:02.799 -05:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7290/api/Notas?page=1&pageSize=10 - null null
+2026-09-08 08:24:02.805 -05:00 [INF] CORS policy execution successful.
+2026-09-08 08:24:02.806 -05:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7290/api/Notas?page=1&pageSize=10 - 204 null null 6.9707ms
+2026-09-08 08:24:02.811 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7290/api/Notas?page=1&pageSize=10 - null null
+2026-09-08 08:24:02.815 -05:00 [INF] CORS policy execution successful.
+2026-09-08 08:24:02.816 -05:00 [INF] Executing endpoint 'Notas.API.Controllers.NotasController.GetAll (Notas.API)'
+2026-09-08 08:24:02.817 -05:00 [INF] Route matched with {action = "GetAll", controller = "Notas"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(Int32, Int32) on controller Notas.API.Controllers.NotasController (Notas.API).
+2026-09-08 08:24:02.821 -05:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Notas] AS [n]
+INNER JOIN [Estudiantes] AS [e] ON [n].[IdEstudiante] = [e].[Id]
+INNER JOIN [Profesores] AS [p] ON [n].[IdProfesor] = [p].[Id]
+2026-09-08 08:24:02.826 -05:00 [INF] Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id], [n].[Nombre], [n].[IdEstudiante], [e].[Nombre] AS [NombreEstudiante], [n].[IdProfesor], [p].[Nombre] AS [NombreProfesor], [n].[Valor]
+FROM [Notas] AS [n]
+INNER JOIN [Estudiantes] AS [e] ON [n].[IdEstudiante] = [e].[Id]
+INNER JOIN [Profesores] AS [p] ON [n].[IdProfesor] = [p].[Id]
+ORDER BY [n].[Id]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2026-09-08 08:24:02.829 -05:00 [INF] Executing OkObjectResult, writing value of type 'Notas.Application.Common.Paginacion`1[[Notas.Application.DTOs.NotaDto, Notas.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-09-08 08:24:02.831 -05:00 [INF] Executed action Notas.API.Controllers.NotasController.GetAll (Notas.API) in 12.2352ms
+2026-09-08 08:24:02.832 -05:00 [INF] Executed endpoint 'Notas.API.Controllers.NotasController.GetAll (Notas.API)'
+2026-09-08 08:24:02.834 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7290/api/Notas?page=1&pageSize=10 - 200 null application/json; charset=utf-8 22.3563ms
+2026-09-08 08:26:40.966 -05:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7290/api/Notas?page=1&pageSize=10 - null null
+2026-09-08 08:26:40.973 -05:00 [INF] CORS policy execution successful.
+2026-09-08 08:26:40.974 -05:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7290/api/Notas?page=1&pageSize=10 - 204 null null 7.9968ms
+2026-09-08 08:26:40.976 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7290/api/Notas?page=1&pageSize=10 - null null
+2026-09-08 08:26:40.979 -05:00 [INF] CORS policy execution successful.
+2026-09-08 08:26:40.980 -05:00 [INF] Executing endpoint 'Notas.API.Controllers.NotasController.GetAll (Notas.API)'
+2026-09-08 08:26:40.981 -05:00 [INF] Route matched with {action = "GetAll", controller = "Notas"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(Int32, Int32) on controller Notas.API.Controllers.NotasController (Notas.API).
+2026-09-08 08:26:40.986 -05:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Notas] AS [n]
+INNER JOIN [Estudiantes] AS [e] ON [n].[IdEstudiante] = [e].[Id]
+INNER JOIN [Profesores] AS [p] ON [n].[IdProfesor] = [p].[Id]
+2026-09-08 08:26:40.990 -05:00 [INF] Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id], [n].[Nombre], [n].[IdEstudiante], [e].[Nombre] AS [NombreEstudiante], [n].[IdProfesor], [p].[Nombre] AS [NombreProfesor], [n].[Valor]
+FROM [Notas] AS [n]
+INNER JOIN [Estudiantes] AS [e] ON [n].[IdEstudiante] = [e].[Id]
+INNER JOIN [Profesores] AS [p] ON [n].[IdProfesor] = [p].[Id]
+ORDER BY [n].[Id]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2026-09-08 08:26:40.993 -05:00 [INF] Executing OkObjectResult, writing value of type 'Notas.Application.Common.Paginacion`1[[Notas.Application.DTOs.NotaDto, Notas.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-09-08 08:26:40.994 -05:00 [INF] Executed action Notas.API.Controllers.NotasController.GetAll (Notas.API) in 11.0435ms
+2026-09-08 08:26:40.995 -05:00 [INF] Executed endpoint 'Notas.API.Controllers.NotasController.GetAll (Notas.API)'
+2026-09-08 08:26:40.996 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7290/api/Notas?page=1&pageSize=10 - 200 null application/json; charset=utf-8 20.3719ms
+2026-09-08 08:28:51.618 -05:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7290/api/Notas?page=1&pageSize=10 - null null
+2026-09-08 08:28:51.623 -05:00 [INF] CORS policy execution successful.
+2026-09-08 08:28:51.624 -05:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7290/api/Notas?page=1&pageSize=10 - 204 null null 5.748ms
+2026-09-08 08:28:51.624 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7290/api/Notas?page=1&pageSize=10 - null null
+2026-09-08 08:28:51.628 -05:00 [INF] CORS policy execution successful.
+2026-09-08 08:28:51.629 -05:00 [INF] Executing endpoint 'Notas.API.Controllers.NotasController.GetAll (Notas.API)'
+2026-09-08 08:28:51.629 -05:00 [INF] Route matched with {action = "GetAll", controller = "Notas"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(Int32, Int32) on controller Notas.API.Controllers.NotasController (Notas.API).
+2026-09-08 08:28:51.633 -05:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Notas] AS [n]
+INNER JOIN [Estudiantes] AS [e] ON [n].[IdEstudiante] = [e].[Id]
+INNER JOIN [Profesores] AS [p] ON [n].[IdProfesor] = [p].[Id]
+2026-09-08 08:28:51.636 -05:00 [INF] Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id], [n].[Nombre], [n].[IdEstudiante], [e].[Nombre] AS [NombreEstudiante], [n].[IdProfesor], [p].[Nombre] AS [NombreProfesor], [n].[Valor]
+FROM [Notas] AS [n]
+INNER JOIN [Estudiantes] AS [e] ON [n].[IdEstudiante] = [e].[Id]
+INNER JOIN [Profesores] AS [p] ON [n].[IdProfesor] = [p].[Id]
+ORDER BY [n].[Id]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2026-09-08 08:28:51.639 -05:00 [INF] Executing OkObjectResult, writing value of type 'Notas.Application.Common.Paginacion`1[[Notas.Application.DTOs.NotaDto, Notas.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-09-08 08:28:51.640 -05:00 [INF] Executed action Notas.API.Controllers.NotasController.GetAll (Notas.API) in 8.7548ms
+2026-09-08 08:28:51.641 -05:00 [INF] Executed endpoint 'Notas.API.Controllers.NotasController.GetAll (Notas.API)'
+2026-09-08 08:28:51.641 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7290/api/Notas?page=1&pageSize=10 - 200 null application/json; charset=utf-8 17.0825ms
+2026-09-08 08:29:29.670 -05:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7290/api/Notas?page=1&pageSize=10 - null null
+2026-09-08 08:29:29.676 -05:00 [INF] CORS policy execution successful.
+2026-09-08 08:29:29.677 -05:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7290/api/Notas?page=1&pageSize=10 - 204 null null 6.3515ms
+2026-09-08 08:29:29.678 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7290/api/Notas?page=1&pageSize=10 - null null
+2026-09-08 08:29:29.682 -05:00 [INF] CORS policy execution successful.
+2026-09-08 08:29:29.683 -05:00 [INF] Executing endpoint 'Notas.API.Controllers.NotasController.GetAll (Notas.API)'
+2026-09-08 08:29:29.684 -05:00 [INF] Route matched with {action = "GetAll", controller = "Notas"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(Int32, Int32) on controller Notas.API.Controllers.NotasController (Notas.API).
+2026-09-08 08:29:29.688 -05:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Notas] AS [n]
+INNER JOIN [Estudiantes] AS [e] ON [n].[IdEstudiante] = [e].[Id]
+INNER JOIN [Profesores] AS [p] ON [n].[IdProfesor] = [p].[Id]
+2026-09-08 08:29:29.693 -05:00 [INF] Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id], [n].[Nombre], [n].[IdEstudiante], [e].[Nombre] AS [NombreEstudiante], [n].[IdProfesor], [p].[Nombre] AS [NombreProfesor], [n].[Valor]
+FROM [Notas] AS [n]
+INNER JOIN [Estudiantes] AS [e] ON [n].[IdEstudiante] = [e].[Id]
+INNER JOIN [Profesores] AS [p] ON [n].[IdProfesor] = [p].[Id]
+ORDER BY [n].[Id]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2026-09-08 08:29:29.695 -05:00 [INF] Executing OkObjectResult, writing value of type 'Notas.Application.Common.Paginacion`1[[Notas.Application.DTOs.NotaDto, Notas.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-09-08 08:29:29.696 -05:00 [INF] Executed action Notas.API.Controllers.NotasController.GetAll (Notas.API) in 11.0609ms
+2026-09-08 08:29:29.698 -05:00 [INF] Executed endpoint 'Notas.API.Controllers.NotasController.GetAll (Notas.API)'
+2026-09-08 08:29:29.699 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7290/api/Notas?page=1&pageSize=10 - 200 null application/json; charset=utf-8 21.2393ms
+2026-09-08 08:29:52.736 -05:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7290/api/Notas?page=1&pageSize=10 - null null
+2026-09-08 08:29:52.742 -05:00 [INF] CORS policy execution successful.
+2026-09-08 08:29:52.743 -05:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7290/api/Notas?page=1&pageSize=10 - 204 null null 7.6576ms
+2026-09-08 08:29:52.745 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7290/api/Notas?page=1&pageSize=10 - null null
+2026-09-08 08:29:52.748 -05:00 [INF] CORS policy execution successful.
+2026-09-08 08:29:52.749 -05:00 [INF] Executing endpoint 'Notas.API.Controllers.NotasController.GetAll (Notas.API)'
+2026-09-08 08:29:52.750 -05:00 [INF] Route matched with {action = "GetAll", controller = "Notas"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(Int32, Int32) on controller Notas.API.Controllers.NotasController (Notas.API).
+2026-09-08 08:29:52.755 -05:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Notas] AS [n]
+INNER JOIN [Estudiantes] AS [e] ON [n].[IdEstudiante] = [e].[Id]
+INNER JOIN [Profesores] AS [p] ON [n].[IdProfesor] = [p].[Id]
+2026-09-08 08:29:52.760 -05:00 [INF] Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id], [n].[Nombre], [n].[IdEstudiante], [e].[Nombre] AS [NombreEstudiante], [n].[IdProfesor], [p].[Nombre] AS [NombreProfesor], [n].[Valor]
+FROM [Notas] AS [n]
+INNER JOIN [Estudiantes] AS [e] ON [n].[IdEstudiante] = [e].[Id]
+INNER JOIN [Profesores] AS [p] ON [n].[IdProfesor] = [p].[Id]
+ORDER BY [n].[Id]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2026-09-08 08:29:52.762 -05:00 [INF] Executing OkObjectResult, writing value of type 'Notas.Application.Common.Paginacion`1[[Notas.Application.DTOs.NotaDto, Notas.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-09-08 08:29:52.763 -05:00 [INF] Executed action Notas.API.Controllers.NotasController.GetAll (Notas.API) in 10.9305ms
+2026-09-08 08:29:52.764 -05:00 [INF] Executed endpoint 'Notas.API.Controllers.NotasController.GetAll (Notas.API)'
+2026-09-08 08:29:52.765 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7290/api/Notas?page=1&pageSize=10 - 200 null application/json; charset=utf-8 20.1912ms
+2026-09-08 08:30:05.718 -05:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7290/api/Notas?page=1&pageSize=10 - null null
+2026-09-08 08:30:05.721 -05:00 [INF] CORS policy execution successful.
+2026-09-08 08:30:05.721 -05:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7290/api/Notas?page=1&pageSize=10 - 204 null null 2.8778ms
+2026-09-08 08:30:05.722 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7290/api/Notas?page=1&pageSize=10 - null null
+2026-09-08 08:30:05.726 -05:00 [INF] CORS policy execution successful.
+2026-09-08 08:30:05.727 -05:00 [INF] Executing endpoint 'Notas.API.Controllers.NotasController.GetAll (Notas.API)'
+2026-09-08 08:30:05.728 -05:00 [INF] Route matched with {action = "GetAll", controller = "Notas"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(Int32, Int32) on controller Notas.API.Controllers.NotasController (Notas.API).
+2026-09-08 08:30:05.732 -05:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Notas] AS [n]
+INNER JOIN [Estudiantes] AS [e] ON [n].[IdEstudiante] = [e].[Id]
+INNER JOIN [Profesores] AS [p] ON [n].[IdProfesor] = [p].[Id]
+2026-09-08 08:30:05.737 -05:00 [INF] Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id], [n].[Nombre], [n].[IdEstudiante], [e].[Nombre] AS [NombreEstudiante], [n].[IdProfesor], [p].[Nombre] AS [NombreProfesor], [n].[Valor]
+FROM [Notas] AS [n]
+INNER JOIN [Estudiantes] AS [e] ON [n].[IdEstudiante] = [e].[Id]
+INNER JOIN [Profesores] AS [p] ON [n].[IdProfesor] = [p].[Id]
+ORDER BY [n].[Id]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2026-09-08 08:30:05.739 -05:00 [INF] Executing OkObjectResult, writing value of type 'Notas.Application.Common.Paginacion`1[[Notas.Application.DTOs.NotaDto, Notas.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-09-08 08:30:05.741 -05:00 [INF] Executed action Notas.API.Controllers.NotasController.GetAll (Notas.API) in 11.0817ms
+2026-09-08 08:30:05.742 -05:00 [INF] Executed endpoint 'Notas.API.Controllers.NotasController.GetAll (Notas.API)'
+2026-09-08 08:30:05.743 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7290/api/Notas?page=1&pageSize=10 - 200 null application/json; charset=utf-8 20.6226ms
+2026-09-08 08:30:20.362 -05:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7290/api/Notas?page=1&pageSize=10 - null null
+2026-09-08 08:30:20.365 -05:00 [INF] CORS policy execution successful.
+2026-09-08 08:30:20.367 -05:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7290/api/Notas?page=1&pageSize=10 - 204 null null 4.2288ms
+2026-09-08 08:30:20.368 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7290/api/Notas?page=1&pageSize=10 - null null
+2026-09-08 08:30:20.372 -05:00 [INF] CORS policy execution successful.
+2026-09-08 08:30:20.373 -05:00 [INF] Executing endpoint 'Notas.API.Controllers.NotasController.GetAll (Notas.API)'
+2026-09-08 08:30:20.374 -05:00 [INF] Route matched with {action = "GetAll", controller = "Notas"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(Int32, Int32) on controller Notas.API.Controllers.NotasController (Notas.API).
+2026-09-08 08:30:20.380 -05:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Notas] AS [n]
+INNER JOIN [Estudiantes] AS [e] ON [n].[IdEstudiante] = [e].[Id]
+INNER JOIN [Profesores] AS [p] ON [n].[IdProfesor] = [p].[Id]
+2026-09-08 08:30:20.386 -05:00 [INF] Executed DbCommand (3ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id], [n].[Nombre], [n].[IdEstudiante], [e].[Nombre] AS [NombreEstudiante], [n].[IdProfesor], [p].[Nombre] AS [NombreProfesor], [n].[Valor]
+FROM [Notas] AS [n]
+INNER JOIN [Estudiantes] AS [e] ON [n].[IdEstudiante] = [e].[Id]
+INNER JOIN [Profesores] AS [p] ON [n].[IdProfesor] = [p].[Id]
+ORDER BY [n].[Id]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2026-09-08 08:30:20.391 -05:00 [INF] Executing OkObjectResult, writing value of type 'Notas.Application.Common.Paginacion`1[[Notas.Application.DTOs.NotaDto, Notas.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-09-08 08:30:20.393 -05:00 [INF] Executed action Notas.API.Controllers.NotasController.GetAll (Notas.API) in 16.9432ms
+2026-09-08 08:30:20.394 -05:00 [INF] Executed endpoint 'Notas.API.Controllers.NotasController.GetAll (Notas.API)'
+2026-09-08 08:30:20.396 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7290/api/Notas?page=1&pageSize=10 - 200 null application/json; charset=utf-8 27.8939ms
+2026-09-08 08:30:39.488 -05:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7290/api/Notas/3 - null null
+2026-09-08 08:30:39.490 -05:00 [INF] CORS policy execution successful.
+2026-09-08 08:30:39.491 -05:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7290/api/Notas/3 - 204 null null 2.9833ms
+2026-09-08 08:30:39.492 -05:00 [INF] Request starting HTTP/2 DELETE https://localhost:7290/api/Notas/3 - null null
+2026-09-08 08:30:39.495 -05:00 [INF] CORS policy execution successful.
+2026-09-08 08:30:39.497 -05:00 [INF] Executing endpoint 'Notas.API.Controllers.NotasController.Delete (Notas.API)'
+2026-09-08 08:30:39.500 -05:00 [INF] Route matched with {action = "Delete", controller = "Notas"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Delete(Int32) on controller Notas.API.Controllers.NotasController (Notas.API).
+2026-09-08 08:30:39.527 -05:00 [INF] Executed DbCommand (2ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [n].[Id], [n].[IdEstudiante], [n].[IdProfesor], [n].[Nombre], [n].[Valor]
+FROM [Notas] AS [n]
+WHERE [n].[Id] = @__id_0
+2026-09-08 08:30:39.537 -05:00 [INF] Executed DbCommand (2ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+DELETE FROM [Notas]
+OUTPUT 1
+WHERE [Id] = @p0;
+2026-09-08 08:30:39.543 -05:00 [INF] Executing StatusCodeResult, setting HTTP status code 204
+2026-09-08 08:30:39.544 -05:00 [INF] Executed action Notas.API.Controllers.NotasController.Delete (Notas.API) in 42.8613ms
+2026-09-08 08:30:39.545 -05:00 [INF] Executed endpoint 'Notas.API.Controllers.NotasController.Delete (Notas.API)'
+2026-09-08 08:30:39.546 -05:00 [INF] Request finished HTTP/2 DELETE https://localhost:7290/api/Notas/3 - 204 null null 54.433ms
+2026-09-08 08:30:40.715 -05:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7290/api/Notas?page=1&pageSize=10 - null null
+2026-09-08 08:30:40.716 -05:00 [INF] CORS policy execution successful.
+2026-09-08 08:30:40.717 -05:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7290/api/Notas?page=1&pageSize=10 - 204 null null 2.5517ms
+2026-09-08 08:30:40.718 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7290/api/Notas?page=1&pageSize=10 - null null
+2026-09-08 08:30:40.721 -05:00 [INF] CORS policy execution successful.
+2026-09-08 08:30:40.722 -05:00 [INF] Executing endpoint 'Notas.API.Controllers.NotasController.GetAll (Notas.API)'
+2026-09-08 08:30:40.723 -05:00 [INF] Route matched with {action = "GetAll", controller = "Notas"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(Int32, Int32) on controller Notas.API.Controllers.NotasController (Notas.API).
+2026-09-08 08:30:40.727 -05:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Notas] AS [n]
+INNER JOIN [Estudiantes] AS [e] ON [n].[IdEstudiante] = [e].[Id]
+INNER JOIN [Profesores] AS [p] ON [n].[IdProfesor] = [p].[Id]
+2026-09-08 08:30:40.731 -05:00 [INF] Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id], [n].[Nombre], [n].[IdEstudiante], [e].[Nombre] AS [NombreEstudiante], [n].[IdProfesor], [p].[Nombre] AS [NombreProfesor], [n].[Valor]
+FROM [Notas] AS [n]
+INNER JOIN [Estudiantes] AS [e] ON [n].[IdEstudiante] = [e].[Id]
+INNER JOIN [Profesores] AS [p] ON [n].[IdProfesor] = [p].[Id]
+ORDER BY [n].[Id]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2026-09-08 08:30:40.733 -05:00 [INF] Executing OkObjectResult, writing value of type 'Notas.Application.Common.Paginacion`1[[Notas.Application.DTOs.NotaDto, Notas.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-09-08 08:30:40.734 -05:00 [INF] Executed action Notas.API.Controllers.NotasController.GetAll (Notas.API) in 9.5803ms
+2026-09-08 08:30:40.735 -05:00 [INF] Executed endpoint 'Notas.API.Controllers.NotasController.GetAll (Notas.API)'
+2026-09-08 08:30:40.736 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7290/api/Notas?page=1&pageSize=10 - 200 null application/json; charset=utf-8 18.1803ms
+2026-09-08 08:30:49.424 -05:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7290/api/Notas - null null
+2026-09-08 08:30:49.426 -05:00 [INF] CORS policy execution successful.
+2026-09-08 08:30:49.426 -05:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7290/api/Notas - 204 null null 2.6531ms
+2026-09-08 08:30:49.427 -05:00 [INF] Request starting HTTP/2 POST https://localhost:7290/api/Notas - application/json 46
+2026-09-08 08:30:49.430 -05:00 [INF] CORS policy execution successful.
+2026-09-08 08:30:49.432 -05:00 [INF] Executing endpoint 'Notas.API.Controllers.NotasController.Create (Notas.API)'
+2026-09-08 08:30:49.433 -05:00 [INF] Route matched with {action = "Create", controller = "Notas"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(Notas.Application.DTOs.CreateNotaDto) on controller Notas.API.Controllers.NotasController (Notas.API).
+2026-09-08 08:30:49.435 -05:00 [INF] Start processing HTTP request GET https://localhost:7061/api/Estudiantes/1
+2026-09-08 08:30:49.436 -05:00 [INF] Sending HTTP request GET https://localhost:7061/api/Estudiantes/1
+2026-09-08 08:30:49.457 -05:00 [INF] Received HTTP response headers after 20.1011ms - 200
+2026-09-08 08:30:49.458 -05:00 [INF] End processing HTTP request after 22.9023ms - 200
+2026-09-08 08:30:49.459 -05:00 [INF] Estudiante validado correctamente desde Estudiantes.API. IdEstudiante: 1
+2026-09-08 08:30:49.460 -05:00 [INF] Start processing HTTP request GET https://localhost:7116/api/Profesores/ObtenerIdProfesor
+2026-09-08 08:30:49.460 -05:00 [INF] Sending HTTP request GET https://localhost:7116/api/Profesores/ObtenerIdProfesor
+2026-09-08 08:30:49.535 -05:00 [INF] Received HTTP response headers after 73.2713ms - 200
+2026-09-08 08:30:49.536 -05:00 [INF] End processing HTTP request after 76.3293ms - 200
+2026-09-08 08:30:49.537 -05:00 [INF] Profesor autenticado obtenido correctamente. IdProfesor: 2
+2026-09-08 08:30:49.541 -05:00 [INF] Executed DbCommand (2ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Int32), @p2='?' (Size = 100), @p3='?' (Precision = 3) (Scale = 2) (DbType = Decimal)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Notas] ([IdEstudiante], [IdProfesor], [Nombre], [Valor])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3);
+2026-09-08 08:30:49.544 -05:00 [INF] Nota creada correctamente. IdNota: 4, IdEstudiante: 1, IdProfesor: 2, Valor: 3
+2026-09-08 08:30:49.545 -05:00 [INF] Executing CreatedAtActionResult, writing value of type 'Notas.Application.DTOs.NotaDto'.
+2026-09-08 08:30:49.546 -05:00 [INF] Executed action Notas.API.Controllers.NotasController.Create (Notas.API) in 111.6056ms
+2026-09-08 08:30:49.547 -05:00 [INF] Executed endpoint 'Notas.API.Controllers.NotasController.Create (Notas.API)'
+2026-09-08 08:30:49.548 -05:00 [INF] Request finished HTTP/2 POST https://localhost:7290/api/Notas - 201 null application/json; charset=utf-8 120.9929ms
+2026-09-08 08:30:50.348 -05:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7290/api/Notas?page=1&pageSize=10 - null null
+2026-09-08 08:30:50.350 -05:00 [INF] CORS policy execution successful.
+2026-09-08 08:30:50.350 -05:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7290/api/Notas?page=1&pageSize=10 - 204 null null 2.5836ms
+2026-09-08 08:30:50.351 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7290/api/Notas?page=1&pageSize=10 - null null
+2026-09-08 08:30:50.354 -05:00 [INF] CORS policy execution successful.
+2026-09-08 08:30:50.355 -05:00 [INF] Executing endpoint 'Notas.API.Controllers.NotasController.GetAll (Notas.API)'
+2026-09-08 08:30:50.356 -05:00 [INF] Route matched with {action = "GetAll", controller = "Notas"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(Int32, Int32) on controller Notas.API.Controllers.NotasController (Notas.API).
+2026-09-08 08:30:50.359 -05:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Notas] AS [n]
+INNER JOIN [Estudiantes] AS [e] ON [n].[IdEstudiante] = [e].[Id]
+INNER JOIN [Profesores] AS [p] ON [n].[IdProfesor] = [p].[Id]
+2026-09-08 08:30:50.363 -05:00 [INF] Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id], [n].[Nombre], [n].[IdEstudiante], [e].[Nombre] AS [NombreEstudiante], [n].[IdProfesor], [p].[Nombre] AS [NombreProfesor], [n].[Valor]
+FROM [Notas] AS [n]
+INNER JOIN [Estudiantes] AS [e] ON [n].[IdEstudiante] = [e].[Id]
+INNER JOIN [Profesores] AS [p] ON [n].[IdProfesor] = [p].[Id]
+ORDER BY [n].[Id]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2026-09-08 08:30:50.365 -05:00 [INF] Executing OkObjectResult, writing value of type 'Notas.Application.Common.Paginacion`1[[Notas.Application.DTOs.NotaDto, Notas.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-09-08 08:30:50.366 -05:00 [INF] Executed action Notas.API.Controllers.NotasController.GetAll (Notas.API) in 8.9569ms
+2026-09-08 08:30:50.367 -05:00 [INF] Executed endpoint 'Notas.API.Controllers.NotasController.GetAll (Notas.API)'
+2026-09-08 08:30:50.368 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7290/api/Notas?page=1&pageSize=10 - 200 null application/json; charset=utf-8 17.2396ms
+2026-09-08 08:30:58.865 -05:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7290/api/Notas?page=1&pageSize=10 - null null
+2026-09-08 08:30:58.867 -05:00 [INF] CORS policy execution successful.
+2026-09-08 08:30:58.867 -05:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7290/api/Notas?page=1&pageSize=10 - 204 null null 2.5942ms
+2026-09-08 08:30:58.868 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7290/api/Notas?page=1&pageSize=10 - null null
+2026-09-08 08:30:58.872 -05:00 [INF] CORS policy execution successful.
+2026-09-08 08:30:58.872 -05:00 [INF] Executing endpoint 'Notas.API.Controllers.NotasController.GetAll (Notas.API)'
+2026-09-08 08:30:58.873 -05:00 [INF] Route matched with {action = "GetAll", controller = "Notas"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(Int32, Int32) on controller Notas.API.Controllers.NotasController (Notas.API).
+2026-09-08 08:30:58.876 -05:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Notas] AS [n]
+INNER JOIN [Estudiantes] AS [e] ON [n].[IdEstudiante] = [e].[Id]
+INNER JOIN [Profesores] AS [p] ON [n].[IdProfesor] = [p].[Id]
+2026-09-08 08:30:58.882 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id], [n].[Nombre], [n].[IdEstudiante], [e].[Nombre] AS [NombreEstudiante], [n].[IdProfesor], [p].[Nombre] AS [NombreProfesor], [n].[Valor]
+FROM [Notas] AS [n]
+INNER JOIN [Estudiantes] AS [e] ON [n].[IdEstudiante] = [e].[Id]
+INNER JOIN [Profesores] AS [p] ON [n].[IdProfesor] = [p].[Id]
+ORDER BY [n].[Id]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2026-09-08 08:30:58.884 -05:00 [INF] Executing OkObjectResult, writing value of type 'Notas.Application.Common.Paginacion`1[[Notas.Application.DTOs.NotaDto, Notas.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-09-08 08:30:58.885 -05:00 [INF] Executed action Notas.API.Controllers.NotasController.GetAll (Notas.API) in 10.236ms
+2026-09-08 08:30:58.886 -05:00 [INF] Executed endpoint 'Notas.API.Controllers.NotasController.GetAll (Notas.API)'
+2026-09-08 08:30:58.887 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7290/api/Notas?page=1&pageSize=10 - 200 null application/json; charset=utf-8 18.2788ms
+2026-09-08 08:31:10.090 -05:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7290/api/Notas?page=1&pageSize=10 - null null
+2026-09-08 08:31:10.092 -05:00 [INF] CORS policy execution successful.
+2026-09-08 08:31:10.093 -05:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7290/api/Notas?page=1&pageSize=10 - 204 null null 2.5768ms
+2026-09-08 08:31:10.094 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7290/api/Notas?page=1&pageSize=10 - null null
+2026-09-08 08:31:10.097 -05:00 [INF] CORS policy execution successful.
+2026-09-08 08:31:10.098 -05:00 [INF] Executing endpoint 'Notas.API.Controllers.NotasController.GetAll (Notas.API)'
+2026-09-08 08:31:10.099 -05:00 [INF] Route matched with {action = "GetAll", controller = "Notas"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(Int32, Int32) on controller Notas.API.Controllers.NotasController (Notas.API).
+2026-09-08 08:31:10.101 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Notas] AS [n]
+INNER JOIN [Estudiantes] AS [e] ON [n].[IdEstudiante] = [e].[Id]
+INNER JOIN [Profesores] AS [p] ON [n].[IdProfesor] = [p].[Id]
+2026-09-08 08:31:10.104 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id], [n].[Nombre], [n].[IdEstudiante], [e].[Nombre] AS [NombreEstudiante], [n].[IdProfesor], [p].[Nombre] AS [NombreProfesor], [n].[Valor]
+FROM [Notas] AS [n]
+INNER JOIN [Estudiantes] AS [e] ON [n].[IdEstudiante] = [e].[Id]
+INNER JOIN [Profesores] AS [p] ON [n].[IdProfesor] = [p].[Id]
+ORDER BY [n].[Id]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2026-09-08 08:31:10.106 -05:00 [INF] Executing OkObjectResult, writing value of type 'Notas.Application.Common.Paginacion`1[[Notas.Application.DTOs.NotaDto, Notas.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-09-08 08:31:10.107 -05:00 [INF] Executed action Notas.API.Controllers.NotasController.GetAll (Notas.API) in 6.7658ms
+2026-09-08 08:31:10.108 -05:00 [INF] Executed endpoint 'Notas.API.Controllers.NotasController.GetAll (Notas.API)'
+2026-09-08 08:31:10.109 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7290/api/Notas?page=1&pageSize=10 - 200 null application/json; charset=utf-8 15.0307ms
+2026-09-08 08:31:11.869 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7290/api/Notas?page=1&pageSize=10 - null null
+2026-09-08 08:31:11.871 -05:00 [INF] CORS policy execution successful.
+2026-09-08 08:31:11.872 -05:00 [INF] Executing endpoint 'Notas.API.Controllers.NotasController.GetAll (Notas.API)'
+2026-09-08 08:31:11.873 -05:00 [INF] Route matched with {action = "GetAll", controller = "Notas"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(Int32, Int32) on controller Notas.API.Controllers.NotasController (Notas.API).
+2026-09-08 08:31:11.875 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Notas] AS [n]
+INNER JOIN [Estudiantes] AS [e] ON [n].[IdEstudiante] = [e].[Id]
+INNER JOIN [Profesores] AS [p] ON [n].[IdProfesor] = [p].[Id]
+2026-09-08 08:31:11.878 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id], [n].[Nombre], [n].[IdEstudiante], [e].[Nombre] AS [NombreEstudiante], [n].[IdProfesor], [p].[Nombre] AS [NombreProfesor], [n].[Valor]
+FROM [Notas] AS [n]
+INNER JOIN [Estudiantes] AS [e] ON [n].[IdEstudiante] = [e].[Id]
+INNER JOIN [Profesores] AS [p] ON [n].[IdProfesor] = [p].[Id]
+ORDER BY [n].[Id]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2026-09-08 08:31:11.880 -05:00 [INF] Executing OkObjectResult, writing value of type 'Notas.Application.Common.Paginacion`1[[Notas.Application.DTOs.NotaDto, Notas.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-09-08 08:31:11.881 -05:00 [INF] Executed action Notas.API.Controllers.NotasController.GetAll (Notas.API) in 6.9011ms
+2026-09-08 08:31:11.882 -05:00 [INF] Executed endpoint 'Notas.API.Controllers.NotasController.GetAll (Notas.API)'
+2026-09-08 08:31:11.883 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7290/api/Notas?page=1&pageSize=10 - 200 null application/json; charset=utf-8 14.2474ms
+2026-09-08 08:31:47.333 -05:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7290/api/Notas?page=1&pageSize=10 - null null
+2026-09-08 08:31:47.339 -05:00 [INF] CORS policy execution successful.
+2026-09-08 08:31:47.339 -05:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7290/api/Notas?page=1&pageSize=10 - 204 null null 6.6393ms
+2026-09-08 08:31:47.345 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7290/api/Notas?page=1&pageSize=10 - null null
+2026-09-08 08:31:47.348 -05:00 [INF] CORS policy execution successful.
+2026-09-08 08:31:47.349 -05:00 [INF] Executing endpoint 'Notas.API.Controllers.NotasController.GetAll (Notas.API)'
+2026-09-08 08:31:47.349 -05:00 [INF] Route matched with {action = "GetAll", controller = "Notas"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(Int32, Int32) on controller Notas.API.Controllers.NotasController (Notas.API).
+2026-09-08 08:31:47.354 -05:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Notas] AS [n]
+INNER JOIN [Estudiantes] AS [e] ON [n].[IdEstudiante] = [e].[Id]
+INNER JOIN [Profesores] AS [p] ON [n].[IdProfesor] = [p].[Id]
+2026-09-08 08:31:47.358 -05:00 [INF] Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id], [n].[Nombre], [n].[IdEstudiante], [e].[Nombre] AS [NombreEstudiante], [n].[IdProfesor], [p].[Nombre] AS [NombreProfesor], [n].[Valor]
+FROM [Notas] AS [n]
+INNER JOIN [Estudiantes] AS [e] ON [n].[IdEstudiante] = [e].[Id]
+INNER JOIN [Profesores] AS [p] ON [n].[IdProfesor] = [p].[Id]
+ORDER BY [n].[Id]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2026-09-08 08:31:47.360 -05:00 [INF] Executing OkObjectResult, writing value of type 'Notas.Application.Common.Paginacion`1[[Notas.Application.DTOs.NotaDto, Notas.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-09-08 08:31:47.361 -05:00 [INF] Executed action Notas.API.Controllers.NotasController.GetAll (Notas.API) in 10.0064ms
+2026-09-08 08:31:47.362 -05:00 [INF] Executed endpoint 'Notas.API.Controllers.NotasController.GetAll (Notas.API)'
+2026-09-08 08:31:47.363 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7290/api/Notas?page=1&pageSize=10 - 200 null application/json; charset=utf-8 18.8256ms
+2026-09-08 08:32:07.192 -05:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7290/api/Notas/4 - null null
+2026-09-08 08:32:07.194 -05:00 [INF] CORS policy execution successful.
+2026-09-08 08:32:07.194 -05:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7290/api/Notas/4 - 204 null null 2.849ms
+2026-09-08 08:32:07.195 -05:00 [INF] Request starting HTTP/2 PUT https://localhost:7290/api/Notas/4 - application/json 29
+2026-09-08 08:32:07.198 -05:00 [INF] CORS policy execution successful.
+2026-09-08 08:32:07.199 -05:00 [INF] Executing endpoint 'Notas.API.Controllers.NotasController.Update (Notas.API)'
+2026-09-08 08:32:07.202 -05:00 [INF] Route matched with {action = "Update", controller = "Notas"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Update(Int32, Notas.Application.DTOs.UpdateNotaDto) on controller Notas.API.Controllers.NotasController (Notas.API).
+2026-09-08 08:32:07.208 -05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [n].[Id], [n].[IdEstudiante], [n].[IdProfesor], [n].[Nombre], [n].[Valor]
+FROM [Notas] AS [n]
+WHERE [n].[Id] = @__id_0
+2026-09-08 08:32:07.216 -05:00 [INF] Executed DbCommand (4ms) [Parameters=[@p4='?' (DbType = Int32), @p0='?' (DbType = Int32), @p1='?' (DbType = Int32), @p2='?' (Size = 100), @p3='?' (Precision = 3) (Scale = 2) (DbType = Decimal)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Notas] SET [IdEstudiante] = @p0, [IdProfesor] = @p1, [Nombre] = @p2, [Valor] = @p3
+OUTPUT 1
+WHERE [Id] = @p4;
+2026-09-08 08:32:07.218 -05:00 [INF] Executing StatusCodeResult, setting HTTP status code 204
+2026-09-08 08:32:07.219 -05:00 [INF] Executed action Notas.API.Controllers.NotasController.Update (Notas.API) in 15.7704ms
+2026-09-08 08:32:07.220 -05:00 [INF] Executed endpoint 'Notas.API.Controllers.NotasController.Update (Notas.API)'
+2026-09-08 08:32:07.221 -05:00 [INF] Request finished HTTP/2 PUT https://localhost:7290/api/Notas/4 - 204 null null 25.9027ms
+2026-09-08 08:32:08.144 -05:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7290/api/Notas?page=1&pageSize=10 - null null
+2026-09-08 08:32:08.146 -05:00 [INF] CORS policy execution successful.
+2026-09-08 08:32:08.146 -05:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7290/api/Notas?page=1&pageSize=10 - 204 null null 2.5818ms
+2026-09-08 08:32:08.147 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7290/api/Notas?page=1&pageSize=10 - null null
+2026-09-08 08:32:08.151 -05:00 [INF] CORS policy execution successful.
+2026-09-08 08:32:08.151 -05:00 [INF] Executing endpoint 'Notas.API.Controllers.NotasController.GetAll (Notas.API)'
+2026-09-08 08:32:08.152 -05:00 [INF] Route matched with {action = "GetAll", controller = "Notas"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(Int32, Int32) on controller Notas.API.Controllers.NotasController (Notas.API).
+2026-09-08 08:32:08.156 -05:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Notas] AS [n]
+INNER JOIN [Estudiantes] AS [e] ON [n].[IdEstudiante] = [e].[Id]
+INNER JOIN [Profesores] AS [p] ON [n].[IdProfesor] = [p].[Id]
+2026-09-08 08:32:08.160 -05:00 [INF] Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id], [n].[Nombre], [n].[IdEstudiante], [e].[Nombre] AS [NombreEstudiante], [n].[IdProfesor], [p].[Nombre] AS [NombreProfesor], [n].[Valor]
+FROM [Notas] AS [n]
+INNER JOIN [Estudiantes] AS [e] ON [n].[IdEstudiante] = [e].[Id]
+INNER JOIN [Profesores] AS [p] ON [n].[IdProfesor] = [p].[Id]
+ORDER BY [n].[Id]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2026-09-08 08:32:08.163 -05:00 [INF] Executing OkObjectResult, writing value of type 'Notas.Application.Common.Paginacion`1[[Notas.Application.DTOs.NotaDto, Notas.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-09-08 08:32:08.164 -05:00 [INF] Executed action Notas.API.Controllers.NotasController.GetAll (Notas.API) in 9.9533ms
+2026-09-08 08:32:08.165 -05:00 [INF] Executed endpoint 'Notas.API.Controllers.NotasController.GetAll (Notas.API)'
+2026-09-08 08:32:08.166 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7290/api/Notas?page=1&pageSize=10 - 200 null application/json; charset=utf-8 18.347ms
+2026-09-08 08:32:15.305 -05:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7290/api/Notas/4 - null null
+2026-09-08 08:32:15.307 -05:00 [INF] CORS policy execution successful.
+2026-09-08 08:32:15.307 -05:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7290/api/Notas/4 - 204 null null 2.4716ms
+2026-09-08 08:32:15.308 -05:00 [INF] Request starting HTTP/2 DELETE https://localhost:7290/api/Notas/4 - null null
+2026-09-08 08:32:15.311 -05:00 [INF] CORS policy execution successful.
+2026-09-08 08:32:15.312 -05:00 [INF] Executing endpoint 'Notas.API.Controllers.NotasController.Delete (Notas.API)'
+2026-09-08 08:32:15.313 -05:00 [INF] Route matched with {action = "Delete", controller = "Notas"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Delete(Int32) on controller Notas.API.Controllers.NotasController (Notas.API).
+2026-09-08 08:32:15.316 -05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [n].[Id], [n].[IdEstudiante], [n].[IdProfesor], [n].[Nombre], [n].[Valor]
+FROM [Notas] AS [n]
+WHERE [n].[Id] = @__id_0
+2026-09-08 08:32:15.321 -05:00 [INF] Executed DbCommand (2ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+DELETE FROM [Notas]
+OUTPUT 1
+WHERE [Id] = @p0;
+2026-09-08 08:32:15.323 -05:00 [INF] Executing StatusCodeResult, setting HTTP status code 204
+2026-09-08 08:32:15.324 -05:00 [INF] Executed action Notas.API.Controllers.NotasController.Delete (Notas.API) in 9.7809ms
+2026-09-08 08:32:15.325 -05:00 [INF] Executed endpoint 'Notas.API.Controllers.NotasController.Delete (Notas.API)'
+2026-09-08 08:32:15.326 -05:00 [INF] Request finished HTTP/2 DELETE https://localhost:7290/api/Notas/4 - 204 null null 17.7276ms
+2026-09-08 08:32:16.437 -05:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7290/api/Notas?page=1&pageSize=10 - null null
+2026-09-08 08:32:16.439 -05:00 [INF] CORS policy execution successful.
+2026-09-08 08:32:16.439 -05:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7290/api/Notas?page=1&pageSize=10 - 204 null null 2.6932ms
+2026-09-08 08:32:16.440 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7290/api/Notas?page=1&pageSize=10 - null null
+2026-09-08 08:32:16.444 -05:00 [INF] CORS policy execution successful.
+2026-09-08 08:32:16.445 -05:00 [INF] Executing endpoint 'Notas.API.Controllers.NotasController.GetAll (Notas.API)'
+2026-09-08 08:32:16.446 -05:00 [INF] Route matched with {action = "GetAll", controller = "Notas"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(Int32, Int32) on controller Notas.API.Controllers.NotasController (Notas.API).
+2026-09-08 08:32:16.450 -05:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Notas] AS [n]
+INNER JOIN [Estudiantes] AS [e] ON [n].[IdEstudiante] = [e].[Id]
+INNER JOIN [Profesores] AS [p] ON [n].[IdProfesor] = [p].[Id]
+2026-09-08 08:32:16.453 -05:00 [INF] Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id], [n].[Nombre], [n].[IdEstudiante], [e].[Nombre] AS [NombreEstudiante], [n].[IdProfesor], [p].[Nombre] AS [NombreProfesor], [n].[Valor]
+FROM [Notas] AS [n]
+INNER JOIN [Estudiantes] AS [e] ON [n].[IdEstudiante] = [e].[Id]
+INNER JOIN [Profesores] AS [p] ON [n].[IdProfesor] = [p].[Id]
+ORDER BY [n].[Id]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2026-09-08 08:32:16.456 -05:00 [INF] Executing OkObjectResult, writing value of type 'Notas.Application.Common.Paginacion`1[[Notas.Application.DTOs.NotaDto, Notas.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-09-08 08:32:16.457 -05:00 [INF] Executed action Notas.API.Controllers.NotasController.GetAll (Notas.API) in 9.6032ms
+2026-09-08 08:32:16.458 -05:00 [INF] Executed endpoint 'Notas.API.Controllers.NotasController.GetAll (Notas.API)'
+2026-09-08 08:32:16.459 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7290/api/Notas?page=1&pageSize=10 - 200 null application/json; charset=utf-8 18.4337ms
+2026-09-08 08:37:44.124 -05:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7290/api/Notas/mis-notas?page=1&pageSize=10 - null null
+2026-09-08 08:37:44.129 -05:00 [INF] CORS policy execution successful.
+2026-09-08 08:37:44.130 -05:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7290/api/Notas/mis-notas?page=1&pageSize=10 - 204 null null 5.5928ms
+2026-09-08 08:37:44.134 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7290/api/Notas/mis-notas?page=1&pageSize=10 - null null
+2026-09-08 08:37:44.137 -05:00 [INF] CORS policy execution successful.
+2026-09-08 08:37:44.138 -05:00 [INF] Executing endpoint 'Notas.API.Controllers.NotasController.GetMisNotas (Notas.API)'
+2026-09-08 08:37:44.139 -05:00 [INF] Route matched with {action = "GetMisNotas", controller = "Notas"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetMisNotas(Int32, Int32) on controller Notas.API.Controllers.NotasController (Notas.API).
+2026-09-08 08:37:44.140 -05:00 [INF] Start processing HTTP request GET https://localhost:7061/api/Estudiantes/ObtenerIdEstudiante
+2026-09-08 08:37:44.141 -05:00 [INF] Sending HTTP request GET https://localhost:7061/api/Estudiantes/ObtenerIdEstudiante
+2026-09-08 08:37:44.171 -05:00 [INF] Received HTTP response headers after 29.0028ms - 200
+2026-09-08 08:37:44.172 -05:00 [INF] End processing HTTP request after 31.8423ms - 200
+2026-09-08 08:37:44.183 -05:00 [INF] Executed DbCommand (3ms) [Parameters=[@__idEstudiante_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Notas] AS [n]
+INNER JOIN [Estudiantes] AS [e] ON [n].[IdEstudiante] = [e].[Id]
+INNER JOIN [Profesores] AS [p] ON [n].[IdProfesor] = [p].[Id]
+WHERE [n].[IdEstudiante] = @__idEstudiante_0
+2026-09-08 08:37:44.187 -05:00 [INF] Executed DbCommand (2ms) [Parameters=[@__idEstudiante_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id], [n].[Nombre], [n].[IdEstudiante], [e].[Nombre] AS [NombreEstudiante], [n].[IdProfesor], [p].[Nombre] AS [NombreProfesor], [n].[Valor]
+FROM [Notas] AS [n]
+INNER JOIN [Estudiantes] AS [e] ON [n].[IdEstudiante] = [e].[Id]
+INNER JOIN [Profesores] AS [p] ON [n].[IdProfesor] = [p].[Id]
+WHERE [n].[IdEstudiante] = @__idEstudiante_0
+ORDER BY [n].[Id]
+OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY
+2026-09-08 08:37:44.190 -05:00 [INF] Executing OkObjectResult, writing value of type 'Notas.Application.Common.Paginacion`1[[Notas.Application.DTOs.NotaDto, Notas.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-09-08 08:37:44.191 -05:00 [INF] Executed action Notas.API.Controllers.NotasController.GetMisNotas (Notas.API) in 50.3902ms
+2026-09-08 08:37:44.192 -05:00 [INF] Executed endpoint 'Notas.API.Controllers.NotasController.GetMisNotas (Notas.API)'
+2026-09-08 08:37:44.192 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7290/api/Notas/mis-notas?page=1&pageSize=10 - 200 null application/json; charset=utf-8 58.9012ms
+2026-09-08 08:38:06.290 -05:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7290/api/Notas?page=1&pageSize=10 - null null
+2026-09-08 08:38:06.295 -05:00 [INF] CORS policy execution successful.
+2026-09-08 08:38:06.296 -05:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7290/api/Notas?page=1&pageSize=10 - 204 null null 5.5234ms
+2026-09-08 08:38:06.297 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7290/api/Notas?page=1&pageSize=10 - null null
+2026-09-08 08:38:06.300 -05:00 [INF] CORS policy execution successful.
+2026-09-08 08:38:06.301 -05:00 [INF] Executing endpoint 'Notas.API.Controllers.NotasController.GetAll (Notas.API)'
+2026-09-08 08:38:06.302 -05:00 [INF] Route matched with {action = "GetAll", controller = "Notas"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(Int32, Int32) on controller Notas.API.Controllers.NotasController (Notas.API).
+2026-09-08 08:38:06.306 -05:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Notas] AS [n]
+INNER JOIN [Estudiantes] AS [e] ON [n].[IdEstudiante] = [e].[Id]
+INNER JOIN [Profesores] AS [p] ON [n].[IdProfesor] = [p].[Id]
+2026-09-08 08:38:06.310 -05:00 [INF] Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id], [n].[Nombre], [n].[IdEstudiante], [e].[Nombre] AS [NombreEstudiante], [n].[IdProfesor], [p].[Nombre] AS [NombreProfesor], [n].[Valor]
+FROM [Notas] AS [n]
+INNER JOIN [Estudiantes] AS [e] ON [n].[IdEstudiante] = [e].[Id]
+INNER JOIN [Profesores] AS [p] ON [n].[IdProfesor] = [p].[Id]
+ORDER BY [n].[Id]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2026-09-08 08:38:06.312 -05:00 [INF] Executing OkObjectResult, writing value of type 'Notas.Application.Common.Paginacion`1[[Notas.Application.DTOs.NotaDto, Notas.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-09-08 08:38:06.313 -05:00 [INF] Executed action Notas.API.Controllers.NotasController.GetAll (Notas.API) in 9.7971ms
+2026-09-08 08:38:06.314 -05:00 [INF] Executed endpoint 'Notas.API.Controllers.NotasController.GetAll (Notas.API)'
+2026-09-08 08:38:06.315 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7290/api/Notas?page=1&pageSize=10 - 200 null application/json; charset=utf-8 18.2449ms
+2026-09-08 08:38:22.037 -05:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7290/api/Notas?page=1&pageSize=10 - null null
+2026-09-08 08:38:22.039 -05:00 [INF] CORS policy execution successful.
+2026-09-08 08:38:22.040 -05:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7290/api/Notas?page=1&pageSize=10 - 204 null null 2.5368ms
+2026-09-08 08:38:22.041 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7290/api/Notas?page=1&pageSize=10 - null null
+2026-09-08 08:38:22.044 -05:00 [INF] CORS policy execution successful.
+2026-09-08 08:38:22.045 -05:00 [INF] Executing endpoint 'Notas.API.Controllers.NotasController.GetAll (Notas.API)'
+2026-09-08 08:38:22.045 -05:00 [INF] Route matched with {action = "GetAll", controller = "Notas"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(Int32, Int32) on controller Notas.API.Controllers.NotasController (Notas.API).
+2026-09-08 08:38:24.906 -05:00 [INF] Executed DbCommand (2,857ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Notas] AS [n]
+INNER JOIN [Estudiantes] AS [e] ON [n].[IdEstudiante] = [e].[Id]
+INNER JOIN [Profesores] AS [p] ON [n].[IdProfesor] = [p].[Id]
+2026-09-08 08:38:24.910 -05:00 [INF] Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id], [n].[Nombre], [n].[IdEstudiante], [e].[Nombre] AS [NombreEstudiante], [n].[IdProfesor], [p].[Nombre] AS [NombreProfesor], [n].[Valor]
+FROM [Notas] AS [n]
+INNER JOIN [Estudiantes] AS [e] ON [n].[IdEstudiante] = [e].[Id]
+INNER JOIN [Profesores] AS [p] ON [n].[IdProfesor] = [p].[Id]
+ORDER BY [n].[Id]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2026-09-08 08:38:24.912 -05:00 [INF] Executing OkObjectResult, writing value of type 'Notas.Application.Common.Paginacion`1[[Notas.Application.DTOs.NotaDto, Notas.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-09-08 08:38:24.913 -05:00 [INF] Executed action Notas.API.Controllers.NotasController.GetAll (Notas.API) in 2865.4392ms
+2026-09-08 08:38:24.914 -05:00 [INF] Executed endpoint 'Notas.API.Controllers.NotasController.GetAll (Notas.API)'
+2026-09-08 08:38:24.915 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7290/api/Notas?page=1&pageSize=10 - 200 null application/json; charset=utf-8 2874.4617ms
+2026-09-08 08:39:20.391 -05:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7290/api/Notas?page=1&pageSize=10 - null null
+2026-09-08 08:39:20.397 -05:00 [INF] CORS policy execution successful.
+2026-09-08 08:39:20.398 -05:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7290/api/Notas?page=1&pageSize=10 - 204 null null 6.4269ms
+2026-09-08 08:39:20.399 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7290/api/Notas?page=1&pageSize=10 - null null
+2026-09-08 08:39:20.402 -05:00 [INF] CORS policy execution successful.
+2026-09-08 08:39:20.404 -05:00 [INF] Executing endpoint 'Notas.API.Controllers.NotasController.GetAll (Notas.API)'
+2026-09-08 08:39:20.404 -05:00 [INF] Route matched with {action = "GetAll", controller = "Notas"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(Int32, Int32) on controller Notas.API.Controllers.NotasController (Notas.API).
+2026-09-08 08:39:20.412 -05:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Notas] AS [n]
+INNER JOIN [Estudiantes] AS [e] ON [n].[IdEstudiante] = [e].[Id]
+INNER JOIN [Profesores] AS [p] ON [n].[IdProfesor] = [p].[Id]
+2026-09-08 08:39:20.416 -05:00 [INF] Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id], [n].[Nombre], [n].[IdEstudiante], [e].[Nombre] AS [NombreEstudiante], [n].[IdProfesor], [p].[Nombre] AS [NombreProfesor], [n].[Valor]
+FROM [Notas] AS [n]
+INNER JOIN [Estudiantes] AS [e] ON [n].[IdEstudiante] = [e].[Id]
+INNER JOIN [Profesores] AS [p] ON [n].[IdProfesor] = [p].[Id]
+ORDER BY [n].[Id]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2026-09-08 08:39:20.418 -05:00 [INF] Executing OkObjectResult, writing value of type 'Notas.Application.Common.Paginacion`1[[Notas.Application.DTOs.NotaDto, Notas.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-09-08 08:39:20.420 -05:00 [INF] Executed action Notas.API.Controllers.NotasController.GetAll (Notas.API) in 13.6144ms
+2026-09-08 08:39:20.421 -05:00 [INF] Executed endpoint 'Notas.API.Controllers.NotasController.GetAll (Notas.API)'
+2026-09-08 08:39:20.422 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7290/api/Notas?page=1&pageSize=10 - 200 null application/json; charset=utf-8 22.9421ms
+2026-09-08 09:24:33.168 -05:00 [INF] User profile is available. Using 'C:\Users\Goyatsu\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-09-08 09:24:33.553 -05:00 [INF] Now listening on: https://localhost:7290
+2026-09-08 09:24:33.554 -05:00 [INF] Now listening on: http://localhost:5032
+2026-09-08 09:24:33.631 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-09-08 09:24:33.632 -05:00 [INF] Hosting environment: Development
+2026-09-08 09:24:33.632 -05:00 [INF] Content root path: C:\Users\Goyatsu\Desktop\SistemaGestionNotas\SistemaGestionNotas\Notas.API
+2026-09-08 09:24:34.217 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7290/ - null null
+2026-09-08 09:24:34.390 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7290/ - 404 0 null 174.3889ms
+2026-09-08 09:24:34.397 -05:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7290/, Response status code: 404
+2026-09-08 09:26:03.307 -05:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7290/api/Notas/mis-notas?page=1&pageSize=10 - null null
+2026-09-08 09:26:03.312 -05:00 [INF] CORS policy execution successful.
+2026-09-08 09:26:03.314 -05:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7290/api/Notas/mis-notas?page=1&pageSize=10 - 204 null null 6.6466ms
+2026-09-08 09:26:03.316 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7290/api/Notas/mis-notas?page=1&pageSize=10 - null null
+2026-09-08 09:26:03.319 -05:00 [INF] CORS policy execution successful.
+2026-09-08 09:26:03.361 -05:00 [INF] Executing endpoint 'Notas.API.Controllers.NotasController.GetMisNotas (Notas.API)'
+2026-09-08 09:26:03.378 -05:00 [INF] Route matched with {action = "GetMisNotas", controller = "Notas"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetMisNotas(Int32, Int32) on controller Notas.API.Controllers.NotasController (Notas.API).
+2026-09-08 09:26:03.510 -05:00 [INF] Start processing HTTP request GET https://localhost:7061/api/Estudiantes/ObtenerIdEstudiante
+2026-09-08 09:26:03.513 -05:00 [INF] Sending HTTP request GET https://localhost:7061/api/Estudiantes/ObtenerIdEstudiante
+2026-09-08 09:26:03.564 -05:00 [INF] Received HTTP response headers after 47.8426ms - 200
+2026-09-08 09:26:03.565 -05:00 [INF] End processing HTTP request after 57.8179ms - 200
+2026-09-08 09:26:04.378 -05:00 [INF] Executed DbCommand (35ms) [Parameters=[@__idEstudiante_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Notas] AS [n]
+INNER JOIN [Estudiantes] AS [e] ON [n].[IdEstudiante] = [e].[Id]
+INNER JOIN [Profesores] AS [p] ON [n].[IdProfesor] = [p].[Id]
+WHERE [n].[IdEstudiante] = @__idEstudiante_0
+2026-09-08 09:26:04.413 -05:00 [INF] Executed DbCommand (4ms) [Parameters=[@__idEstudiante_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id], [n].[Nombre], [n].[IdEstudiante], [e].[Nombre] AS [NombreEstudiante], [n].[IdProfesor], [p].[Nombre] AS [NombreProfesor], [n].[Valor]
+FROM [Notas] AS [n]
+INNER JOIN [Estudiantes] AS [e] ON [n].[IdEstudiante] = [e].[Id]
+INNER JOIN [Profesores] AS [p] ON [n].[IdProfesor] = [p].[Id]
+WHERE [n].[IdEstudiante] = @__idEstudiante_0
+ORDER BY [n].[Id]
+OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY
+2026-09-08 09:26:04.422 -05:00 [INF] Executing OkObjectResult, writing value of type 'Notas.Application.Common.Paginacion`1[[Notas.Application.DTOs.NotaDto, Notas.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-09-08 09:26:04.434 -05:00 [INF] Executed action Notas.API.Controllers.NotasController.GetMisNotas (Notas.API) in 1052.8257ms
+2026-09-08 09:26:04.436 -05:00 [INF] Executed endpoint 'Notas.API.Controllers.NotasController.GetMisNotas (Notas.API)'
+2026-09-08 09:26:04.442 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7290/api/Notas/mis-notas?page=1&pageSize=10 - 200 null application/json; charset=utf-8 1126.121ms
+2026-09-08 09:26:25.295 -05:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7290/api/Notas?page=1&pageSize=10 - null null
+2026-09-08 09:26:25.297 -05:00 [INF] CORS policy execution successful.
+2026-09-08 09:26:25.298 -05:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7290/api/Notas?page=1&pageSize=10 - 204 null null 3.1652ms
+2026-09-08 09:26:25.299 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7290/api/Notas?page=1&pageSize=10 - null null
+2026-09-08 09:26:25.302 -05:00 [INF] CORS policy execution successful.
+2026-09-08 09:26:25.305 -05:00 [INF] Executing endpoint 'Notas.API.Controllers.NotasController.GetAll (Notas.API)'
+2026-09-08 09:26:25.309 -05:00 [INF] Route matched with {action = "GetAll", controller = "Notas"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(Int32, Int32) on controller Notas.API.Controllers.NotasController (Notas.API).
+2026-09-08 09:26:25.350 -05:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Notas] AS [n]
+INNER JOIN [Estudiantes] AS [e] ON [n].[IdEstudiante] = [e].[Id]
+INNER JOIN [Profesores] AS [p] ON [n].[IdProfesor] = [p].[Id]
+2026-09-08 09:26:25.357 -05:00 [INF] Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id], [n].[Nombre], [n].[IdEstudiante], [e].[Nombre] AS [NombreEstudiante], [n].[IdProfesor], [p].[Nombre] AS [NombreProfesor], [n].[Valor]
+FROM [Notas] AS [n]
+INNER JOIN [Estudiantes] AS [e] ON [n].[IdEstudiante] = [e].[Id]
+INNER JOIN [Profesores] AS [p] ON [n].[IdProfesor] = [p].[Id]
+ORDER BY [n].[Id]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2026-09-08 09:26:25.360 -05:00 [INF] Executing OkObjectResult, writing value of type 'Notas.Application.Common.Paginacion`1[[Notas.Application.DTOs.NotaDto, Notas.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-09-08 09:26:25.361 -05:00 [INF] Executed action Notas.API.Controllers.NotasController.GetAll (Notas.API) in 50.4954ms
+2026-09-08 09:26:25.362 -05:00 [INF] Executed endpoint 'Notas.API.Controllers.NotasController.GetAll (Notas.API)'
+2026-09-08 09:26:25.363 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7290/api/Notas?page=1&pageSize=10 - 200 null application/json; charset=utf-8 64.3381ms
+2026-09-08 09:28:30.987 -05:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7290/api/Notas?page=1&pageSize=10 - null null
+2026-09-08 09:28:31.012 -05:00 [INF] CORS policy execution successful.
+2026-09-08 09:28:31.013 -05:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7290/api/Notas?page=1&pageSize=10 - 204 null null 26.2613ms
+2026-09-08 09:28:31.014 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7290/api/Notas?page=1&pageSize=10 - null null
+2026-09-08 09:28:31.017 -05:00 [INF] CORS policy execution successful.
+2026-09-08 09:28:31.019 -05:00 [INF] Executing endpoint 'Notas.API.Controllers.NotasController.GetAll (Notas.API)'
+2026-09-08 09:28:31.020 -05:00 [INF] Route matched with {action = "GetAll", controller = "Notas"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(Int32, Int32) on controller Notas.API.Controllers.NotasController (Notas.API).
+2026-09-08 09:28:31.036 -05:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Notas] AS [n]
+INNER JOIN [Estudiantes] AS [e] ON [n].[IdEstudiante] = [e].[Id]
+INNER JOIN [Profesores] AS [p] ON [n].[IdProfesor] = [p].[Id]
+2026-09-08 09:28:31.040 -05:00 [INF] Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id], [n].[Nombre], [n].[IdEstudiante], [e].[Nombre] AS [NombreEstudiante], [n].[IdProfesor], [p].[Nombre] AS [NombreProfesor], [n].[Valor]
+FROM [Notas] AS [n]
+INNER JOIN [Estudiantes] AS [e] ON [n].[IdEstudiante] = [e].[Id]
+INNER JOIN [Profesores] AS [p] ON [n].[IdProfesor] = [p].[Id]
+ORDER BY [n].[Id]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2026-09-08 09:28:31.042 -05:00 [INF] Executing OkObjectResult, writing value of type 'Notas.Application.Common.Paginacion`1[[Notas.Application.DTOs.NotaDto, Notas.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-09-08 09:28:31.043 -05:00 [INF] Executed action Notas.API.Controllers.NotasController.GetAll (Notas.API) in 22.1588ms
+2026-09-08 09:28:31.044 -05:00 [INF] Executed endpoint 'Notas.API.Controllers.NotasController.GetAll (Notas.API)'
+2026-09-08 09:28:31.045 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7290/api/Notas?page=1&pageSize=10 - 200 null application/json; charset=utf-8 31.3246ms
+2026-09-08 09:29:00.025 -05:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7290/api/Notas?page=1&pageSize=10 - null null
+2026-09-08 09:29:00.027 -05:00 [INF] CORS policy execution successful.
+2026-09-08 09:29:00.028 -05:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7290/api/Notas?page=1&pageSize=10 - 204 null null 2.6989ms
+2026-09-08 09:29:00.029 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7290/api/Notas?page=1&pageSize=10 - null null
+2026-09-08 09:29:00.032 -05:00 [INF] CORS policy execution successful.
+2026-09-08 09:29:00.033 -05:00 [INF] Executing endpoint 'Notas.API.Controllers.NotasController.GetAll (Notas.API)'
+2026-09-08 09:29:00.034 -05:00 [INF] Route matched with {action = "GetAll", controller = "Notas"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(Int32, Int32) on controller Notas.API.Controllers.NotasController (Notas.API).
+2026-09-08 09:29:00.038 -05:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Notas] AS [n]
+INNER JOIN [Estudiantes] AS [e] ON [n].[IdEstudiante] = [e].[Id]
+INNER JOIN [Profesores] AS [p] ON [n].[IdProfesor] = [p].[Id]
+2026-09-08 09:29:00.042 -05:00 [INF] Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id], [n].[Nombre], [n].[IdEstudiante], [e].[Nombre] AS [NombreEstudiante], [n].[IdProfesor], [p].[Nombre] AS [NombreProfesor], [n].[Valor]
+FROM [Notas] AS [n]
+INNER JOIN [Estudiantes] AS [e] ON [n].[IdEstudiante] = [e].[Id]
+INNER JOIN [Profesores] AS [p] ON [n].[IdProfesor] = [p].[Id]
+ORDER BY [n].[Id]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2026-09-08 09:29:00.044 -05:00 [INF] Executing OkObjectResult, writing value of type 'Notas.Application.Common.Paginacion`1[[Notas.Application.DTOs.NotaDto, Notas.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-09-08 09:29:00.045 -05:00 [INF] Executed action Notas.API.Controllers.NotasController.GetAll (Notas.API) in 10.0846ms
+2026-09-08 09:29:00.047 -05:00 [INF] Executed endpoint 'Notas.API.Controllers.NotasController.GetAll (Notas.API)'
+2026-09-08 09:29:00.048 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7290/api/Notas?page=1&pageSize=10 - 200 null application/json; charset=utf-8 18.7462ms
+2026-09-08 09:29:17.142 -05:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7290/api/Notas - null null
+2026-09-08 09:29:17.144 -05:00 [INF] CORS policy execution successful.
+2026-09-08 09:29:17.145 -05:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7290/api/Notas - 204 null null 2.979ms
+2026-09-08 09:29:17.146 -05:00 [INF] Request starting HTTP/2 POST https://localhost:7290/api/Notas - application/json 51
+2026-09-08 09:29:17.149 -05:00 [INF] CORS policy execution successful.
+2026-09-08 09:29:17.150 -05:00 [INF] Executing endpoint 'Notas.API.Controllers.NotasController.Create (Notas.API)'
+2026-09-08 09:29:17.155 -05:00 [INF] Route matched with {action = "Create", controller = "Notas"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(Notas.Application.DTOs.CreateNotaDto) on controller Notas.API.Controllers.NotasController (Notas.API).
+2026-09-08 09:29:17.170 -05:00 [INF] Start processing HTTP request GET https://localhost:7061/api/Estudiantes/1
+2026-09-08 09:29:17.171 -05:00 [INF] Sending HTTP request GET https://localhost:7061/api/Estudiantes/1
+2026-09-08 09:29:17.221 -05:00 [INF] Received HTTP response headers after 48.2139ms - 200
+2026-09-08 09:29:17.222 -05:00 [INF] End processing HTTP request after 51.1923ms - 200
+2026-09-08 09:29:17.223 -05:00 [INF] Estudiante validado correctamente desde Estudiantes.API. IdEstudiante: 1
+2026-09-08 09:29:17.225 -05:00 [INF] Start processing HTTP request GET https://localhost:7116/api/Profesores/ObtenerIdProfesor
+2026-09-08 09:29:17.226 -05:00 [INF] Sending HTTP request GET https://localhost:7116/api/Profesores/ObtenerIdProfesor
+2026-09-08 09:29:17.269 -05:00 [INF] Received HTTP response headers after 42.9637ms - 200
+2026-09-08 09:29:17.271 -05:00 [INF] End processing HTTP request after 45.9317ms - 200
+2026-09-08 09:29:17.273 -05:00 [INF] Profesor autenticado obtenido correctamente. IdProfesor: 2
+2026-09-08 09:29:17.378 -05:00 [INF] Executed DbCommand (7ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Int32), @p2='?' (Size = 100), @p3='?' (Precision = 3) (Scale = 2) (DbType = Decimal)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Notas] ([IdEstudiante], [IdProfesor], [Nombre], [Valor])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3);
+2026-09-08 09:29:17.396 -05:00 [INF] Nota creada correctamente. IdNota: 5, IdEstudiante: 1, IdProfesor: 2, Valor: 5
+2026-09-08 09:29:17.399 -05:00 [INF] Executing CreatedAtActionResult, writing value of type 'Notas.Application.DTOs.NotaDto'.
+2026-09-08 09:29:17.414 -05:00 [INF] Executed action Notas.API.Controllers.NotasController.Create (Notas.API) in 256.8135ms
+2026-09-08 09:29:17.415 -05:00 [INF] Executed endpoint 'Notas.API.Controllers.NotasController.Create (Notas.API)'
+2026-09-08 09:29:17.416 -05:00 [INF] Request finished HTTP/2 POST https://localhost:7290/api/Notas - 201 null application/json; charset=utf-8 269.5743ms
+2026-09-08 09:29:19.471 -05:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7290/api/Notas?page=1&pageSize=10 - null null
+2026-09-08 09:29:19.473 -05:00 [INF] CORS policy execution successful.
+2026-09-08 09:29:19.474 -05:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7290/api/Notas?page=1&pageSize=10 - 204 null null 2.7037ms
+2026-09-08 09:29:19.475 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7290/api/Notas?page=1&pageSize=10 - null null
+2026-09-08 09:29:19.478 -05:00 [INF] CORS policy execution successful.
+2026-09-08 09:29:19.479 -05:00 [INF] Executing endpoint 'Notas.API.Controllers.NotasController.GetAll (Notas.API)'
+2026-09-08 09:29:19.480 -05:00 [INF] Route matched with {action = "GetAll", controller = "Notas"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(Int32, Int32) on controller Notas.API.Controllers.NotasController (Notas.API).
+2026-09-08 09:29:19.484 -05:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Notas] AS [n]
+INNER JOIN [Estudiantes] AS [e] ON [n].[IdEstudiante] = [e].[Id]
+INNER JOIN [Profesores] AS [p] ON [n].[IdProfesor] = [p].[Id]
+2026-09-08 09:29:19.488 -05:00 [INF] Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id], [n].[Nombre], [n].[IdEstudiante], [e].[Nombre] AS [NombreEstudiante], [n].[IdProfesor], [p].[Nombre] AS [NombreProfesor], [n].[Valor]
+FROM [Notas] AS [n]
+INNER JOIN [Estudiantes] AS [e] ON [n].[IdEstudiante] = [e].[Id]
+INNER JOIN [Profesores] AS [p] ON [n].[IdProfesor] = [p].[Id]
+ORDER BY [n].[Id]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2026-09-08 09:29:19.490 -05:00 [INF] Executing OkObjectResult, writing value of type 'Notas.Application.Common.Paginacion`1[[Notas.Application.DTOs.NotaDto, Notas.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-09-08 09:29:19.492 -05:00 [INF] Executed action Notas.API.Controllers.NotasController.GetAll (Notas.API) in 10.4492ms
+2026-09-08 09:29:19.493 -05:00 [INF] Executed endpoint 'Notas.API.Controllers.NotasController.GetAll (Notas.API)'
+2026-09-08 09:29:19.493 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7290/api/Notas?page=1&pageSize=10 - 200 null application/json; charset=utf-8 18.5697ms

@@ -154,3 +154,21 @@ OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
 2026-09-07 21:27:37.971 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7290/ - null null
 2026-09-07 21:27:38.161 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7290/ - 404 0 null 191.5125ms
 2026-09-07 21:27:38.168 -05:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7290/, Response status code: 404
+2026-09-07 22:47:30.276 -05:00 [INF] User profile is available. Using 'C:\Users\Goyatsu\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-09-07 22:47:31.094 -05:00 [INF] Now listening on: https://localhost:7290
+2026-09-07 22:47:31.097 -05:00 [INF] Now listening on: http://localhost:5032
+2026-09-07 22:47:31.204 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-09-07 22:47:31.206 -05:00 [INF] Hosting environment: Development
+2026-09-07 22:47:31.206 -05:00 [INF] Content root path: C:\Users\Goyatsu\Desktop\SistemaGestionNotas\SistemaGestionNotas\Notas.API
+2026-09-07 22:47:31.863 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7290/ - null null
+2026-09-07 22:47:32.175 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7290/ - 404 0 null 313.4184ms
+2026-09-07 22:47:32.182 -05:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7290/, Response status code: 404
+2026-09-07 22:52:24.422 -05:00 [INF] User profile is available. Using 'C:\Users\Goyatsu\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-09-07 22:52:24.791 -05:00 [INF] Now listening on: https://localhost:7290
+2026-09-07 22:52:24.793 -05:00 [INF] Now listening on: http://localhost:5032
+2026-09-07 22:52:24.868 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-09-07 22:52:24.869 -05:00 [INF] Hosting environment: Development
+2026-09-07 22:52:24.870 -05:00 [INF] Content root path: C:\Users\Goyatsu\Desktop\SistemaGestionNotas\SistemaGestionNotas\Notas.API
+2026-09-07 22:52:25.275 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7290/ - null null
+2026-09-07 22:52:25.475 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7290/ - 404 0 null 201.0888ms
+2026-09-07 22:52:25.482 -05:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7290/, Response status code: 404
