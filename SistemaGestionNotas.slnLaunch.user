@@ -13,6 +13,10 @@
       {
         "Path": "Profesores.API\\Profesores.API.csproj",
         "Action": "Start"
+      },
+      {
+        "Path": "Notas.API\\Notas.API.csproj",
+        "Action": "Start"
       }
     ]
   }

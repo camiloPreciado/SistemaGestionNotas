@@ -101,5 +101,20 @@ namespace Profesores.Application.Services
 
             return true;
         }
+
+        public async Task<ProfesorDto?> GetByUsuarioIdAsync(int usuarioId)
+        {
+            var profesor = await _repository.GetByUsuarioIdAsync(usuarioId);
+
+            if (profesor is null)
+                return null;
+
+            return new ProfesorDto
+            {
+                Id = profesor.Id,
+                UsuarioId = profesor.UsuarioId,
+                Nombre = profesor.Nombre
+            };
+        }
     }
 }

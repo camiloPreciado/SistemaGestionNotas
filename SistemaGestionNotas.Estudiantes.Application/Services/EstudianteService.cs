@@ -95,6 +95,21 @@ namespace Estudiantes.Application.Services
 
             return true;
         }
+
+        public async Task<EstudianteDto?> GetByUsuarioIdAsync(int usuarioId)
+        {
+            var estudiante = await _repository.GetByUsuarioIdAsync(usuarioId);
+
+            if (estudiante is null)
+                return null;
+
+            return new EstudianteDto
+            {
+                Id = estudiante.Id,
+                UsuarioId = estudiante.UsuarioId,
+                Nombre = estudiante.Nombre
+            };
+        }
     }
 }
 

@@ -69,5 +69,12 @@ namespace Estudiantes.Infrastructure.Repositories
 
             await _context.SaveChangesAsync();
         }
+
+        public async Task<Estudiante?> GetByUsuarioIdAsync(int usuarioId)
+        {
+            return await _context.Estudiantes
+                .AsNoTracking()
+                .FirstOrDefaultAsync(e => e.UsuarioId == usuarioId);
+        }
     }
 }

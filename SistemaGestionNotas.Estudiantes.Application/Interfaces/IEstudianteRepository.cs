@@ -15,5 +15,6 @@ namespace Estudiantes.Application.Interfaces
         Task<Estudiante> CreateAsync(Estudiante estudiante);
         Task UpdateAsync(Estudiante estudiante);
         Task DeleteAsync(Estudiante estudiante);
+        Task<Estudiante?> GetByUsuarioIdAsync(int usuarioId);
     }
 }

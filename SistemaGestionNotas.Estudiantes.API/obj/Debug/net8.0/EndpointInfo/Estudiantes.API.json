@@ -155,6 +155,19 @@
           }
         }
       }
+    },
+    "/api/Estudiantes/ObtenerIdEstudiante": {
+      "get": {
+        "tags": [
+          "Estudiantes"
+        ],
+        "summary": "Obtiene el Id de un estudiante por el IdUsuario",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
     }
   },
   "components": {

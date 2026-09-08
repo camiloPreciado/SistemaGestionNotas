@@ -91,5 +91,29 @@ namespace Estudiantes.API.Controllers
 
             return NoContent();
         }
+
+        /// <summary>
+        /// Obtiene el Id de un estudiante por el IdUsuario
+        /// </summary>
+        [Authorize(Roles = Roles.Estudiante)]
+        [HttpGet("ObtenerIdEstudiante")]
+        public async Task<IActionResult> ObtenerIdEstudiante()
+        {
+            var usuarioIdClaim = User.FindFirst(
+                System.Security.Claims.ClaimTypes.NameIdentifier);
+
+            if (usuarioIdClaim is null)
+                return Unauthorized();
+
+            if (!int.TryParse(usuarioIdClaim.Value, out var usuarioId))
+                return Unauthorized();
+            
+            var estudiante = await _service.GetByUsuarioIdAsync(usuarioId);
+
+            if (estudiante is null)
+                return NotFound();
+
+            return Ok(estudiante);
+        }
     }
 }

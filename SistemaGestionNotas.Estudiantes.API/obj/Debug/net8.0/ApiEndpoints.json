@@ -88,5 +88,15 @@
       }
     ],
     "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Estudiantes.API.Controllers.EstudiantesController",
+    "Method": "ObtenerIdEstudiante",
+    "RelativePath": "api/Estudiantes/ObtenerIdEstudiante",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
   }
 ]

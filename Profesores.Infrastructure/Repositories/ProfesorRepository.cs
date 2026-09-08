@@ -69,5 +69,12 @@ namespace Profesores.Infrastructure.Repositories
 
             await _context.SaveChangesAsync();
         }
+
+        public async Task<Profesor?> GetByUsuarioIdAsync(int usuarioId)
+        {
+            return await _context.Profesores
+                .AsNoTracking()
+                .FirstOrDefaultAsync(p => p.UsuarioId == usuarioId);
+        }
     }
 }

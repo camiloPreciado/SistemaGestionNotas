@@ -15,5 +15,6 @@ namespace Profesores.Application.Interfaces
         Task<ProfesorDto> CreateAsync(CreateProfesorDto dto);
         Task<bool> UpdateAsync(int id, UpdateProfesorDto dto);
         Task<bool> DeleteAsync(int id);
+        Task<ProfesorDto?> GetByUsuarioIdAsync(int usuarioId);
     }
 }

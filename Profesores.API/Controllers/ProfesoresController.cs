@@ -94,5 +94,29 @@ namespace Profesores.API.Controllers
 
             return NoContent();
         }
+
+        /// <summary>
+        /// Obtiene el Id de un profesor por el IdUsuario
+        /// </summary>
+        [Authorize(Roles = Roles.Profesor)]
+        [HttpGet("ObtenerIdProfesor")]
+        public async Task<IActionResult> ObtenerIdProfesor()
+        {
+            var usuarioIdClaim = User.FindFirst(
+                System.Security.Claims.ClaimTypes.NameIdentifier);
+
+            if (usuarioIdClaim is null)
+                return Unauthorized();
+
+            if (!int.TryParse(usuarioIdClaim.Value, out var usuarioId))
+                return Unauthorized();
+
+            var profesor = await _service.GetByUsuarioIdAsync(usuarioId);
+
+            if (profesor is null)
+                return NotFound();
+
+            return Ok(profesor);
+        }
     }
 }

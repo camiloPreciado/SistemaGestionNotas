@@ -36,5 +36,10 @@
             Elimina un estudiante por el id
             </summary>
         </member>
+        <member name="M:Estudiantes.API.Controllers.EstudiantesController.ObtenerIdEstudiante">
+            <summary>
+            Obtiene el Id de un estudiante por el IdUsuario
+            </summary>
+        </member>
     </members>
 </doc>
