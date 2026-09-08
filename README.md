@@ -448,17 +448,104 @@ Bearer {token}
 ```
 De esta manera es posible probar desde Swagger tanto los endpoints públicos como aquellos que requieren autenticación y autorización según el rol del usuario.
 
-## Cómo ejecutar el proyecto
+## Ejecución del proyecto
 
-### Requisitos previos
-### Configuración de SQL Server
-### Configuración de conexión
-### Ejecutar migraciones
-### Proyectos de inicio
-### Ejecución de los microservicios
+Para ejecutar el backend localmente es necesario contar con **.NET 8 SDK** y **SQL Server** instalados y configurados.
 
-## Flujo de autenticación
+### 1. Configurar la base de datos
 
-## Diagramas
+Verificar que la cadena de conexión configurada en los archivos `appsettings.json` de los microservicios apunte correctamente a la instancia de SQL Server utilizada.
 
-## Consideraciones
+Ejemplo:
+
+```json
+"ConnectionStrings": {
+  "DefaultConnection": "Server=localhost;Database=SistemaGestionNotas;Trusted_Connection=True;TrustServerCertificate=True;"
+}
+```
+
+### 2. Aplicar las migraciones
+
+Desde la **Package Manager Console** de Visual Studio, seleccionar el proyecto API correspondiente y ejecutar:
+```powershell
+Update-Database
+```
+Si se requiere crear una nueva migración:
+```powershell
+Add-Migration NombreDeLaMigracion
+```
+y posteriormente:
+```powershell
+Update-Database
+```
+### 3. Ejecutar los microservicios
+
+Se deben ejecutar los cuatro microservicios de la solución:
+
+- `Usuario.API`
+- `Estudiantes.API`
+- `Profesores.API`
+- `Notas.API`
+
+Cada microservicio se encuentra configurado para ejecutarse en un puerto HTTPS diferente:
+
+```text
+Usuario.API       https://localhost:7223
+Estudiantes.API   https://localhost:7061
+Profesores.API    https://localhost:7116
+Notas.API         https://localhost:7290
+```
+
+### 3. Ejecutar los microservicios
+
+Desde Visual Studio se pueden ejecutar los microservicios seleccionando los proyectos `*.API` como proyectos de inicio.
+
+Para ejecutarlos simultáneamente:
+
+1. Hacer clic derecho sobre la solución.
+2. Seleccionar **Set Startup Projects...**.
+3. Seleccionar **Multiple startup projects**.
+4. Establecer la acción **Start** para los siguientes proyectos:
+   - `Usuario.API`
+   - `Estudiantes.API`
+   - `Profesores.API`
+   - `Notas.API`
+5. Ejecutar la solución.
+
+Cada microservicio se iniciará en su respectivo puerto y quedará disponible para recibir las solicitudes del frontend.
+
+### 4. Acceder a Swagger
+
+Una vez iniciados los microservicios, se puede acceder a la documentación y pruebas de cada API mediante Swagger:
+
+```text
+Usuario.API
+https://localhost:7223/swagger
+
+Estudiantes.API
+https://localhost:7061/swagger
+
+Profesores.API
+https://localhost:7116/swagger
+
+Notas.API
+https://localhost:7290/swagger
+```
+Swagger permite consultar los endpoints disponibles, visualizar los modelos de solicitud y respuesta y realizar pruebas directamente desde el navegador.
+
+
+### 5. Flujo de autenticación
+
+Para utilizar los endpoints protegidos:
+
+1. Iniciar sesión mediante `Usuario.API`.
+2. Obtener el token JWT generado.
+3. Utilizar el botón **Authorize** en Swagger.
+4. Ingresar el token utilizando el formato:
+
+```text
+Bearer {token}
+```
+Realizar las solicitudes a los endpoints según los permisos correspondientes al rol del usuario.
+
+Con esto, el backend queda preparado para ejecutar y probar los diferentes microservicios de forma local.
