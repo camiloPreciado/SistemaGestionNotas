@@ -1,6 +1,7 @@
 ﻿using Estudiantes.Application.Common;
 using Estudiantes.Application.DTOs;
 using Estudiantes.Application.Interfaces;
+using Microsoft.Extensions.Logging;
 using SistemaGestionNotas.Estudiantes.Domain.Entities;
 using System;
 using System.Collections.Generic;
@@ -13,9 +14,11 @@ namespace Estudiantes.Application.Services
     public class EstudianteService : IEstudianteService
     {
         private readonly IEstudianteRepository _repository;
+        private readonly ILogger<EstudianteService> _logger;
 
-        public EstudianteService(IEstudianteRepository repository) { 
+        public EstudianteService(IEstudianteRepository repository, ILogger<EstudianteService> logger) { 
             _repository = repository;
+            _logger = logger;
         }
 
         public async Task<Paginacion<EstudianteDto>> GetAllAsync( int page, int pageSize)
@@ -63,6 +66,7 @@ namespace Estudiantes.Application.Services
             };
 
             var created = await _repository.CreateAsync(estudiante);
+            _logger.LogInformation("Estudiante creado correctamente. IdEstudiante: {IdEstudiante}, UsuarioId: {UsuarioId}", created.Id, created.UsuarioId);
 
             return new EstudianteDto
             {
@@ -76,11 +80,15 @@ namespace Estudiantes.Application.Services
         {
             var estudiante = await _repository.GetByIdAsync(id);
 
-            if (estudiante is null) { return false; };
+            if (estudiante is null) {
+                _logger.LogWarning("No se pudo actualizar el estudiante porque no existe. IdEstudiante: {IdEstudiante}", id);
+                return false;
+            }
 
             estudiante.Nombre = dto.Nombre;
 
             await _repository.UpdateAsync(estudiante);
+            _logger.LogInformation("Estudiante actualizado correctamente. IdEstudiante: {IdEstudiante}", estudiante.Id);
 
             return true;
         }
@@ -89,9 +97,13 @@ namespace Estudiantes.Application.Services
         {
             var estudiante = await _repository.GetByIdAsync(id);
 
-            if (estudiante is null) { return false; };
+            if (estudiante is null) {
+                _logger.LogWarning("No se pudo eliminar el estudiante porque no existe. IdEstudiante: {IdEstudiante}", id);
+                return false;
+            }
 
             await _repository.DeleteAsync(estudiante);
+            _logger.LogInformation("Estudiante eliminado correctamente. IdEstudiante: {IdEstudiante}, UsuarioId: {UsuarioId}", estudiante.Id, estudiante.UsuarioId);
 
             return true;
         }

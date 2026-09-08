@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Http;
+using Microsoft.Extensions.Logging;
 using Notas.Application.Interfaces;
 using System;
 using System.Collections.Generic;
@@ -14,11 +15,13 @@ namespace Notas.Infraestructure.ServicesClient
     {
         private readonly HttpClient _httpClient;
         private readonly IHttpContextAccessor _httpContextAccessor;
+        private readonly ILogger<EstudianteClient> _logger;
 
-        public EstudianteClient(HttpClient httpClient, IHttpContextAccessor httpContextAccessor)
+        public EstudianteClient(HttpClient httpClient, IHttpContextAccessor httpContextAccessor, ILogger<EstudianteClient> logger)
         {
             _httpClient = httpClient;
             _httpContextAccessor = httpContextAccessor;
+            _logger = logger;
         }
 
         public async Task<bool> ExisteAsync(int idEstudiante)
@@ -32,6 +35,13 @@ namespace Notas.Infraestructure.ServicesClient
 
             var response = await _httpClient.GetAsync($"api/Estudiantes/{idEstudiante}");
 
+            if (!response.IsSuccessStatusCode)
+            {
+                _logger.LogWarning("Estudiantes.API respondió con estado {StatusCode} al consultar el estudiante {IdEstudiante}.", (int)response.StatusCode, idEstudiante);
+                return false;
+            }
+
+            _logger.LogInformation("Estudiante validado correctamente desde Estudiantes.API. IdEstudiante: {IdEstudiante}", idEstudiante);
             return response.IsSuccessStatusCode;
         }
 
@@ -39,11 +49,13 @@ namespace Notas.Infraestructure.ServicesClient
         {
             AgregarToken();
 
-            var response = await _httpClient.GetAsync(
-                "api/Estudiantes/ObtenerIdEstudiante");
+            var response = await _httpClient.GetAsync("api/Estudiantes/ObtenerIdEstudiante");
 
             if (!response.IsSuccessStatusCode)
+            {
+                _logger.LogWarning("No fue posible obtener el estudiante autenticado desde Estudiantes.API. StatusCode: {StatusCode}", (int)response.StatusCode);
                 return null;
+            }
 
             var estudiante = await response.Content
                 .ReadFromJsonAsync<EstudianteResponse>();

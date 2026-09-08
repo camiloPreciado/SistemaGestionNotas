@@ -1506,7 +1506,10 @@
         },
         "runtime": {
           "bin/placeholder/Estudiantes.Application.dll": {}
-        }
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
       },
       "Estudiantes.Domain/1.0.0": {
         "type": "project",

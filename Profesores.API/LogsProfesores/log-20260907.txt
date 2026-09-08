@@ -1,0 +1,42 @@
+2026-09-07 21:27:36.759 -05:00 [INF] User profile is available. Using 'C:\Users\Goyatsu\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-09-07 21:27:37.202 -05:00 [INF] Now listening on: https://localhost:7116
+2026-09-07 21:27:37.206 -05:00 [INF] Now listening on: http://localhost:5156
+2026-09-07 21:27:37.305 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-09-07 21:27:37.312 -05:00 [INF] Hosting environment: Development
+2026-09-07 21:27:37.323 -05:00 [INF] Content root path: C:\Users\Goyatsu\Desktop\SistemaGestionNotas\SistemaGestionNotas\Profesores.API
+2026-09-07 21:27:37.970 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7116/ - null null
+2026-09-07 21:27:38.160 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7116/ - 404 0 null 190.96ms
+2026-09-07 21:27:38.168 -05:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7116/, Response status code: 404
+2026-09-07 21:30:39.855 -05:00 [INF] Request starting HTTP/2 PUT https://localhost:7116/api/Profesores/1 - application/json 32
+2026-09-07 21:30:39.907 -05:00 [INF] Executing endpoint 'Profesores.API.Controllers.ProfesoresController.Update (Profesores.API)'
+2026-09-07 21:30:39.924 -05:00 [INF] Route matched with {action = "Update", controller = "Profesores"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Update(Int32, Profesores.Application.DTOs.UpdateProfesorDto) on controller Profesores.API.Controllers.ProfesoresController (Profesores.API).
+2026-09-07 21:30:40.796 -05:00 [INF] Executed DbCommand (35ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[Id], [p].[Nombre], [p].[UsuarioId]
+FROM [Profesores] AS [p]
+WHERE [p].[Id] = @__id_0
+2026-09-07 21:30:40.897 -05:00 [INF] Executed DbCommand (5ms) [Parameters=[@p2='?' (DbType = Int32), @p0='?' (Size = 100), @p1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Profesores] SET [Nombre] = @p0, [UsuarioId] = @p1
+OUTPUT 1
+WHERE [Id] = @p2;
+2026-09-07 21:30:40.905 -05:00 [INF] Profesor actualizado correctamente. IdProfesor: 1
+2026-09-07 21:30:40.909 -05:00 [INF] Executing StatusCodeResult, setting HTTP status code 204
+2026-09-07 21:30:40.912 -05:00 [INF] Executed action Profesores.API.Controllers.ProfesoresController.Update (Profesores.API) in 985.0411ms
+2026-09-07 21:30:40.914 -05:00 [INF] Executed endpoint 'Profesores.API.Controllers.ProfesoresController.Update (Profesores.API)'
+2026-09-07 21:30:40.920 -05:00 [INF] Request finished HTTP/2 PUT https://localhost:7116/api/Profesores/1 - 204 null null 1065.6116ms
+2026-09-07 21:30:44.196 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7116/api/Profesores?page=1&pageSize=10 - null null
+2026-09-07 21:30:44.203 -05:00 [INF] Executing endpoint 'Profesores.API.Controllers.ProfesoresController.GetAll (Profesores.API)'
+2026-09-07 21:30:44.207 -05:00 [INF] Route matched with {action = "GetAll", controller = "Profesores"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(Int32, Int32) on controller Profesores.API.Controllers.ProfesoresController (Profesores.API).
+2026-09-07 21:30:44.283 -05:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Profesores] AS [p]
+2026-09-07 21:30:44.294 -05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Nombre], [p].[UsuarioId]
+FROM [Profesores] AS [p]
+ORDER BY [p].[Id]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2026-09-07 21:30:44.301 -05:00 [INF] Executing OkObjectResult, writing value of type 'Profesores.Application.Common.Paginacion`1[[Profesores.Application.DTOs.ProfesorDto, Profesores.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-09-07 21:30:44.306 -05:00 [INF] Executed action Profesores.API.Controllers.ProfesoresController.GetAll (Profesores.API) in 97.5075ms
+2026-09-07 21:30:44.308 -05:00 [INF] Executed endpoint 'Profesores.API.Controllers.ProfesoresController.GetAll (Profesores.API)'
+2026-09-07 21:30:44.309 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7116/api/Profesores?page=1&pageSize=10 - 200 null application/json; charset=utf-8 112.1689ms

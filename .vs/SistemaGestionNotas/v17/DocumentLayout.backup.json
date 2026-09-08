@@ -3,32 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\Goyatsu\\Desktop\\SistemaGestionNotas\\SistemaGestionNotas\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F80307C5-E6A5-4966-A1DD-2C183CC76E9F}|Notas.Application\\Notas.Application.csproj|c:\\users\\goyatsu\\desktop\\sistemagestionnotas\\sistemagestionnotas\\notas.application\\services\\notaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F80307C5-E6A5-4966-A1DD-2C183CC76E9F}|Notas.Application\\Notas.Application.csproj|solutionrelative:notas.application\\services\\notaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{86F0BEFA-7083-48EC-83A4-6E09768BECDC}|Notas.Infraestructure\\Notas.Infraestructure.csproj|c:\\users\\goyatsu\\desktop\\sistemagestionnotas\\sistemagestionnotas\\notas.infraestructure\\persistence\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{86F0BEFA-7083-48EC-83A4-6E09768BECDC}|Notas.Infraestructure\\Notas.Infraestructure.csproj|solutionrelative:notas.infraestructure\\persistence\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{86F0BEFA-7083-48EC-83A4-6E09768BECDC}|Notas.Infraestructure\\Notas.Infraestructure.csproj|c:\\users\\goyatsu\\desktop\\sistemagestionnotas\\sistemagestionnotas\\notas.infraestructure\\repositories\\notarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{86F0BEFA-7083-48EC-83A4-6E09768BECDC}|Notas.Infraestructure\\Notas.Infraestructure.csproj|solutionrelative:notas.infraestructure\\repositories\\notarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F80307C5-E6A5-4966-A1DD-2C183CC76E9F}|Notas.Application\\Notas.Application.csproj|c:\\users\\goyatsu\\desktop\\sistemagestionnotas\\sistemagestionnotas\\notas.application\\interfaces\\inotarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F80307C5-E6A5-4966-A1DD-2C183CC76E9F}|Notas.Application\\Notas.Application.csproj|solutionrelative:notas.application\\interfaces\\inotarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F80307C5-E6A5-4966-A1DD-2C183CC76E9F}|Notas.Application\\Notas.Application.csproj|c:\\users\\goyatsu\\desktop\\sistemagestionnotas\\sistemagestionnotas\\notas.application\\dtos\\notadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F80307C5-E6A5-4966-A1DD-2C183CC76E9F}|Notas.Application\\Notas.Application.csproj|solutionrelative:notas.application\\dtos\\notadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F5D931C9-786B-41FE-8E29-85CED74F3D27}|Notas.API\\Notas.API.csproj|c:\\users\\goyatsu\\desktop\\sistemagestionnotas\\sistemagestionnotas\\notas.api\\controllers\\notascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F5D931C9-786B-41FE-8E29-85CED74F3D27}|Notas.API\\Notas.API.csproj|solutionrelative:notas.api\\controllers\\notascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F5D931C9-786B-41FE-8E29-85CED74F3D27}|Notas.API\\Notas.API.csproj|c:\\users\\goyatsu\\desktop\\sistemagestionnotas\\sistemagestionnotas\\notas.api\\notas.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{F5D931C9-786B-41FE-8E29-85CED74F3D27}|Notas.API\\Notas.API.csproj|solutionrelative:notas.api\\notas.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{F5D931C9-786B-41FE-8E29-85CED74F3D27}|Notas.API\\Notas.API.csproj|c:\\users\\goyatsu\\desktop\\sistemagestionnotas\\sistemagestionnotas\\notas.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F5D931C9-786B-41FE-8E29-85CED74F3D27}|Notas.API\\Notas.API.csproj|solutionrelative:notas.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,34 +14,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "NotaService.cs",
-              "DocumentMoniker": "C:\\Users\\Goyatsu\\Desktop\\SistemaGestionNotas\\SistemaGestionNotas\\Notas.Application\\Services\\NotaService.cs",
-              "RelativeDocumentMoniker": "Notas.Application\\Services\\NotaService.cs",
-              "ToolTip": "C:\\Users\\Goyatsu\\Desktop\\SistemaGestionNotas\\SistemaGestionNotas\\Notas.Application\\Services\\NotaService.cs",
-              "RelativeToolTip": "Notas.Application\\Services\\NotaService.cs",
-              "ViewState": "AgIAAEEAAAAAAAAAAAAwwEcAAAAOAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-08T01:15:31.885Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ApplicationDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\Goyatsu\\Desktop\\SistemaGestionNotas\\SistemaGestionNotas\\Notas.Infraestructure\\Persistence\\ApplicationDbContext.cs",
-              "RelativeDocumentMoniker": "Notas.Infraestructure\\Persistence\\ApplicationDbContext.cs",
-              "ToolTip": "C:\\Users\\Goyatsu\\Desktop\\SistemaGestionNotas\\SistemaGestionNotas\\Notas.Infraestructure\\Persistence\\ApplicationDbContext.cs",
-              "RelativeToolTip": "Notas.Infraestructure\\Persistence\\ApplicationDbContext.cs",
-              "ViewState": "AgIAADIAAAAAAAAAAAAkwEoAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-08T01:12:10.294Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
@@ -76,67 +26,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "NotaRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Goyatsu\\Desktop\\SistemaGestionNotas\\SistemaGestionNotas\\Notas.Infraestructure\\Repositories\\NotaRepository.cs",
-              "RelativeDocumentMoniker": "Notas.Infraestructure\\Repositories\\NotaRepository.cs",
-              "ToolTip": "C:\\Users\\Goyatsu\\Desktop\\SistemaGestionNotas\\SistemaGestionNotas\\Notas.Infraestructure\\Repositories\\NotaRepository.cs",
-              "RelativeToolTip": "Notas.Infraestructure\\Repositories\\NotaRepository.cs",
-              "ViewState": "AgIAACwAAAAAAAAAAAAYwDwAAABfAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Goyatsu\\Desktop\\SistemaGestionNotas\\SistemaGestionNotas\\Notas.API\\Program.cs",
+              "RelativeDocumentMoniker": "Notas.API\\Program.cs",
+              "ToolTip": "C:\\Users\\Goyatsu\\Desktop\\SistemaGestionNotas\\SistemaGestionNotas\\Notas.API\\Program.cs",
+              "RelativeToolTip": "Notas.API\\Program.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABIAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-08T01:05:30.14Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "INotaRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Goyatsu\\Desktop\\SistemaGestionNotas\\SistemaGestionNotas\\Notas.Application\\Interfaces\\INotaRepository.cs",
-              "RelativeDocumentMoniker": "Notas.Application\\Interfaces\\INotaRepository.cs",
-              "ToolTip": "C:\\Users\\Goyatsu\\Desktop\\SistemaGestionNotas\\SistemaGestionNotas\\Notas.Application\\Interfaces\\INotaRepository.cs",
-              "RelativeToolTip": "Notas.Application\\Interfaces\\INotaRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAfAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-08T01:03:03.213Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "NotaDto.cs",
-              "DocumentMoniker": "C:\\Users\\Goyatsu\\Desktop\\SistemaGestionNotas\\SistemaGestionNotas\\Notas.Application\\DTOs\\NotaDto.cs",
-              "RelativeDocumentMoniker": "Notas.Application\\DTOs\\NotaDto.cs",
-              "ToolTip": "C:\\Users\\Goyatsu\\Desktop\\SistemaGestionNotas\\SistemaGestionNotas\\Notas.Application\\DTOs\\NotaDto.cs",
-              "RelativeToolTip": "Notas.Application\\DTOs\\NotaDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-08T00:57:38.144Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "NotasController.cs",
-              "DocumentMoniker": "C:\\Users\\Goyatsu\\Desktop\\SistemaGestionNotas\\SistemaGestionNotas\\Notas.API\\Controllers\\NotasController.cs",
-              "RelativeDocumentMoniker": "Notas.API\\Controllers\\NotasController.cs",
-              "ToolTip": "C:\\Users\\Goyatsu\\Desktop\\SistemaGestionNotas\\SistemaGestionNotas\\Notas.API\\Controllers\\NotasController.cs",
-              "RelativeToolTip": "Notas.API\\Controllers\\NotasController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAHQAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-08T00:47:24.983Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Notas.API",
-              "DocumentMoniker": "C:\\Users\\Goyatsu\\Desktop\\SistemaGestionNotas\\SistemaGestionNotas\\Notas.API\\Notas.API.csproj",
-              "RelativeDocumentMoniker": "Notas.API\\Notas.API.csproj",
-              "ToolTip": "C:\\Users\\Goyatsu\\Desktop\\SistemaGestionNotas\\SistemaGestionNotas\\Notas.API\\Notas.API.csproj",
-              "RelativeToolTip": "Notas.API\\Notas.API.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2026-09-08T00:47:08.076Z",
+              "WhenOpened": "2026-09-08T01:42:10.216Z",
               "EditorCaption": ""
             }
           ]

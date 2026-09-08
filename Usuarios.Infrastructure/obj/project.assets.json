@@ -1520,7 +1520,10 @@
         },
         "runtime": {
           "bin/placeholder/Usuarios.Application.dll": {}
-        }
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
       },
       "Usuarios.Domain/1.0.0": {
         "type": "project",

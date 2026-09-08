@@ -1,4 +1,5 @@
-﻿using Notas.Application.Common;
+﻿using Microsoft.Extensions.Logging;
+using Notas.Application.Common;
 using Notas.Application.DTOs;
 using Notas.Application.Interfaces;
 using Notas.Domain.Entities;
@@ -15,15 +16,18 @@ namespace Notas.Application.Services
         private readonly INotaRepository _repository;
         private readonly IEstudianteClient _estudianteClient;
         private readonly IProfesorClient _profesorClient;
+        private readonly ILogger<NotaService> _logger;
 
         public NotaService(
             INotaRepository repository,
             IEstudianteClient estudianteClient,
-            IProfesorClient profesorClient)
+            IProfesorClient profesorClient,
+            ILogger<NotaService> logger)
         {
             _repository = repository;
             _estudianteClient = estudianteClient;
             _profesorClient = profesorClient;
+            _logger = logger;
         }
 
         public async Task<Paginacion<NotaDto>> GetAllAsync(int page, int pageSize)
@@ -84,6 +88,7 @@ namespace Notas.Application.Services
 
             if (!estudianteExiste)
             {
+                _logger.LogWarning("No se pudo crear la nota porque el estudiante no existe. IdEstudiante: {IdEstudiante}", dto.IdEstudiante);
                 throw new ValidationException("El estudiante especificado no existe.");
             }
 
@@ -92,6 +97,7 @@ namespace Notas.Application.Services
 
             if (idProfesor is null)
             {
+                _logger.LogWarning("No se pudo obtener el profesor asociado al usuario autenticado.");
                 throw new ValidationException("No se pudo obtener el profesor autenticado.");
             }
 
@@ -105,6 +111,12 @@ namespace Notas.Application.Services
 
             var created =
                 await _repository.CreateAsync(nota);
+
+            _logger.LogInformation("Nota creada correctamente. IdNota: {IdNota}, IdEstudiante: {IdEstudiante}, IdProfesor: {IdProfesor}, Valor: {Valor}",
+                    created.Id,
+                    created.IdEstudiante,
+                    created.IdProfesor,
+                    created.Valor);
 
             return new NotaDto
             {
@@ -121,7 +133,10 @@ namespace Notas.Application.Services
             var nota = await _repository.GetByIdAsync(id);
 
             if (nota is null)
+            {
+                _logger.LogWarning("No se pudo actualizar la nota porque no existe. IdNota: {IdNota}", id);
                 return false;
+            };
 
             nota.Nombre = dto.Nombre;
             nota.Valor = dto.Valor;
@@ -137,7 +152,10 @@ namespace Notas.Application.Services
             var nota = await _repository.GetByIdAsync(id);
 
             if (nota is null)
+            {
+                _logger.LogWarning("No se pudo eliminar la nota porque no existe. IdNota: {IdNota}",id);
                 return false;
+            };
 
             await _repository.DeleteAsync(nota);
 
